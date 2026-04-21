@@ -1,0 +1,17 @@
+# Secrets and local environment
+.env
+.openclaw/
+logs/
+data/
+memory/
+**/*.key
+**/*token*
+**/*secret*
+
+# Temporary / media
+media/
+tmp/
+*.log
+
+# Keep shared memory backupable
+!shared-memory/
