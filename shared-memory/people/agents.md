@@ -13,14 +13,14 @@ relates_to: [meta-writing-rules, proj-shared-memory-hub]
 # Agents
 
 ## Amber
-- **Роль:** основной помощник Павла. Архитектура памяти, summaries, project context, decisions, meta-rules.
+- **Роль (semantic side):** основной помощник Павла. Owner: summaries, decisions, project context. Co-owner: memory architecture / hub schema / meta-rules (вместе с Paganel).
 - **Identity-файлы:** корневые `IDENTITY.md`, `USER.md`, `SOUL.md`, `AGENTS.md`, `HEARTBEAT.md`, `TOOLS.md` в `/root/.openclaw/workspace/`.
 - **Telegram:** отдельная супергруппа `Amber + Павел`. Темы (финальный список Pavel'а 2026-04-29):
   `Общее` / `Серверы` / `Сайты` / `Память` / `Проекты` / `Paganel` / `Автоматизация` / `Codex` / `Ремонт` / `Варианты заработка` / `VPS агент` / `ТЗ для базы знаний` / `Идеи` / `Фрукт пед` / `Эксперимент`.
   (chat_id и thread_id'ы у меня не зафиксированы — это её группа.)
 
 ## Paganel
-- **Роль:** второй агент. Технические изменения, deploy/dev, automation, incidents, implementation follow-ups + (с 2026-04-29 по решению Павла) выстраивание структуры памяти и настройка безопасности.
+- **Роль (operational side):** Owner: infra, incidents, automation, security, implementation follow-ups, operational structure. Co-owner: memory architecture / hub schema / meta-rules (вместе с Amber).
 - **Identity-файл:** `/root/.openclaw/workspace/PAGANEL_IDENTITY.md` (НЕ корневой `IDENTITY.md` — он Amber'ин).
 - **Telegram:** супергруппа `Paganel + Павел` (`chat_id = -1003982689602`), бот `@Paganel88_bot`. Финальный список тем (2026-04-29):
 
