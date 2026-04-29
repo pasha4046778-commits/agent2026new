@@ -24,9 +24,18 @@ relates_to: [proj-shared-memory-hub]
 - [x] Security: GitHub PAT убран из `.git/config` (incident `2026-04-29-001` в `logs/security_log.json`)
 
 ## В работе
-- [ ] Operational regulament — `meta/writing-rules.md` (кто/когда/что/куда пишет; правило маршрутизации Telegram-темы → hub)
-- [ ] Заполнить `projects/fp-babichnail-online.md` реальным контекстом (текущие доработки, инфра, бэклог)
-- [ ] Описать инфраструктуру в `infra/`: сервер `babichnail.online`, поддомены `fp.` и `video.`, GitHub-ремоут
+- [ ] Operational regulament — `meta/writing-rules.md` v0.1.3 (на ревью у Павла)
+- [x] Заполнить `projects/fp-babichnail-online.md` реальным контекстом (на 2026-04-29)
+- [x] `infra/server-pasha-beget.md`, `infra/fp-babichnail-online.md` — заполнены реальным состоянием по результатам read-only осмотра 2026-04-29
+
+## FrutPed action items (ждут ок Павла)
+- [ ] Установить SSH-ключ Paganel на VPS, отключить `PasswordAuthentication` и поменять `PermitRootLogin yes` → `prohibit-password`
+- [ ] Починить `incident-2026-04-29-003-session-warning` (правка config.php строки 24-25)
+- [ ] Завести приватный git-репо для кода `/var/www/fp.babichnail.online/`
+- [ ] Настроить ежедневный mysqldump БД `fruitpedicure` (916K, тривиально)
+- [ ] `certbot --nginx -d fp.babichnail.online` для origin TLS, потом перевести Beget на full SSL
+- [ ] Убрать `.bak`-файлы из public_html
+- [ ] Выровнять ownership всех файлов на www-data:www-data
 
 ## Не начато
 - [ ] **Rotate FrutPed `pasha_fp` password** (incident `2026-04-29-002`, требует Павла)
