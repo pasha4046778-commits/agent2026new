@@ -7,6 +7,8 @@
 ## Paganel
 - Второй агент
 - Должен использовать общий memory hub, а не изолированную память
+- Identity: `/PAGANEL_IDENTITY.md` в корне workspace (НЕ корневой `IDENTITY.md` — он Amber'ин)
+- Telegram: @Paganel88_bot
 
 ## Правило масштабирования
 Если подключается третий агент:
