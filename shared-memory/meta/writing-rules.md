@@ -4,8 +4,9 @@ type: meta
 title: Writing rules для shared-memory (operational regulament)
 author: paganel
 status: in_progress
+version: v0.1.1
 created: 2026-04-29T07:10:00Z
-updated: 2026-04-29T07:10:00Z
+updated: 2026-04-29T07:15:00Z
 tags: [meta, rules, regulament]
 relates_to: [meta-record-schema, proj-shared-memory-hub]
 ---
@@ -65,6 +66,8 @@ relates_to: [meta-record-schema, proj-shared-memory-hub]
 
 ## 5. Куда пишем (routing)
 
+### 5.1 По типу события
+
 Когда возникает важный факт — он маршрутизируется по таблице:
 
 | Что произошло | Куда оседает |
@@ -81,6 +84,38 @@ relates_to: [meta-record-schema, proj-shared-memory-hub]
 | Правило / схема / соглашение | `meta/<slug>.md` |
 
 Один факт может попасть в несколько разделов (например, инцидент → `incidents/` + `daily/` + `decisions.md` если по итогам приняли правило). Это нормально, связи делаются через `relates_to`.
+
+### 5.2 По Telegram-теме (fan-out)
+
+Telegram-тема — surface для обсуждения, не имя раздела памяти. Один разговор в теме может породить записи в нескольких разделах. Таблица показывает, КУДА может ложиться важное из каждой темы. **Primary** — типичный основной адресат; **Secondary** — куда часто попадает дополнительно. Пустой хвост (`daily/`) подразумевается всегда — туда оседают сами события дня.
+
+#### Группа `Amber + Павел`
+
+| Тема | Primary | Secondary |
+|---|---|---|
+| `Общее` | `daily/` | `decisions.md`, `todo.md` |
+| `Проекты` | `projects/<slug>.md` | `decisions.md`, `infra/`, `sources/`, `todo.md` |
+| `Память` | `meta/`, `proj-shared-memory-hub` | `decisions.md`, `todo.md` |
+| `Идеи` | `ideas/<slug>.md` | `projects/`, `decisions.md` |
+| `Сайты` | `projects/<сайт>.md`, `infra/<сайт>.md` | `decisions.md`, `incidents/`, `daily/` |
+| `Серверы` | `infra/<server>.md` | `incidents/`, `decisions.md`, `daily/` |
+
+#### Группа `Paganel + Павел`
+
+| Тема | Primary | Secondary |
+|---|---|---|
+| `Dev` | `projects/<slug>.md` | `decisions.md`, `infra/`, `incidents/`, `todo.md` |
+| `Сервер` | `infra/<server>.md` | `incidents/`, `decisions.md`, `daily/` |
+| `Автоматизация` | `infra/<automation>.md` | `decisions.md`, `incidents/`, `proj-shared-memory-hub` |
+| `Ошибки` | `incidents/<id>.md` | `decisions.md` (если правило по итогам), `infra/`, `todo.md` |
+| `ТЗ` | `projects/<slug>.md`, `todo.md` | `decisions.md`, `daily/` |
+| `Проверки` | `daily/` | `incidents/` (если нашли баг), `decisions.md`, `todo.md` |
+
+### 5.3 Как читать эту таблицу
+
+- Если событие = твой Primary → запись точно туда.
+- Если событие задевает Secondary → дополнительная запись с `relates_to` к Primary.
+- Если событие не вписывается ни в Primary, ни в Secondary темы — это сигнал, что либо тему выбрали не ту, либо нужна новая категория памяти. Поднимаем Павлу.
 
 ## 6. Как пишем
 
@@ -137,3 +172,4 @@ relates_to: [meta-record-schema, proj-shared-memory-hub]
 
 ## История изменений
 - 2026-04-29 v0.1 — Paganel создал draft. Базируется на плане v2 от Amber + расширении Paganel + уточнении ролей Павла.
+- 2026-04-29 v0.1.1 — Paganel добавил раздел 5.2 (fan-out маршрутизации по Telegram-темам) и 5.3 (как читать таблицу). По запросу Павла.
