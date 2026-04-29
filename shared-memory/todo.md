@@ -36,7 +36,7 @@ relates_to: [proj-shared-memory-hub]
 - [ ] (Pavel) свой SSH-ключ → прислать публичную часть, добавлю в authorized_keys
 - [x] Починить `incident-2026-04-29-003-session-warning` (config.php, убран сломанный блок) ✅ 2026-04-29
 - [x] Локальный git-репо для кода `/var/www/fp.babichnail.online/` (initial commit `78231b9`) ✅ 2026-04-29
-- [ ] Настроить remote для site-git репо (GitHub приватный? отдельный hub?) — решение за Павлом
+- [x] Настроить remote для site-git репо ✅ 2026-04-29 — приватный `pasha4046778-commits/fp-site`, fine-grained PAT (scope: только этот репо, Contents=RW)
 - [x] Ежедневный mysqldump БД `fruitpedicure` (cron 23:55 UTC+5, retention 14d, локально на VPS) ✅ 2026-04-29
 - [x] Offsite-копия дампов БД ✅ 2026-04-29 — двухуровневый бэкап описан в `infra/db-backup.md`
 - [-] ~~certbot для origin TLS~~ — снято: edge SSL Beget'а покрывает функциональные требования. Можно вернуться при необходимости defense-in-depth.
@@ -45,7 +45,7 @@ relates_to: [proj-shared-memory-hub]
 - [x] **0 user_courses при 10 users** ✅ это «single course» дизайн (не баг): доступ выдаётся флагом `users.is_active`, `user_courses` зарезервирована под мульти-курс.
 - [ ] (Pavel) Сменить пароль `gdl.php` на `video.babichnail.online` (incident `2026-04-29-004`)
 - [ ] (Pavel) Прописать webhook URL `https://fp.babichnail.online/api/confirm-payment.php` в TipTop Pay панели когда терминал переключат на боевой
-- [ ] (Pavel) Расширить scope GitHub PAT с `public_repo` на `repo` (нужно для создания приватного site-репо)
+- [x] (Pavel) Расширить scope GitHub PAT — Pavel пошёл лучшим путём, создал отдельный fine-grained PAT scoped только на `fp-site` ✅ 2026-04-29
 - [ ] Перенести пароль `gdl.php` из кода в `.env` (`getenv()`); долгоиграющая правка
 - [x] Чистка `.mov` originals из `/var/www/videos/` ✅ 2026-04-29 (21 GB освобождено, 52%→25%; inventory в `/root/backups/fp.babichnail.online/mov-deleted-2026-04-29_10-29-45.txt`)
 - [ ] Мониторинг `/var/log/nginx/error.log` на «PHP Warning» (cron / heartbeat) — чтобы новые подобные баги не висели неделями
