@@ -34,7 +34,7 @@ relates_to: [proj-shared-memory-hub]
 - [ ] (Pavel) сменить root-пароль `passwd` для гигиены
 - [ ] (Pavel) сменить FrutPed `pasha_fp` пароль в Beget
 - [ ] (Pavel) свой SSH-ключ → прислать публичную часть, добавлю в authorized_keys
-- [ ] Починить `incident-2026-04-29-003-session-warning` (правка config.php строки 24-25)
+- [x] Починить `incident-2026-04-29-003-session-warning` (config.php, убран сломанный блок) ✅ 2026-04-29
 - [ ] Завести приватный git-репо для кода `/var/www/fp.babichnail.online/`
 - [ ] Настроить ежедневный mysqldump БД `fruitpedicure` (916K, тривиально)
 - [ ] `certbot --nginx -d fp.babichnail.online` для origin TLS, потом перевести Beget на full SSL

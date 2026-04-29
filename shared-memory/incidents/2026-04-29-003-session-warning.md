@@ -3,9 +3,9 @@ id: incident-2026-04-29-003-session-warning
 type: incident
 title: PHP session warning on every request to fp.babichnail.online
 author: paganel
-status: open
+status: done
 created: 2026-04-29T08:05:00Z
-updated: 2026-04-29T08:05:00Z
+updated: 2026-04-29T08:55:00Z
 tags: [php, session, security, fp.babichnail.online]
 relates_to: [infra-fp-babichnail-online, proj-fp-babichnail-online]
 affects: [infra-fp-babichnail-online]
@@ -40,15 +40,26 @@ PHP Warning: session_set_cookie_params(): Session cookie parameters cannot be ch
 - Это значит cookies могут уходить без `Secure` (через HTTP — критично для прод-сайта), без `HttpOnly` (XSS получает доступ к session-id), без `SameSite=Strict/Lax` (CSRF становится проще).
 - Размер прямого ущерба зависит от того, какие именно настройки пытались поставить и какие применяются по умолчанию из php.ini.
 
-## Действия (Paganel)
-- Зафиксировал инцидент.
-- Никаких правок кода НЕ делал — Павел просил «проверь», а не «починить». Жду ОК на правку.
+## Действия (Paganel) — выполнено 2026-04-29 08:54 UTC
+- Прочитал `config.php`. Подтвердил root cause: 14 entry-скриптов делают `session_start()` на строке 2, ПОТОМ `require config.php` — поэтому `ini_set/session_set_cookie_params` в config.php (строки 24-25) запускались уже после старта сессии и не работали.
+- Пробил php-defaults: `session.gc_maxlifetime=1440`, `session.cookie_lifetime=0`, `session.auto_start=0`. Текущее реальное поведение сайта = эти дефолты, **а не** 3600s, которые автор хотел поставить.
+- Решение выбрано **F1: убрать сломанный блок**, потому что Павел сказал «функционал должен остаться прежним». Реальное поведение и так = PHP defaults; перенос `ini_set` в рабочую позицию (F2) изменил бы функционал (расширил бы сессию с 24 мин до 1ч).
+- Сделал backup `/root/backups/fp.babichnail.online/config.php.bak.2026-04-29_08-54-17` (вне git, на VPS).
+- Заменил блок в `config.php` строки 23-25 на explanatory комментарий (в файле теперь 4608 байт vs 4249 до). Проверил `php -l` — синтаксис ок.
+- Comment в файле объясняет, как при желании реально применить 1h-lifetime: добавить в pool.d:
+  ```
+  php_admin_value[session.gc_maxlifetime] = 3600
+  php_admin_value[session.cookie_lifetime] = 3600
+  ```
+- ownership/perms сохранены (`644 www-data:www-data`).
 
-## Действия (требуются)
-- Прочитать `config.php:1-30`, понять порядок инициализации.
-- Перенести `ini_set(...)` и `session_set_cookie_params(...)` ДО любого `session_start()` (типично — в самом начале файла, перед include'ами).
-- Убедиться, что `session.auto_start` в php.ini = 0 (по умолчанию обычно так).
-- Проверить, что после правки nginx error log чист.
+## Верификация
+- Прогнал 4 запроса (3 на главную + 1 на login) → все HTTP 200.
+- Подсчёт session-warning'ов в `/var/log/nginx/error.log` за сегодня:
+  - до 08:54 UTC: **19**
+  - после 08:54 UTC: **0**
+- Регрессий не обнаружено.
 
 ## Lesson learned
-- Включить мониторинг `/var/log/nginx/error.log` хотя бы простым `grep -c "PHP Warning"` в cron — чтобы такие баги не висели неделями.
+- При написании session-related кода: ini_set + session_set_cookie_params должны идти ДО session_start. Идиоматично — в config.php в самом верху, и сам же config.php потом вызывает session_start. Тогда entry-скриптам остаётся только `require_once 'config.php'`, без отдельного `session_start()`.
+- Полезный мониторинг: `grep -c "PHP Warning" /var/log/nginx/error.log` в cron / heartbeat (доб. в todo).
