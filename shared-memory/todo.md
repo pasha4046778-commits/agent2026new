@@ -47,7 +47,7 @@ relates_to: [proj-shared-memory-hub]
 - [ ] (Pavel) Прописать webhook URL `https://fp.babichnail.online/api/confirm-payment.php` в TipTop Pay панели когда терминал переключат на боевой
 - [ ] (Pavel) Расширить scope GitHub PAT с `public_repo` на `repo` (нужно для создания приватного site-репо)
 - [ ] Перенести пароль `gdl.php` из кода в `.env` (`getenv()`); долгоиграющая правка
-- [ ] Подумать о чистке `.mov` originals из `/var/www/videos/` после конвертации — диск занят на 52%, новые уроки добьют
+- [x] Чистка `.mov` originals из `/var/www/videos/` ✅ 2026-04-29 (21 GB освобождено, 52%→25%; inventory в `/root/backups/fp.babichnail.online/mov-deleted-2026-04-29_10-29-45.txt`)
 - [ ] Мониторинг `/var/log/nginx/error.log` на «PHP Warning» (cron / heartbeat) — чтобы новые подобные баги не висели неделями
 
 ## Не начато

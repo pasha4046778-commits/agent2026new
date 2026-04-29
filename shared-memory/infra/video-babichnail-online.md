@@ -29,9 +29,10 @@ relates_to: [infra-fp-babichnail-online, infra-server-pasha-beget, proj-fp-babic
 
 ## Хранение видео
 - Каталог: `/var/www/videos/` (на VPS).
-- Текущий размер на 2026-04-29: ~31 GB (13 готовых .mp4 + 10 исходников .mov).
-- Готовые файлы: `urok_01..09.mp4`, `mozoli_04.mp4`, `onih_plenki2.mp4`, `vostonovl_uglov3.mp4`, `ustanovka_plenok1.0.mp4` и др.
-- **Disk pressure:** на VPS / занято 52% (40G из 77G). Видео — основной едок. Нужен план: либо чистка исходников .mov после конвертации, либо переезд на больший диск/object storage.
+- На 2026-04-29 после чистки: ~9 GB (13 готовых .mp4). 10 .mov-исходников удалены 2026-04-29 10:29 UTC по разрешению Павла.
+- Готовые .mp4: `urok_01..09.mp4`, `mozoli_04.mp4`, `onih_plenki2.mp4`, `vostonovl_uglov3.mp4`, `ustanovka_plenok1.0.mp4` и др.
+- **Disk pressure:** до чистки / занято было 52% (40G), после — 25% (19G). 21 GB освобождено.
+- Restore policy: оригиналы .mov остались у Павла на Google Drive. Если понадобится — можно перезалить через `gdl.php`. Inventory удалённого: `/root/backups/fp.babichnail.online/mov-deleted-2026-04-29_10-29-45.txt` на VPS.
 
 ## Авто-конвертация (inotify + ffmpeg)
 - systemd unit: `video-convert.service` (`active running`).
