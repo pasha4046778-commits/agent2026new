@@ -38,8 +38,8 @@ relates_to: [proj-shared-memory-hub]
 - [x] Локальный git-репо для кода `/var/www/fp.babichnail.online/` (initial commit `78231b9`) ✅ 2026-04-29
 - [ ] Настроить remote для site-git репо (GitHub приватный? отдельный hub?) — решение за Павлом
 - [x] Ежедневный mysqldump БД `fruitpedicure` (cron 23:55 UTC+5, retention 14d, локально на VPS) ✅ 2026-04-29
-- [ ] Offsite-копия дампов БД — сейчас живут только на VPS (риск потери при крэше VPS); сделать nightly scp на Amber/Paganel host
-- [ ] **Заблокировано (Pavel decision)** `certbot --nginx -d fp.babichnail.online` — DNS не указывает на VPS (45.130.41.50 = Beget proxy), HTTP-01 challenge не сработает. Варианты: (a) Beget Full SSL, (b) DNS-01 через Beget API, (c) изменить DNS на VPS-IP
+- [x] Offsite-копия дампов БД ✅ 2026-04-29 — двухуровневый бэкап описан в `infra/db-backup.md`
+- [-] ~~certbot для origin TLS~~ — снято: edge SSL Beget'а покрывает функциональные требования. Можно вернуться при необходимости defense-in-depth.
 - [x] Убрать `.bak`-файлы из public_html ✅ 2026-04-29
 - [x] Выровнять ownership всех файлов на www-data:www-data ✅ 2026-04-29
 - [ ] **0 user_courses при 10 users** — выяснить у Павла бизнес-логику (доступ выдаётся вне таблицы или баг?)
