@@ -42,7 +42,12 @@ relates_to: [proj-shared-memory-hub]
 - [-] ~~certbot для origin TLS~~ — снято: edge SSL Beget'а покрывает функциональные требования. Можно вернуться при необходимости defense-in-depth.
 - [x] Убрать `.bak`-файлы из public_html ✅ 2026-04-29
 - [x] Выровнять ownership всех файлов на www-data:www-data ✅ 2026-04-29
-- [ ] **0 user_courses при 10 users** — выяснить у Павла бизнес-логику (доступ выдаётся вне таблицы или баг?)
+- [x] **0 user_courses при 10 users** ✅ это «single course» дизайн (не баг): доступ выдаётся флагом `users.is_active`, `user_courses` зарезервирована под мульти-курс.
+- [ ] (Pavel) Сменить пароль `gdl.php` на `video.babichnail.online` (incident `2026-04-29-004`)
+- [ ] (Pavel) Прописать webhook URL `https://fp.babichnail.online/api/confirm-payment.php` в TipTop Pay панели когда терминал переключат на боевой
+- [ ] (Pavel) Расширить scope GitHub PAT с `public_repo` на `repo` (нужно для создания приватного site-репо)
+- [ ] Перенести пароль `gdl.php` из кода в `.env` (`getenv()`); долгоиграющая правка
+- [ ] Подумать о чистке `.mov` originals из `/var/www/videos/` после конвертации — диск занят на 52%, новые уроки добьют
 - [ ] Мониторинг `/var/log/nginx/error.log` на «PHP Warning» (cron / heartbeat) — чтобы новые подобные баги не висели неделями
 
 ## Не начато
