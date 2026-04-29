@@ -15,12 +15,30 @@ relates_to: [meta-writing-rules, proj-shared-memory-hub]
 ## Amber
 - **Роль:** основной помощник Павла. Архитектура памяти, summaries, project context, decisions, meta-rules.
 - **Identity-файлы:** корневые `IDENTITY.md`, `USER.md`, `SOUL.md`, `AGENTS.md`, `HEARTBEAT.md`, `TOOLS.md` в `/root/.openclaw/workspace/`.
-- **Telegram:** отдельная супергруппа `Amber + Павел`. Темы: `Общее` / `Проекты` / `Память` / `Идеи` / `Сайты` / `Серверы`.
+- **Telegram:** отдельная супергруппа `Amber + Павел`. Темы (финальный список Pavel'а 2026-04-29):
+  `Общее` / `Серверы` / `Сайты` / `Память` / `Проекты` / `Paganel` / `Автоматизация` / `Codex` / `Ремонт` / `Варианты заработка` / `VPS агент` / `ТЗ для базы знаний` / `Идеи` / `Фрукт пед` / `Эксперимент`.
+  (chat_id и thread_id'ы у меня не зафиксированы — это её группа.)
 
 ## Paganel
 - **Роль:** второй агент. Технические изменения, deploy/dev, automation, incidents, implementation follow-ups + (с 2026-04-29 по решению Павла) выстраивание структуры памяти и настройка безопасности.
 - **Identity-файл:** `/root/.openclaw/workspace/PAGANEL_IDENTITY.md` (НЕ корневой `IDENTITY.md` — он Amber'ин).
-- **Telegram:** отдельная супергруппа `Paganel + Павел`, бот `@Paganel88_bot`. Базовые темы: `Dev` / `Сервер` / `Автоматизация` / `Ошибки` / `ТЗ` / `Проверки`. Project-dedicated темы: `FrutPed` (для `proj-fp-babichnail-online`).
+- **Telegram:** супергруппа `Paganel + Павел` (`chat_id = -1003982689602`), бот `@Paganel88_bot`. Финальный список тем (2026-04-29):
+
+| Тема | thread_id | Назначение |
+|---|---|---|
+| `general` (root supergroup) | — (нет thread_id) | свободный канал, оседает в `daily/`, дальше по контексту |
+| `memory` | 7 | shared-memory hub: схема, правила, архитектура памяти |
+| `FrutPed` (project-dedicated) | 49 | сайт `fp.babichnail.online`, всё по нему |
+| `Dev / Разработка` | 114 | программирование общее, разные проекты |
+| `Серверы` | 117 | серверы, хостинг, VPS |
+| `Автоматизация` | 120 | cron, скрипты, deploy-pipeline, бэкап-сервисы |
+| `Ошибки` | 123 | баги, сбои, root-cause разборы |
+| `ТЗ` | 126 | постановки задач, требования, scope, acceptance criteria |
+| `Идеи` | 129 | гипотезы, наброски, фичи в раздумьях |
+| `Апгрейд` | 132 | обновления, версии, тюнинг (`my.cnf`, `php.ini`, opcache, unattended-upgrades) |
+| `Сайты` | 135 | сайт-портфолио, разборы статей/инструментов |
+| `Трейдинг` | 138 | трейдинг (новый домен — боты, API, бэктест, не финсоветы) |
+| `Проверки` | (thread_id уточнить) | прогон by-hand проверок, smoke тесты, regression checks |
 
 ## Общее
 - Оба пишут в один shared-memory hub по правилам `meta/writing-rules.md`.
