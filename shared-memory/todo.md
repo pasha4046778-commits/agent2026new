@@ -31,9 +31,9 @@ relates_to: [proj-shared-memory-hub]
 ## FrutPed action items (ждут ок Павла)
 - [x] Установить SSH-ключ Paganel на VPS, отключить `PasswordAuthentication`, поменять `PermitRootLogin` на `without-password` ✅ 2026-04-29
 - [x] Сменить SSH-порт с 22 на 49222, обновить fail2ban ✅ 2026-04-29
-- [ ] (Pavel) сменить root-пароль `passwd` для гигиены
-- [ ] (Pavel) сменить FrutPed `pasha_fp` пароль в Beget
-- [ ] (Pavel) свой SSH-ключ → прислать публичную часть, добавлю в authorized_keys
+- [x] (Pavel) сменить root-пароль ✅ 2026-04-29
+- [x] (Pavel) сменить FrutPed `pasha_fp` пароль в Beget ✅ 2026-04-29
+- [x] (Pavel) свой SSH-ключ → добавлен в authorized_keys ✅ 2026-04-29 — теперь Pavel имеет независимый root-доступ к VPS
 - [x] Починить `incident-2026-04-29-003-session-warning` (config.php, убран сломанный блок) ✅ 2026-04-29
 - [x] Локальный git-репо для кода `/var/www/fp.babichnail.online/` (initial commit `78231b9`) ✅ 2026-04-29
 - [x] Настроить remote для site-git репо ✅ 2026-04-29 — приватный `pasha4046778-commits/fp-site`, fine-grained PAT (scope: только этот репо, Contents=RW)
@@ -43,10 +43,10 @@ relates_to: [proj-shared-memory-hub]
 - [x] Убрать `.bak`-файлы из public_html ✅ 2026-04-29
 - [x] Выровнять ownership всех файлов на www-data:www-data ✅ 2026-04-29
 - [x] **0 user_courses при 10 users** ✅ это «single course» дизайн (не баг): доступ выдаётся флагом `users.is_active`, `user_courses` зарезервирована под мульти-курс.
-- [ ] (Pavel) Сменить пароль `gdl.php` на `video.babichnail.online` (incident `2026-04-29-004`)
+- [x] Сменить пароль `gdl.php` на `video.babichnail.online` ✅ 2026-04-29 — Paganel ротировал и отрефакторил под `/etc/gdl/password` (Pavel читает через SSH, в коде секрета больше нет)
 - [ ] (Pavel) Прописать webhook URL `https://fp.babichnail.online/api/confirm-payment.php` в TipTop Pay панели когда терминал переключат на боевой
 - [x] (Pavel) Расширить scope GitHub PAT — Pavel пошёл лучшим путём, создал отдельный fine-grained PAT scoped только на `fp-site` ✅ 2026-04-29
-- [ ] Перенести пароль `gdl.php` из кода в `.env` (`getenv()`); долгоиграющая правка
+- [x] Перенести пароль `gdl.php` из кода ✅ 2026-04-29 — теперь читается из `/etc/gdl/password` (root:www-data 640)
 - [x] Чистка `.mov` originals из `/var/www/videos/` ✅ 2026-04-29 (21 GB освобождено, 52%→25%; inventory в `/root/backups/fp.babichnail.online/mov-deleted-2026-04-29_10-29-45.txt`)
 - [ ] Мониторинг `/var/log/nginx/error.log` на «PHP Warning» (cron / heartbeat) — чтобы новые подобные баги не висели неделями
 
