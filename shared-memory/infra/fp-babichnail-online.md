@@ -82,18 +82,20 @@ Production-deployment кастомной LMS «Fruit Pedicure» — обучаю
 - Логин `pasha_fp`, root-папка `/home/p/pasha/fp.babichnail.online/` — 16K, **почти пустая болванка**, не связана с live-сайтом.
 - Live-код деплоится root'ом в `/var/www/`. FTP `pasha_fp` к live доступа не даёт. (Хорошо для безопасности, но значит, что и Pavel не может править сайт через FTP.)
 
-## Известные проблемы (на 2026-04-29)
-1. **PHP session warning на каждый запрос** — `config.php` строки 24-25 (`ini_set` и `session_set_cookie_params`) вызываются после того, как сессия уже стартовала. Настройки cookie (`lifetime`, `secure`, `httponly`, `samesite`) НЕ применяются. См. `incident-2026-04-29-003-session-warning`.
-2. Нет origin TLS-сертификата (полагается на Beget edge SSL → origin HTTP).
-3. `.bak`-файлы лежат в production: `public_html/api/register.php.bak`, `public_html/admin/index.php.bak`.
-4. Mixed ownership: `activate.php`, `create_users.php`, `config.php` принадлежат `root:root`, остальное — `www-data:www-data`. Мелкое рассогласование.
-5. Нет git-репо у кода → нет истории, нет отката.
-6. Нет автоматического mysqldump.
+## Известные проблемы (на 2026-04-29 09:00 UTC)
+1. ✅ ~~PHP session warning~~ — починено 2026-04-29 (`incident-2026-04-29-003-session-warning` → done, status mitigated).
+2. ⏸️ **Origin без TLS-сертификата** — заблокировано: DNS `fp.babichnail.online` → `45.130.41.50` (Beget proxy), а не на VPS (`85.198.84.47`). Поэтому ACME HTTP-01 challenge с VPS не пройдёт — Let's Encrypt стучит в Beget proxy. Варианты решения: (a) включить «Full SSL» в панели Beget (если такая опция есть — origin получит сертификат от Beget); (b) изменить DNS на VPS-IP, потерять edge-кэш Beget; (c) сделать DNS-01 challenge — нужен Beget DNS API token. Решает Павел.
+3. ✅ ~~.bak-файлы~~ — убраны 2026-04-29.
+4. ✅ ~~Mixed ownership~~ — приведено к `www-data:www-data` 2026-04-29.
+5. ✅ ~~Нет git-репо~~ — инициализировано 2026-04-29 (без remote).
+6. ✅ ~~Нет автоматического mysqldump~~ — поставлен 2026-04-29 (без offsite-копии).
+7. ⏳ **0 user_courses при 10 users** — открытый бизнес-вопрос к Павлу (доступ выдаётся вне таблицы или баг).
 
 ## Деплой / процесс
-- На сервере НЕТ git, НЕТ CI/CD.
-- Деплой ручной: SCP/SSH из локала в `/var/www/`.
-- Бэкапов кода и БД через cron не видно.
+- ✅ git репо инициализирован 2026-04-29: `/var/www/fp.babichnail.online/.git`. Initial commit `78231b9` (master, author Paganel). 27 файлов в репо. `config.php`, `*.bak`, `videos/`, `*.log` — в `.gitignore`. Remote пока не настроен — ждёт решения Павла (приватный GitHub-репо или другой канал).
+- ✅ mysqldump cron 2026-04-29: ежедневный gzip-дамп `fruitpedicure` в `/root/backups/fp.babichnail.online/db/` на VPS, retain 14 дней. Расписание: 23:55 UTC+5 (cron `55 18 * * *`). Скрипт `/root/scripts/backup-fp-db.sh`. Лог `/var/log/fp-db-backup.log`. Тест-запуск 2026-04-29 08:59 UTC прошёл (7 таблиц, 3.3K gzipped). **Offsite копия пока НЕ настроена** — если VPS умирает, дампы умрут с ним. Стоит сделать nightly scp на хост Amber/Paganel.
+- ✅ Все .bak-файлы убраны из public_html 2026-04-29 (бэкапы в `/root/backups/fp.babichnail.online/cleanup-*/`).
+- ✅ Ownership всех source-файлов нормализован к `www-data:www-data` 2026-04-29 (раньше config.php / activate.php / create_users.php / api/register.php были root-owned).
 
 ## Что неизвестно (open вопросы к Павлу)
 - `pasha.beget.tech` shared hosting и VPS — это одна машина с двумя интерфейсами или две? (Я подключался напрямую к VPS — там FTP-папка `/home/p/pasha/` лежит как chroot для shared-hosting клиента; видимо одна машина.)

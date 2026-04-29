@@ -35,11 +35,15 @@ relates_to: [proj-shared-memory-hub]
 - [ ] (Pavel) сменить FrutPed `pasha_fp` пароль в Beget
 - [ ] (Pavel) свой SSH-ключ → прислать публичную часть, добавлю в authorized_keys
 - [x] Починить `incident-2026-04-29-003-session-warning` (config.php, убран сломанный блок) ✅ 2026-04-29
-- [ ] Завести приватный git-репо для кода `/var/www/fp.babichnail.online/`
-- [ ] Настроить ежедневный mysqldump БД `fruitpedicure` (916K, тривиально)
-- [ ] `certbot --nginx -d fp.babichnail.online` для origin TLS, потом перевести Beget на full SSL
-- [ ] Убрать `.bak`-файлы из public_html
-- [ ] Выровнять ownership всех файлов на www-data:www-data
+- [x] Локальный git-репо для кода `/var/www/fp.babichnail.online/` (initial commit `78231b9`) ✅ 2026-04-29
+- [ ] Настроить remote для site-git репо (GitHub приватный? отдельный hub?) — решение за Павлом
+- [x] Ежедневный mysqldump БД `fruitpedicure` (cron 23:55 UTC+5, retention 14d, локально на VPS) ✅ 2026-04-29
+- [ ] Offsite-копия дампов БД — сейчас живут только на VPS (риск потери при крэше VPS); сделать nightly scp на Amber/Paganel host
+- [ ] **Заблокировано (Pavel decision)** `certbot --nginx -d fp.babichnail.online` — DNS не указывает на VPS (45.130.41.50 = Beget proxy), HTTP-01 challenge не сработает. Варианты: (a) Beget Full SSL, (b) DNS-01 через Beget API, (c) изменить DNS на VPS-IP
+- [x] Убрать `.bak`-файлы из public_html ✅ 2026-04-29
+- [x] Выровнять ownership всех файлов на www-data:www-data ✅ 2026-04-29
+- [ ] **0 user_courses при 10 users** — выяснить у Павла бизнес-логику (доступ выдаётся вне таблицы или баг?)
+- [ ] Мониторинг `/var/log/nginx/error.log` на «PHP Warning» (cron / heartbeat) — чтобы новые подобные баги не висели неделями
 
 ## Не начато
 - [ ] **Rotate FrutPed `pasha_fp` password** (incident `2026-04-29-002`, требует Павла)
