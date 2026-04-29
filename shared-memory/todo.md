@@ -29,7 +29,11 @@ relates_to: [proj-shared-memory-hub]
 - [x] `infra/server-pasha-beget.md`, `infra/fp-babichnail-online.md` — заполнены реальным состоянием по результатам read-only осмотра 2026-04-29
 
 ## FrutPed action items (ждут ок Павла)
-- [ ] Установить SSH-ключ Paganel на VPS, отключить `PasswordAuthentication` и поменять `PermitRootLogin yes` → `prohibit-password`
+- [x] Установить SSH-ключ Paganel на VPS, отключить `PasswordAuthentication`, поменять `PermitRootLogin` на `without-password` ✅ 2026-04-29
+- [x] Сменить SSH-порт с 22 на 49222, обновить fail2ban ✅ 2026-04-29
+- [ ] (Pavel) сменить root-пароль `passwd` для гигиены
+- [ ] (Pavel) сменить FrutPed `pasha_fp` пароль в Beget
+- [ ] (Pavel) свой SSH-ключ → прислать публичную часть, добавлю в authorized_keys
 - [ ] Починить `incident-2026-04-29-003-session-warning` (правка config.php строки 24-25)
 - [ ] Завести приватный git-репо для кода `/var/www/fp.babichnail.online/`
 - [ ] Настроить ежедневный mysqldump БД `fruitpedicure` (916K, тривиально)
