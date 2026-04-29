@@ -28,3 +28,4 @@ relates_to: [proj-shared-memory-hub]
 - **Git identity:** локально для этого репо `Paganel <paganel@bot.openclaw.local>` (без --global, не влияет на другие репо).
 - **Приоритетные проекты:** `proj-fp-babichnail-online` (сайт https://fp.babichnail.online/) и `proj-shared-memory-hub` (сама память).
 - **Telegram-маршрутизация:** темы группы `Paganel+Павел` (Dev / Сервер / Автоматизация / Ошибки / ТЗ / Проверки) — рабочее пространство; важное из тем оседает в hub по правилу: daily / todo / decisions / projects / infra / incidents / sources.
+- **2026-04-29 (Amber + Paganel co-design)** writing-rules → v1.1: введён тип `summary` (папка `summaries/`, шаблон, owners), явный ID-naming canon (`meta/id-naming.md`), правило update vs new record, явная политика bump'а версий. Архитектурный принцип: «не делаем hub слишком умным раньше времени». Co-ownership на meta-rules между Amber и Paganel зафиксирован.

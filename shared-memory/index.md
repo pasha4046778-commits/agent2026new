@@ -22,7 +22,8 @@ relates_to: [shared-memory-readme, meta-record-schema, meta-writing-rules]
 - `people/` — важный контекст по людям и агентам
 - `infra/` — серверы, домены, сервисы, бэкапы, интеграции
 - `incidents/` — сбои, root cause, lesson learned
-- `meta/` — правила и схемы самой памяти (record-schema, writing-rules)
+- `summaries/` — свёртки периодов / проектов / handoff (с v1.1)
+- `meta/` — правила и схемы самой памяти (record-schema, writing-rules, id-naming)
 - `decisions.md` — ключевые решения
 - `todo.md` — открытые вопросы и ближайшие шаги
 

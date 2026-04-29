@@ -69,7 +69,8 @@ relates_to: [meta-record-schema, meta-writing-rules, proj-shared-memory-hub]
 - `people/` — контекст по людям и агентам
 - `infra/` — серверы, домены, сервисы, бэкапы
 - `incidents/` — сбои и root cause
-- `meta/` — правила записи и схема (frontmatter / soft-graph)
+- `summaries/` — свёртки периодов / проектов / handoff (с v1.1)
+- `meta/` — правила записи, схема (frontmatter / soft-graph), id-naming convention
 - `decisions.md` — важные решения и почему они приняты
 - `todo.md` — открытые вопросы и следующие шаги
 

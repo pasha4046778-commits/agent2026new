@@ -24,7 +24,10 @@ relates_to: [proj-shared-memory-hub]
 - [x] Security: GitHub PAT убран из `.git/config` (incident `2026-04-29-001` в `logs/security_log.json`)
 
 ## В работе
-- [ ] Operational regulament — `meta/writing-rules.md` v0.1.3 (на ревью у Павла)
+- [x] Operational regulament — `meta/writing-rules.md` ✅ v1.1 (Amber + Paganel co-design 2026-04-29)
+- [x] ID naming convention ✅ `meta/id-naming.md` v1.0 (proposal Amber, принят)
+- [x] Summary artifact standard ✅ §6.4 + `summaries/TEMPLATE.md`
+- [x] Update vs new record rule ✅ §6.2
 - [x] Заполнить `projects/fp-babichnail-online.md` реальным контекстом (на 2026-04-29)
 - [x] `infra/server-pasha-beget.md`, `infra/fp-babichnail-online.md` — заполнены реальным состоянием по результатам read-only осмотра 2026-04-29
 

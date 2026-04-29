@@ -53,6 +53,9 @@ relates_to: [meta-writing-rules]
 | `idea` | `ideas/` |
 | `meta` | `meta/` |
 | `person` | `people/` |
+| `summary` | `summaries/` (с 2026-04-29 v1.1) |
+
+ID каждой записи следует канону `meta/id-naming.md` (lowercase, hyphens, stable slugs).
 
 ## Допустимые `status`
 
