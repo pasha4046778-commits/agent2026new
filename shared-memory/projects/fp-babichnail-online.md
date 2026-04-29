@@ -6,8 +6,8 @@ author: paganel
 status: in_progress
 created: 2026-04-29T05:35:00Z
 updated: 2026-04-29T05:35:00Z
-tags: [website, priority]
-relates_to: []
+tags: [website, priority, frutped]
+relates_to: [infra-fp-babichnail-online, infra-server-pasha-beget]
 ---
 
 # fp.babichnail.online

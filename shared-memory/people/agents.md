@@ -20,7 +20,7 @@ relates_to: [meta-writing-rules, proj-shared-memory-hub]
 ## Paganel
 - **Роль:** второй агент. Технические изменения, deploy/dev, automation, incidents, implementation follow-ups + (с 2026-04-29 по решению Павла) выстраивание структуры памяти и настройка безопасности.
 - **Identity-файл:** `/root/.openclaw/workspace/PAGANEL_IDENTITY.md` (НЕ корневой `IDENTITY.md` — он Amber'ин).
-- **Telegram:** отдельная супергруппа `Paganel + Павел`, бот `@Paganel88_bot`. Темы: `Dev` / `Сервер` / `Автоматизация` / `Ошибки` / `ТЗ` / `Проверки`.
+- **Telegram:** отдельная супергруппа `Paganel + Павел`, бот `@Paganel88_bot`. Базовые темы: `Dev` / `Сервер` / `Автоматизация` / `Ошибки` / `ТЗ` / `Проверки`. Project-dedicated темы: `FrutPed` (для `proj-fp-babichnail-online`).
 
 ## Общее
 - Оба пишут в один shared-memory hub по правилам `meta/writing-rules.md`.

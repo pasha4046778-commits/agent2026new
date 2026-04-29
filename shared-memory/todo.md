@@ -29,8 +29,10 @@ relates_to: [proj-shared-memory-hub]
 - [ ] Описать инфраструктуру в `infra/`: сервер `babichnail.online`, поддомены `fp.` и `video.`, GitHub-ремоут
 
 ## Не начато
-- [ ] Применить frontmatter ко всем существующим записям (или решить: только к новым)
-- [ ] Rotate GitHub PAT (требует Павла; см. `logs/security_log.json` incident `2026-04-29-001`)
+- [ ] **Rotate FrutPed `pasha_fp` password** (incident `2026-04-29-002`, требует Павла)
+- [ ] **Rotate VPS root password** (incident `2026-04-29-002`, требует Павла; в идеале — SSH key + disable password auth)
+- [ ] Удалить Telegram-сообщения 52 и 53 в теме FrutPed (Павел; incident `2026-04-29-002`)
+- [ ] Rotate GitHub PAT (incident `2026-04-29-001`, требует Павла)
 - [ ] Logrotate для `logs/paganel-backup.log`
 - [ ] Алерт в Telegram при сбое бэкапа
 - [ ] Retrieval / Graphiti поверх hub'а (когда накопится критическая масса записей по схеме)
