@@ -1,3 +1,15 @@
+---
+id: people-paganel-connect-message
+type: meta
+title: Connect message for Paganel
+author: amber
+status: done
+created: 2026-04-21T00:00:00Z
+updated: 2026-04-21T00:00:00Z
+tags: [onboarding, paganel, meta]
+relates_to: [people-agents, people-paganel-onboarding, proj-shared-memory-hub]
+---
+
 # Сообщение для подключения Паганеля к Shared Memory Hub
 
 Паганель, с этого момента ты работаешь не с изолированной памятью, а с общей системой памяти вместе с Amber.

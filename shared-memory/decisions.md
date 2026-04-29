@@ -1,3 +1,15 @@
+---
+id: decisions-register
+type: meta
+title: Decisions register
+author: paganel
+status: in_progress
+created: 2026-04-21T00:00:00Z
+updated: 2026-04-29T07:10:00Z
+tags: [meta, decisions, register]
+relates_to: [proj-shared-memory-hub]
+---
+
 # Decisions
 
 ## 2026-04-21

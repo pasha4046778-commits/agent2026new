@@ -1,3 +1,16 @@
+---
+id: src-2026-04-21-youtube-nX9kYShZVHg
+type: source
+title: "YouTube nX9kYShZVHg — память агента с резервным копированием"
+author: amber
+status: done
+created: 2026-04-21T00:00:00Z
+updated: 2026-04-21T00:00:00Z
+tags: [source, youtube, memory, backup]
+relates_to: [proj-shared-memory-hub]
+source_for: [decision-2026-04-21-shared-memory-architecture]
+---
+
 # Выжимка из видео: память агента с резервным копированием
 
 Источник: YouTube `nX9kYShZVHg`

@@ -1,3 +1,15 @@
+---
+id: people-paganel-onboarding
+type: meta
+title: Onboarding instruction for Paganel
+author: amber
+status: done
+created: 2026-04-21T00:00:00Z
+updated: 2026-04-21T00:00:00Z
+tags: [onboarding, paganel, meta]
+relates_to: [people-agents, proj-shared-memory-hub]
+---
+
 # Инструкция для Паганеля по подключению к Shared Memory Hub
 
 ## Цель

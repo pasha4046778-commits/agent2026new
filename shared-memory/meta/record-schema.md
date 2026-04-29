@@ -3,11 +3,12 @@ id: meta-record-schema
 type: meta
 title: Record schema for shared-memory
 author: paganel
-status: in_progress
+status: approved
+version: v0.1
 created: 2026-04-29T05:35:00Z
-updated: 2026-04-29T05:35:00Z
+updated: 2026-04-29T07:10:00Z
 tags: [meta, schema, soft-graph]
-relates_to: []
+relates_to: [meta-writing-rules]
 ---
 
 # Record Schema (Soft Graph)

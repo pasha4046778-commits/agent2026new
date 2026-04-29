@@ -1,3 +1,15 @@
+---
+id: shared-memory-readme
+type: meta
+title: Shared Memory Hub — README
+author: amber
+status: in_progress
+created: 2026-04-21T00:00:00Z
+updated: 2026-04-29T07:10:00Z
+tags: [meta, readme, hub]
+relates_to: [meta-record-schema, meta-writing-rules, proj-shared-memory-hub]
+---
+
 # Shared Memory
 
 Общая долговременная память для Amber, Paganel и будущих агентов.

@@ -1,3 +1,15 @@
+---
+id: shared-memory-index
+type: meta
+title: Shared Memory Hub — index
+author: amber
+status: in_progress
+created: 2026-04-21T00:00:00Z
+updated: 2026-04-29T07:10:00Z
+tags: [meta, index, hub]
+relates_to: [shared-memory-readme, meta-record-schema, meta-writing-rules]
+---
+
 # Shared Memory Hub
 
 Единый центр памяти для Amber, Paganel и будущих агентов.
