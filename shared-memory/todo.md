@@ -55,7 +55,7 @@ relates_to: [proj-shared-memory-hub]
 - [ ] **Rotate VPS root password** (incident `2026-04-29-002`, требует Павла; в идеале — SSH key + disable password auth)
 - [ ] Удалить Telegram-сообщения 52 и 53 в теме FrutPed (Павел; incident `2026-04-29-002`)
 - [ ] Rotate GitHub PAT (incident `2026-04-29-001`, требует Павла)
-- [ ] Logrotate для `logs/paganel-backup.log`
+- [x] Logrotate для backup-логов ✅ 2026-04-29 (`/etc/logrotate.d/paganel-backups` на этом хосте, `/etc/logrotate.d/fp-db-backup` на VPS; monthly, retain 12, gzip)
 - [ ] Алерт в Telegram при сбое бэкапа
 - [ ] Retrieval / Graphiti поверх hub'а (когда накопится критическая масса записей по схеме)
 - [ ] Визуализация графа
