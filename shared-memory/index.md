@@ -8,8 +8,14 @@
 - `sources/` — выжимки из внешних источников
 - `ideas/` — идеи, гипотезы, черновые направления
 - `people/` — важный контекст по людям и агентам
+- `infra/` — серверы, домены, сервисы, бэкапы, интеграции
+- `incidents/` — сбои, root cause, lesson learned
+- `meta/` — правила и схемы самой памяти (record-schema, writing-rules)
 - `decisions.md` — ключевые решения
 - `todo.md` — открытые вопросы и ближайшие шаги
+
+## Формат записи
+Каждый файл начинается с YAML frontmatter по схеме `meta/record-schema.md` (id / type / author / status / created / updated + soft-graph связи).
 
 ## Цель
 Память должна переживать:

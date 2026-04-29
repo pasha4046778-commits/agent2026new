@@ -55,8 +55,23 @@
 - `sources/` — выжимки из видео, статей, звонков, файлов
 - `ideas/` — идеи и гипотезы
 - `people/` — контекст по людям и агентам
+- `infra/` — серверы, домены, сервисы, бэкапы
+- `incidents/` — сбои и root cause
+- `meta/` — правила записи и схема (frontmatter / soft-graph)
 - `decisions.md` — важные решения и почему они приняты
 - `todo.md` — открытые вопросы и следующие шаги
+
+## Формат записей
+Все файлы должны начинаться с YAML frontmatter по схеме `meta/record-schema.md`:
+обязательные `id`, `type`, `title`, `author`, `status`, `created`, `updated`,
+плюс soft-graph связи: `relates_to`, `depends_on`, `blocked_by`, `decided_by`,
+`implemented_by`, `affects`, `source_for`. Это закладывает совместимость с
+будущим Graphiti / retrieval без миграций.
+
+## Роли агентов (план v2)
+- **Amber:** архитектура памяти, summaries, project context, decisions, meta-rules.
+- **Paganel:** технические изменения, deploy/dev, automation, incidents, follow-ups + (по решению Павла 2026-04-29) выстраивание структуры памяти и безопасность.
+Telegram-темы у каждого свои (см. `people/agents.md`); важное из тем оседает в hub по правилу маршрутизации.
 
 ## Правила записи
 ### Что сохраняем
