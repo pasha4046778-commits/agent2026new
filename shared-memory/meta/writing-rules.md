@@ -125,7 +125,7 @@ Telegram-тема — surface для обсуждения, не имя разд�
 | `general` (root) | — | `daily/` | `decisions.md`, `todo.md` |
 | `memory` | 7 | `meta/`, `proj-shared-memory-hub` | `decisions.md`, `todo.md` |
 | `FrutPed` (project-dedicated) | 49 | `projects/fp-babichnail-online.md`, `infra/fp-babichnail-online.md` | `incidents/`, `decisions.md`, `daily/` |
-| `Dev / Разработка` | 114 | `projects/<slug>.md` | `decisions.md`, `infra/`, `incidents/`, `todo.md` |
+| `Dev-Разработка` | 114 | `ideas/<slug>.md` (на этапе обсуждения) → `projects/<slug>.md` (когда берём в работу) | `decisions.md`, `infra/`, `incidents/`, `todo.md`. **Workflow:** ideation здесь; если проект апрувится — заводим dedicated-топик + project-файл |
 | `Серверы` | 117 | `infra/<server>.md` | `incidents/`, `decisions.md`, `daily/` |
 | `Автоматизация` | 120 | `infra/<automation>.md` | `decisions.md`, `incidents/`, `proj-shared-memory-hub` |
 | `Ошибки` | 123 | `incidents/<id>.md` | `decisions.md` (если правило по итогам), `infra/`, `todo.md` |

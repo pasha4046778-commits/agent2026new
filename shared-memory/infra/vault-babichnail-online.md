@@ -3,7 +3,7 @@ id: infra-vault-babichnail-online
 type: infra
 title: Vaultwarden — vault.babichnail.online
 author: paganel
-status: in_progress
+status: done
 created: 2026-05-05T18:50:00Z
 updated: 2026-05-05T18:50:00Z
 tags: [vaultwarden, secrets, hosting, docker]
@@ -31,7 +31,7 @@ Self-hosted password & secret manager (Bitwarden-compatible API), реализо
 ## Конфигурация контейнера
 Env vars:
 - `DOMAIN=https://vault.babichnail.online`
-- `SIGNUPS_ALLOWED=true` (на момент установки; **закрыть после регистрации Pavel'а** в значение `false`)
+- `SIGNUPS_ALLOWED=false` ✅ закрыто 2026-05-05 после регистрации Pavel'а. Чтобы открыть снова — изменить в `/root/scripts/run-vaultwarden.sh` и пересоздать контейнер.
 - `ADMIN_TOKEN` — random 48-char, plain text. Хранится в `/etc/vaultwarden/admin_token` (chmod 600 root). Используется для доступа к `/admin` панели (управление пользователями, settings).
 - `WEBSOCKET_ENABLED=true` (для live-sync между клиентами)
 - `LOG_LEVEL=warn`
@@ -71,9 +71,10 @@ docker start vaultwarden
 
 ## Open issues / improvements
 - Argon2-hashed admin_token (сейчас plain) — Vaultwarden рекомендует. Можно сделать через `docker exec vaultwarden vaultwarden hash`.
-- `SIGNUPS_ALLOWED=true` пока открыто — **закрыть** сразу после регистрации Pavel'а.
+- ✅ ~~`SIGNUPS_ALLOWED=true`~~ закрыто 2026-05-05.
+- ✅ ~~2FA TOTP~~ — Pavel включил 2FA через Authenticator app 2026-05-05.
 - Geofence / IP-allowlist на nginx (опционально, для жёсткой защиты `/admin`).
-- 2FA TOTP — в Vaultwarden встроено, **обязательно** включить Pavel'у в настройках аккаунта.
+- Lifecycle: добавить `/root/scripts/run-vaultwarden.sh` в systemd-unit для воспроизводимости (сейчас `restart unless-stopped` на уровне docker'а — этого хватает).
 
 ## Связи
 - `infra-server-pasha-beget` — VPS, на котором стоит контейнер.
