@@ -29,7 +29,7 @@ relates_to: [meta-writing-rules, proj-shared-memory-hub]
 | `general` (root supergroup) | — (нет thread_id) | свободный канал, оседает в `daily/`, дальше по контексту |
 | `memory` | 7 | shared-memory hub: схема, правила, архитектура памяти |
 | `FrutPed` (project-dedicated) | 49 | сайт `fp.babichnail.online`, всё по нему |
-| `Dev / Разработка` | 114 | программирование общее, разные проекты |
+| `Dev-Разработка` | 114 | dev-bucket: намечаем проекты, тех. моменты, sketching. Когда проект уходит в работу — заводится отдельная dedicated-тема (как FrutPed 49) |
 | `Серверы` | 117 | серверы, хостинг, VPS |
 | `Автоматизация` | 120 | cron, скрипты, deploy-pipeline, бэкап-сервисы |
 | `Ошибки` | 123 | баги, сбои, root-cause разборы |
