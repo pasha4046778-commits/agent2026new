@@ -135,6 +135,7 @@ Telegram-тема — surface для обсуждения, не имя разд�
 | `Сайты` | 135 | `projects/<site>.md` или `sources/<date>-<title>.md` | `infra/`, `decisions.md`, `ideas/`, `daily/` |
 | `Трейдинг` | 138 | `projects/trading-<slug>.md` | `sources/`, `ideas/`, `decisions.md`, `daily/` |
 | `Проверки` | (уточнить thread_id) | `daily/` | `incidents/` (если нашли баг), `decisions.md`, `todo.md` |
+| `Ремонт` | 248 | `people/<agent>.md`, `incidents/<id>.md` | `infra/`, `decisions.md`, `daily/`, `todo.md`. **Назначение:** работоспособность / ремонт / обновления других агентов на VPS Paganel'а (Amber, Manus, будущие). Cross-zone между Amber и Paganel допустим, координируемся явно. |
 
 ### 5.3 Как читать эту таблицу
 
