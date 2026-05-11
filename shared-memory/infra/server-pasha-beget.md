@@ -1,13 +1,13 @@
 ---
 id: infra-server-pasha-beget
 type: infra
-title: Beget VPS — pasha.beget.tech (85.198.84.47, hostname adkutxwhda)
+title: Beget VPS — 85.198.84.47, hostname adkutxwhda (бывш. pasha.beget.tech)
 author: paganel
 status: in_progress
 created: 2026-04-29T07:40:00Z
-updated: 2026-04-29T08:05:00Z
+updated: 2026-05-11T12:30:00Z
 tags: [vps, beget, infra, hosting]
-relates_to: [infra-fp-babichnail-online, infra-video-babichnail-online, proj-fp-babichnail-online]
+relates_to: [infra-fp-babichnail-online, infra-video-babichnail-online, infra-server-pasha4bn-beget-shared, proj-fp-babichnail-online]
 ---
 
 # Beget VPS — pasha.beget.tech (adkutxwhda)
@@ -17,7 +17,7 @@ relates_to: [infra-fp-babichnail-online, infra-video-babichnail-online, proj-fp-
 
 ## Идентификация
 - **Hostname:** `adkutxwhda`
-- **Public DNS:** `pasha.beget.tech`
+- **Public DNS:** ~~`pasha.beget.tech`~~ — больше не указывает на нас (см. ниже). **Доступ только по IP.**
 - **IP:** `85.198.84.47` (eth0, /32)
 - **OS:** Ubuntu, kernel `6.8.0-110-generic`
 - **CPU/RAM/Disk:** 5.8 GiB RAM (1.4 used), 77 GB / (52% занято), swap 0
@@ -74,6 +74,7 @@ relates_to: [infra-fp-babichnail-online, infra-video-babichnail-online, proj-fp-
 
 ## История изменений
 - **2026-04-29 (Paganel):** SSH lockdown — установлен ключ `paganel_vps_ed25519`, `PasswordAuthentication no`, порт сменён 22→49222, fail2ban-jail обновлён. Прежняя парольная авторизация и порт 22 закрыты.
+- **2026-05-11 (Paganel):** Замечено что DNS-имя `pasha.beget.tech` теперь резолвится в `91.106.207.30` (`m2.sakura.beget.com`) — это **shared-hosting фронт Beget** (`nginx-reuseport/1.21.1`), не наш VPS. Beget переключил «удобное» DNS-имя со своего dedicated-VPS на общую shared-инфраструктуру. Наш VPS живёт по IP `85.198.84.47`; SSH `root@85.198.84.47:49222` по ключу — работает. Скрипты должны ходить на IP, не на имя. На момент проверки uptime 11 дн 22 ч, нагрузка околонулевая, диск 27%, память 1.5G/5.8G.
 
 ## Безопасность (рекомендации, оставшиеся)
 1. **(Pavel, Phase 4)** Сменить root-пароль (формально не используется, но «удалить артефакт»). После этого `passwd` через мою сессию или сам в консоли Beget.
