@@ -3,9 +3,10 @@ id: incident-2026-05-16-007-vps-reinfection
 type: incident
 title: VPS 85.198.84.47 reinfected — same Monero malware family persisted through May 12 cleanup
 author: paganel
-status: open
+status: closed
 created: 2026-05-16T21:00:00Z
-updated: 2026-05-16T21:45:00Z
+updated: 2026-05-17T19:20:00Z
+closed: 2026-05-17T19:20:00Z
 tags: [security, malware, cryptominer, monero, vps, reinfection, persistence]
 relates_to: [incident-2026-05-12-006-vps-cryptominer-compromise, infra-server-pasha-beget]
 affects: [infra-vault-babichnail-online, infra-fp-babichnail-online, infra-video-babichnail-online, infra-server-pasha4bn-beget-shared]
@@ -70,8 +71,9 @@ Beget dedicated VPS `85.198.84.47` (`adkutxwhda`) обнаружен **повт�
 - ✅ 2026-05-16 21:04 — Pavel дал go на shutdown.
 - ✅ 2026-05-16 21:30 — Pavel остановил VPS через панель Beget.
 - ⏳ Снапшот диска через Beget (если опция есть) — ждёт подтверждения Pavel'я.
-- ⏳ Восстановление сервисов на Latvia VPS — план в task list (#10 harden → #11 Vaultwarden → #12 LMS).
-- ⏳ Ротация всех секретов которые могли утечь повторно — task #7.
+- ✅ 2026-05-17 — Latvia VPS захардена, vault + video сервисы восстановлены, VIDEO_SECRET ротирован (см. `daily-2026-05-17` и `infra-server-vps-latvia`).
+- ⏳ Pavel должен удалить старый VPS из Beget панели (не критично, остановлен).
+- ⏳ Ротация прочих секретов (MySQL fp_user, TipTopPay, GitHub PAT) — отложено, не в активном leak-окне.
 
 ## Остаточный риск
 - **Все секреты на VPS считать leaked повторно**, даже если ротированы после #006: vault-данные (E2E encrypted, master Pavel'я в плейн-тексте не лежал → низкий риск), SSH ключи (мой `paganel_vps_ed25519_2026-05` лежал в authorized_keys как pub — приватник у меня, не утёк), API-ключи в `/root/api-keys.json` если был восстановлен, MySQL `fp_user` пароль в `config.php`, gdl.php password (`fp_video_2026`), TipTopPay ключи.

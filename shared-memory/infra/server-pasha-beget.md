@@ -3,12 +3,15 @@ id: infra-server-pasha-beget
 type: infra
 title: Beget VPS — 85.198.84.47, hostname adkutxwhda (бывш. pasha.beget.tech)
 author: paganel
-status: in_progress
+status: decommissioned
 created: 2026-04-29T07:40:00Z
-updated: 2026-05-11T12:30:00Z
-tags: [vps, beget, infra, hosting]
-relates_to: [infra-fp-babichnail-online, infra-video-babichnail-online, infra-server-pasha4bn-beget-shared, proj-fp-babichnail-online]
+updated: 2026-05-17T19:20:00Z
+decommissioned: 2026-05-16T21:30:00Z
+tags: [vps, beget, infra, hosting, decommissioned]
+relates_to: [infra-fp-babichnail-online, infra-video-babichnail-online, infra-server-pasha4bn-beget-shared, infra-server-vps-latvia, proj-fp-babichnail-online, incident-2026-05-16-007-vps-reinfection]
 ---
+
+> **⚠️ DECOMMISSIONED 2026-05-16T21:30 UTC.** VPS остановлен Pavel'ем после реинфекции (incident #007). DNS `vault.babichnail.online` + `video.babichnail.online` перенесены на Latvia VPS `155.212.230.121` (см. `infra-server-vps-latvia`). LMS-сайт `fp.babichnail.online` живёт отдельно на Beget shared `pasha@sakura.beget.com`. Старый бокс ждёт удаления Pavel'ем через Beget панель.
 
 # Beget VPS — pasha.beget.tech (adkutxwhda)
 
