@@ -5,8 +5,8 @@ title: fp.babichnail.online (FrutPed) — Fruit Pedicure LMS
 author: paganel
 status: in_progress
 created: 2026-04-29T05:35:00Z
-updated: 2026-05-25T23:00:00Z
-tags: [website, lms, priority, frutped, manual-payment, ru-sanctions]
+updated: 2026-06-07T13:15:00Z
+tags: [website, lms, priority, frutped, manual-payment, ru-sanctions, prodamus]
 relates_to: [infra-fp-babichnail-online, infra-server-pasha-beget, incident-2026-04-29-003-session-warning]
 ---
 
@@ -183,3 +183,29 @@ End-to-end проверено через curl: form POST → user create → man
 
 ### Backup-стратегия
 Все изменённые файлы имеют рядом `.bak-pre-...` копии. Откат — `cp filename.bak-* filename`.
+
+## 2026-05-28 → 2026-06-07 — Prodamus вместо Raiffeisen + текущая боевая воронка
+
+Pavel решил: ручной перевод на карту Райфа неудобен (телеграм-скрин, ручная активация). Заменили на полный hosted-payment через **Prodamus** (pronails.proeducation.kz). Карты РФ обрабатывает Prodamus, мы получаем webhook.
+
+### Сделано (2026-05-28)
+- **`/buy.php`**: убран Raiffeisen-блок (банк/карта/copy/telegram-pre-fill). Модалка теперь — короткое объяснение «оплата картами РФ через Prodamus, безопасно, без VPN, доступ за час», кнопка «Перейти к оплате →». Никакого order_id-в-Telegram не показывается клиенту (он остался внутри для webhook). Шапка покупки получила подпись «Оплата через TipTop Pay (все страны) или Prodamus для РФ». Основная кнопка переименована «Оплатить 45 000 ₸» → «Оплата (все страны)».
+- **`/api/manual-payment.php`** (тот же endpoint, переделан): payment_method теперь `prodamus_ru`, возвращает `pay_url` = `RU_PRODAMUS_LINK . '?customer_email=…&order_id=FP-RU-…&_param_user_id=…'`. Поля проброшены в Prodamus, вернутся в webhook. Letter админу адаптирован.
+- **`/api/prodamus-webhook.php`** (новый): принимает POST, валидирует HMAC-подпись по `PRODAMUS_SECRET`, ищет юзера по order_id → param_user_id → email, активирует (generatePassword + sendWelcomeEmail + payment.status=completed). Идемпотентен. Если PRODAMUS_SECRET не определён — отвечает 200 «secret not configured» (безопасный noop). Лог `/api/prodamus-webhook.log`.
+- **`/admin/manual-orders.php`**: query расширен на `payment_method IN ('manual_ru','prodamus_ru')`. Карточка-описание перешита: упомянут Prodamus, объяснён вариант webhook vs ручной активации. Auto-reconcile при заходе (если юзер активен — заявка → completed) сохранён.
+
+### Правки 2026-06-01 (Pavel дал новую Prodamus-ссылку)
+- `RU_PRODAMUS_LINK` обновлён: `https://proeducation.kz/779ZGe/` → `https://proeducation.kz/jpa0So/`
+- Сумма в RU-модалке изменена: «45 000 ₸ ≈ 8 500–9 000 ₽» → «41 900 ₸ ≈ 9 000 ₽» (Prodamus берёт 9 000 ₽ ≈ 41 900 ₸). Шапка цены курса осталась 45 000 ₸ (TipTop), это для KZT-покупателей.
+
+### Боевые цифры (на 2026-06-07)
+- prodamus_ru completed: **10** реальных оплат за 9 дней (29.05–07.06)
+- prodamus_ru pending: **15** — часть из них тоже реально оплатили, но Pavel их активирует руками через `/admin/manual-orders.php` или `/admin/students.php`. Активация ручная т.к. **PRODAMUS_SECRET до сих пор не вписан**.
+- Кнопка работает — за 9 дней принесла больше реальных оплат, чем предыдущий Raiffeisen-вариант (3 за неделю).
+
+### Открытое — ждёт Pavel'я
+- **PRODAMUS_SECRET** не передан (9 дней — отказался от автоматизации, сказал «учеников отслеживаю»). Webhook лог пуст кроме одной тестовой записи 29.05. Если Pavel в будущем согласится — нужно: (1) скрин нижней части настроек платежной формы Prodamus → подскажу куда вписать Notification URL `https://fp.babichnail.online/api/prodamus-webhook.php` + где Секретный ключ; (2) Pavel шлёт ключ в DM, я инжектю `define('PRODAMUS_SECRET','…')` в config.php через web-patch.
+- **GitHub fp-site PAT** истёк (GitHub письмо 2026-06-07). Я никогда не использовал этот PAT с Paganel-хоста — он жил на decommissioned VPS (85.198.84.47) и пушил репо `pasha4046778-commits/fp-site` оттуда. Сейчас разработка идёт напрямую на Beget через SSH, github-зеркало неактивно. Если Pavel хочет восстановить — нужно: (a) сгенерить новый fine-grained PAT scoped на repo `fp-site`; (b) положить в `/root/secrets/github_token_fp_site.txt`; (c) настроить git remote в `/home/p/pasha/fp.babichnail.online/` на Beget и пушить оттуда. Спросить Pavel'я, нужно ли вообще — git-зеркало не критично, поскольку мы делаем .bak-файлы рядом с каждым изменением.
+
+### Бэкап-стратегия (Beget)
+Каждое моё изменение оставляет `.bak-pre-<change>-<timestamp>` рядом с файлом. На 2026-06-07 в репо около 13 .bak-файлов (от manual-payment, prodamus, admin/manual-orders, sidebar nav и т.д.). При откате — `cp file.bak-… file`.

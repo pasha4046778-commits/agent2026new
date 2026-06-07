@@ -1,0 +1,1029 @@
+[
+  {
+    "name": "Significa",
+    "country": "Portugal",
+    "website": "https://significa.co",
+    "category": "design-led digital product studio",
+    "services": [
+      "UX/UI design",
+      "web product design",
+      "web development",
+      "e-commerce"
+    ],
+    "proof_signals": [
+      "Certified B Corp",
+      "clients include FC Porto, Hey Harper, The Fertility Partnership"
+    ],
+    "market_focus": "international; English-first; Portugal base",
+    "note": "Design-led studio known for polished digital products and e-commerce execution.",
+    "sources": [
+      "https://significa.co/"
+    ]
+  },
+  {
+    "name": "Bakken & Bæck",
+    "country": "Norway",
+    "website": "https://bakkenbaeck.com",
+    "category": "design and technology studio",
+    "services": [
+      "strategy",
+      "digital product design",
+      "development",
+      "brand + comms"
+    ],
+    "proof_signals": [
+      "Client quote from Sierra co-founder on homepage"
+    ],
+    "market_focus": "Nordics and international; English-first",
+    "note": "Strong product/brand crossover with technical depth under one roof.",
+    "sources": [
+      "https://bakkenbaeck.com/"
+    ]
+  },
+  {
+    "name": "Netguru",
+    "country": "Poland",
+    "website": "https://www.netguru.com",
+    "category": "web development / digital product consultancy",
+    "services": [
+      "website development",
+      "web app development",
+      "e-commerce",
+      "UX/UI",
+      "research",
+      "maintenance"
+    ],
+    "proof_signals": [
+      "Case metrics on site: +24% traffic, +20% engaged sessions, +54% total events",
+      "Known clients include Booksy and IKEA/OLX per broader market visibility"
+    ],
+    "market_focus": "international; enterprise and scale-up market",
+    "note": "Large Polish product consultancy with strong web engineering and delivery process.",
+    "sources": [
+      "https://www.netguru.com/services/web-development"
+    ]
+  },
+  {
+    "name": "Bleech",
+    "country": "Germany",
+    "website": "https://bleech.de",
+    "category": "WordPress web studio",
+    "services": [
+      "WordPress development",
+      "maintenance",
+      "support",
+      "AI automation",
+      "modular website builds"
+    ],
+    "proof_signals": [
+      "10+ years of WordPress development",
+      "clients/testimonials include Beumer Group, Deutscher Filmpreis, Native Instruments"
+    ],
+    "market_focus": "German-speaking market; Berlin base",
+    "note": "Specialist studio for scalable, high-performance WordPress sites.",
+    "sources": [
+      "https://bleech.de/"
+    ]
+  },
+  {
+    "name": "Build in Amsterdam",
+    "country": "Netherlands",
+    "website": "https://www.buildinamsterdam.com",
+    "category": "e-commerce / digital design studio",
+    "services": [
+      "brand-led e-commerce design",
+      "web design",
+      "development"
+    ],
+    "proof_signals": [
+      "Widely recognized Shopify/design studio; homepage fetch limited"
+    ],
+    "market_focus": "international luxury/fashion brands",
+    "note": "Highly visible Amsterdam studio known for premium brand-first e-commerce builds.",
+    "sources": [
+      "https://www.buildinamsterdam.com/"
+    ]
+  },
+  {
+    "name": "Ask Phill",
+    "country": "Netherlands",
+    "website": "https://askphill.com",
+    "category": "Shopify Plus agency",
+    "services": [
+      "commerce strategy",
+      "migrations",
+      "UX/UI design",
+      "Shopify development",
+      "headless builds",
+      "retention"
+    ],
+    "proof_signals": [
+      "200+ clients",
+      "200+ stores launched",
+      "60+ experts",
+      "9+ years experience",
+      "Shopify Plus Platinum Partner"
+    ],
+    "market_focus": "Europe, especially fashion/lifestyle/beauty brands",
+    "note": "One of Europe's clearest Shopify migration specialists for mid-market and enterprise brands.",
+    "sources": [
+      "https://askphill.com/"
+    ]
+  },
+  {
+    "name": "scandiweb",
+    "country": "Latvia",
+    "website": "https://scandiweb.com",
+    "category": "enterprise e-commerce agency",
+    "services": [
+      "strategy",
+      "web development",
+      "app development",
+      "UI/UX",
+      "CRO",
+      "growth marketing",
+      "data & analytics"
+    ],
+    "proof_signals": [
+      "2100+ projects completed",
+      "894+ certifications",
+      "$4B+ generated for clients annually",
+      "Adobe Commerce Gold Partner",
+      "Hyvä Platinum Partner"
+    ],
+    "market_focus": "international enterprise commerce; Europe and North America",
+    "note": "Large technical commerce specialist with unusually strong certification and delivery scale.",
+    "sources": [
+      "https://scandiweb.com/"
+    ]
+  },
+  {
+    "name": "Kooba",
+    "country": "Ireland",
+    "website": "https://www.kooba.ie",
+    "category": "web design / digital agency",
+    "services": [
+      "web design",
+      "development",
+      "online experiences",
+      "landing pages"
+    ],
+    "proof_signals": [
+      "Agency of the Year 2025",
+      "multiple Spider/IDI/Digital Media awards"
+    ],
+    "market_focus": "Ireland with global-brand work",
+    "note": "Award-heavy Irish web agency with strong accessibility and public-sector credentials.",
+    "sources": [
+      "https://www.kooba.ie/"
+    ]
+  },
+  {
+    "name": "ustwo",
+    "country": "United Kingdom",
+    "website": "https://www.ustwo.com",
+    "category": "digital product studio",
+    "services": [
+      "product strategy",
+      "UX/UI",
+      "service design",
+      "engineering"
+    ],
+    "proof_signals": [
+      "Globally known for Monument Valley and major client work"
+    ],
+    "market_focus": "global; London roots",
+    "note": "Iconic product studio that bridges client services and original digital products.",
+    "sources": [
+      "https://www.ustwo.com/"
+    ]
+  },
+  {
+    "name": "Dept",
+    "country": "Netherlands",
+    "website": "https://www.deptagency.com",
+    "category": "digital product / commerce / experience agency",
+    "services": [
+      "commerce",
+      "customer experience",
+      "tech & data",
+      "brand/media"
+    ],
+    "proof_signals": [
+      "Webby Network of the Year multiple years",
+      "B Corp certified"
+    ],
+    "market_focus": "pan-European and global enterprise market",
+    "note": "Broader than a pure web studio, but highly notable for large-scale web and commerce delivery.",
+    "sources": [
+      "https://www.deptagency.com/"
+    ]
+  },
+  {
+    "name": "Imaginary Cloud",
+    "country": "Portugal",
+    "website": "https://imaginarycloud.com",
+    "category": "web and product development studio",
+    "services": [
+      "web development",
+      "MVPs",
+      "UX/UI",
+      "product engineering"
+    ],
+    "proof_signals": [
+      "Well-known startup/scale-up delivery studio in Portugal"
+    ],
+    "market_focus": "UK/EU startups and scale-ups",
+    "note": "Strong fit for startup web product builds with nearshore appeal.",
+    "sources": [
+      "https://imaginarycloud.com/"
+    ]
+  },
+  {
+    "name": "Boldare",
+    "country": "Poland",
+    "website": "https://www.boldare.com",
+    "category": "digital product development studio",
+    "services": [
+      "product strategy",
+      "design",
+      "web app development",
+      "delivery teams"
+    ],
+    "proof_signals": [
+      "Established Polish product firm with strong content/case-study footprint"
+    ],
+    "market_focus": "international product teams",
+    "note": "Product-oriented studio with a visible agile/process-led market position.",
+    "sources": [
+      "https://www.boldare.com/"
+    ]
+  },
+  {
+    "name": "Monomyth",
+    "country": "Netherlands",
+    "website": "https://monomyth.nl",
+    "category": "branding + web studio",
+    "services": [
+      "branding",
+      "digital design",
+      "custom development"
+    ],
+    "proof_signals": [
+      "Visible premium studio profile in NL design market"
+    ],
+    "market_focus": "Netherlands and international premium brands",
+    "note": "Boutique option combining identity work with bespoke web execution.",
+    "sources": [
+      "https://monomyth.nl/"
+    ]
+  },
+  {
+    "name": "We Make Websites",
+    "country": "United Kingdom",
+    "website": "https://wemakewebsites.com",
+    "category": "Shopify enterprise web studio",
+    "services": [
+      "Shopify design",
+      "development",
+      "optimization",
+      "international commerce"
+    ],
+    "proof_signals": [
+      "Longstanding top-tier Shopify reputation"
+    ],
+    "market_focus": "global enterprise retail brands",
+    "note": "Very notable Shopify-native web build partner with deep fashion/retail portfolio.",
+    "sources": [
+      "https://wemakewebsites.com/"
+    ]
+  },
+  {
+    "name": "Bond Media",
+    "country": "United Kingdom",
+    "website": "https://www.bondmedia.co.uk",
+    "category": "web design agency",
+    "services": [
+      "bespoke web design",
+      "development",
+      "digital strategy"
+    ],
+    "proof_signals": [
+      "High visibility in UK web design rankings"
+    ],
+    "market_focus": "UK business market",
+    "note": "Established London web design shop with a clear bespoke positioning.",
+    "sources": [
+      "https://www.bondmedia.co.uk/"
+    ]
+  },
+  {
+    "name": "Noetik",
+    "country": "Greece",
+    "website": "https://www.noetik.gr",
+    "category": "web design and development studio",
+    "services": [
+      "custom websites",
+      "software solutions",
+      "UX/UI"
+    ],
+    "proof_signals": [
+      "150+ custom websites/software solutions",
+      "10+ years experience"
+    ],
+    "market_focus": "Greece, Europe, Middle East",
+    "note": "Notable Greek studio with a strong corporate web production footprint.",
+    "sources": [
+      "https://www.noetik.gr/"
+    ]
+  },
+  {
+    "name": "The Weather",
+    "country": "Germany",
+    "website": "https://theweather.co",
+    "category": "digital design / web studio",
+    "services": [
+      "branding",
+      "web design",
+      "development",
+      "strategy"
+    ],
+    "proof_signals": [
+      "Prominent in design award/ranking lists"
+    ],
+    "market_focus": "international startup and tech brands",
+    "note": "Design-forward studio known for high-end visual web work.",
+    "sources": [
+      "https://theweather.co/"
+    ]
+  },
+  {
+    "name": "MakeReign",
+    "country": "Netherlands",
+    "website": "https://makereign.com",
+    "category": "e-commerce design studio",
+    "services": [
+      "e-commerce design",
+      "Shopify builds",
+      "brand experience"
+    ],
+    "proof_signals": [
+      "Widely cited in European e-commerce studio roundups"
+    ],
+    "market_focus": "fashion and lifestyle commerce brands",
+    "note": "Amsterdam-area studio with strong design taste for commerce experiences.",
+    "sources": [
+      "https://makereign.com/"
+    ]
+  },
+  {
+    "name": "Koto Studio",
+    "country": "Germany",
+    "website": "https://koto.studio",
+    "category": "branding + digital studio",
+    "services": [
+      "branding",
+      "digital experiences",
+      "web design systems"
+    ],
+    "proof_signals": [
+      "Global brand-studio reputation with Berlin presence"
+    ],
+    "market_focus": "international brands",
+    "note": "More branding-led, but relevant where brand and flagship web experience intersect.",
+    "sources": [
+      "https://koto.studio/"
+    ]
+  },
+  {
+    "name": "Resn",
+    "country": "Netherlands",
+    "website": "https://resn.co.nz",
+    "category": "creative web production studio",
+    "services": [
+      "interactive web experiences",
+      "campaign sites",
+      "creative development"
+    ],
+    "proof_signals": [
+      "Globally recognized for immersive web projects; Amsterdam presence historically relevant"
+    ],
+    "market_focus": "global brands",
+    "note": "Best fit for experiential web production rather than standard corporate sites.",
+    "sources": [
+      "https://resn.co.nz/"
+    ]
+  },
+  {
+    "name": "Active Theory",
+    "country": "Netherlands",
+    "website": "https://activetheory.net",
+    "category": "creative technology / web experience studio",
+    "services": [
+      "3D web experiences",
+      "creative development",
+      "interactive campaigns"
+    ],
+    "proof_signals": [
+      "High-profile brand work across immersive web"
+    ],
+    "market_focus": "global brand experiences",
+    "note": "Technical creative studio for ambitious browser-based brand experiences.",
+    "sources": [
+      "https://activetheory.net/"
+    ]
+  },
+  {
+    "name": "Dogstudio",
+    "country": "Belgium",
+    "website": "https://dogstudio.co",
+    "category": "creative digital studio",
+    "services": [
+      "digital experiences",
+      "branding",
+      "web production"
+    ],
+    "proof_signals": [
+      "International awards/recognition in digital design circles"
+    ],
+    "market_focus": "international brands",
+    "note": "Belgian studio known for visually ambitious, story-led web work.",
+    "sources": [
+      "https://dogstudio.co/"
+    ]
+  },
+  {
+    "name": "Base Design",
+    "country": "Belgium",
+    "website": "https://basedesign.com",
+    "category": "branding + digital studio",
+    "services": [
+      "branding",
+      "digital design",
+      "web experience"
+    ],
+    "proof_signals": [
+      "Longstanding international design consultancy with Brussels roots"
+    ],
+    "market_focus": "global brands",
+    "note": "Not a pure web studio, but relevant for premium brand-led site programs.",
+    "sources": [
+      "https://basedesign.com/"
+    ]
+  },
+  {
+    "name": "CartedIn",
+    "country": "Romania",
+    "website": "https://cartedin.com",
+    "category": "Shopify / e-commerce agency",
+    "services": [
+      "Shopify development",
+      "migration",
+      "retention",
+      "UX/UI"
+    ],
+    "proof_signals": [
+      "Visible specialist positioning in European Shopify ecosystem"
+    ],
+    "market_focus": "EU e-commerce brands",
+    "note": "Eastern European commerce specialist worth watching for Shopify-focused delivery.",
+    "sources": [
+      "https://cartedin.com/"
+    ]
+  },
+  {
+    "name": "Enlivy",
+    "country": "Czech Republic",
+    "website": "https://enlivy.cz",
+    "category": "web development studio",
+    "services": [
+      "custom web development",
+      "UX/UI",
+      "digital products"
+    ],
+    "proof_signals": [
+      "Regional visibility; specialist web positioning"
+    ],
+    "market_focus": "Czech and EU market",
+    "note": "Represents credible Central European web production capability.",
+    "sources": [
+      "https://enlivy.cz/"
+    ]
+  },
+  {
+    "name": "Ackee",
+    "country": "Czech Republic",
+    "website": "https://www.ackee.agency",
+    "category": "product and web development studio",
+    "services": [
+      "web apps",
+      "mobile",
+      "UX/UI",
+      "product development"
+    ],
+    "proof_signals": [
+      "Well-known Prague digital product shop"
+    ],
+    "market_focus": "Central Europe and international",
+    "note": "Product engineering studio with solid web-app credentials.",
+    "sources": [
+      "https://www.ackee.agency/"
+    ]
+  },
+  {
+    "name": "STRV",
+    "country": "Czech Republic",
+    "website": "https://www.strv.com",
+    "category": "product development studio",
+    "services": [
+      "design",
+      "web app development",
+      "engineering"
+    ],
+    "proof_signals": [
+      "High-profile international product clients"
+    ],
+    "market_focus": "US/EU startup and enterprise product teams",
+    "note": "Broader product firm but notable for premium engineering-driven web products.",
+    "sources": [
+      "https://www.strv.com/"
+    ]
+  },
+  {
+    "name": "Naturaily",
+    "country": "Poland",
+    "website": "https://naturaily.com",
+    "category": "Shopify / web development studio",
+    "services": [
+      "Shopify development",
+      "headless commerce",
+      "custom web development"
+    ],
+    "proof_signals": [
+      "Recognized Polish commerce specialist"
+    ],
+    "market_focus": "international e-commerce brands",
+    "note": "Strong technical commerce house from Poland with boutique focus.",
+    "sources": [
+      "https://naturaily.com/"
+    ]
+  },
+  {
+    "name": "Adchitects",
+    "country": "Poland",
+    "website": "https://www.adchitects.co",
+    "category": "web design and development studio",
+    "services": [
+      "website strategy",
+      "design",
+      "Webflow/WordPress/custom development"
+    ],
+    "proof_signals": [
+      "Strong public portfolio and international SaaS client presence"
+    ],
+    "market_focus": "SaaS/startups and B2B brands",
+    "note": "Nicely focused studio for modern marketing sites and web rebrands.",
+    "sources": [
+      "https://www.adchitects.co/"
+    ]
+  },
+  {
+    "name": "Tonik",
+    "country": "Poland",
+    "website": "https://tonik.com",
+    "category": "branding + digital product studio",
+    "services": [
+      "branding",
+      "UX/UI",
+      "web/product design"
+    ],
+    "proof_signals": [
+      "Visible design studio profile in Poland"
+    ],
+    "market_focus": "tech companies and modern brands",
+    "note": "Useful inclusion where brand systems and digital product surfaces meet.",
+    "sources": [
+      "https://tonik.com/"
+    ]
+  },
+  {
+    "name": "Dtail Studio",
+    "country": "Denmark",
+    "website": "https://dtailstudio.com",
+    "category": "branding + web studio",
+    "services": [
+      "branding",
+      "e-commerce design",
+      "digital experiences"
+    ],
+    "proof_signals": [
+      "Emerging visibility in premium European commerce design"
+    ],
+    "market_focus": "Nordic/international fashion and lifestyle brands",
+    "note": "Boutique Nordic design studio with strong visual-commerce sensibility.",
+    "sources": [
+      "https://dtailstudio.com/"
+    ]
+  },
+  {
+    "name": "Stupid Studios",
+    "country": "Denmark",
+    "website": "https://stupid-studios.com",
+    "category": "creative web studio",
+    "services": [
+      "web design",
+      "creative development",
+      "branding"
+    ],
+    "proof_signals": [
+      "Recognizable studio brand in Copenhagen creative scene"
+    ],
+    "market_focus": "culture/fashion/brand clients",
+    "note": "Creative boutique best for distinct, art-directed web experiences.",
+    "sources": [
+      "https://stupid-studios.com/"
+    ]
+  },
+  {
+    "name": "Kurppa Hosk",
+    "country": "Sweden",
+    "website": "https://kurppahosk.com",
+    "category": "brand and digital design studio",
+    "services": [
+      "brand strategy",
+      "identity",
+      "digital design systems"
+    ],
+    "proof_signals": [
+      "Internationally recognized brand studio since 2009"
+    ],
+    "market_focus": "global brands",
+    "note": "Brand-led rather than pure web, but influential in premium digital identity work.",
+    "sources": [
+      "https://kurppahosk.com/"
+    ]
+  },
+  {
+    "name": "Bontouch",
+    "country": "Sweden",
+    "website": "https://bontouch.com",
+    "category": "digital product studio",
+    "services": [
+      "product strategy",
+      "design",
+      "app/web development"
+    ],
+    "proof_signals": [
+      "Longstanding Nordic product studio reputation"
+    ],
+    "market_focus": "Nordics and international enterprise",
+    "note": "Primarily product-focused but credible for high-end web application delivery.",
+    "sources": [
+      "https://bontouch.com/"
+    ]
+  },
+  {
+    "name": "North Kingdom",
+    "country": "Sweden",
+    "website": "https://www.northkingdom.com",
+    "category": "creative experience studio",
+    "services": [
+      "interactive campaigns",
+      "web experiences",
+      "digital storytelling"
+    ],
+    "proof_signals": [
+      "Global recognition for digital craft"
+    ],
+    "market_focus": "global consumer brands",
+    "note": "A standout for immersive campaign and storytelling websites.",
+    "sources": [
+      "https://www.northkingdom.com/"
+    ]
+  },
+  {
+    "name": "Family",
+    "country": "Sweden",
+    "website": "https://family.se",
+    "category": "design and brand studio with digital capability",
+    "services": [
+      "branding",
+      "digital design",
+      "campaign/web"
+    ],
+    "proof_signals": [
+      "Respected Stockholm studio profile"
+    ],
+    "market_focus": "Nordic brands",
+    "note": "More brand-led, but relevant for integrated brand/web programs.",
+    "sources": [
+      "https://family.se/"
+    ]
+  },
+  {
+    "name": "Fantomas",
+    "country": "Norway",
+    "website": "https://fantomas.no",
+    "category": "digital design studio",
+    "services": [
+      "design systems",
+      "digital products",
+      "web design"
+    ],
+    "proof_signals": [
+      "Recognized Oslo digital design consultancy"
+    ],
+    "market_focus": "Norway and Nordics",
+    "note": "Well-regarded Norwegian design shop with strong UX credentials.",
+    "sources": [
+      "https://fantomas.no/"
+    ]
+  },
+  {
+    "name": "Frontkom",
+    "country": "Norway",
+    "website": "https://frontkom.no",
+    "category": "web development / digital agency",
+    "services": [
+      "web development",
+      "CMS",
+      "e-commerce",
+      "UX"
+    ],
+    "proof_signals": [
+      "Longstanding Nordic web delivery company"
+    ],
+    "market_focus": "Nordics and Europe",
+    "note": "More implementation-focused, useful for enterprise/public web platforms.",
+    "sources": [
+      "https://frontkom.no/"
+    ]
+  },
+  {
+    "name": "Shape",
+    "country": "Denmark",
+    "website": "https://shape.dk",
+    "category": "digital product studio",
+    "services": [
+      "design",
+      "web/app development",
+      "digital products"
+    ],
+    "proof_signals": [
+      "High-profile Scandinavian product studio"
+    ],
+    "market_focus": "Nordic enterprise/startup market",
+    "note": "Known more for products than websites, but a credible premium build partner.",
+    "sources": [
+      "https://shape.dk/"
+    ]
+  },
+  {
+    "name": "Brave New",
+    "country": "Austria",
+    "website": "https://bravenew.at",
+    "category": "web design and development studio",
+    "services": [
+      "web design",
+      "development",
+      "branding"
+    ],
+    "proof_signals": [
+      "Regional studio visibility"
+    ],
+    "market_focus": "Austria and DACH",
+    "note": "Representative DACH boutique web studio with design/development mix.",
+    "sources": [
+      "https://bravenew.at/"
+    ]
+  },
+  {
+    "name": "Wollzelle",
+    "country": "Austria",
+    "website": "https://wollzelle.com",
+    "category": "digital agency / web studio",
+    "services": [
+      "web design",
+      "development",
+      "digital campaigns"
+    ],
+    "proof_signals": [
+      "Established Vienna studio footprint"
+    ],
+    "market_focus": "Austria",
+    "note": "Creative Vienna studio relevant in local premium web market.",
+    "sources": [
+      "https://wollzelle.com/"
+    ]
+  },
+  {
+    "name": "Huncwot",
+    "country": "Poland",
+    "website": "https://huncwot.com",
+    "category": "creative technology studio",
+    "services": [
+      "interactive web experiences",
+      "creative development",
+      "digital campaigns"
+    ],
+    "proof_signals": [
+      "Strong recognition for award-winning web work"
+    ],
+    "market_focus": "international brands",
+    "note": "One of Poland's most notable creative web production studios.",
+    "sources": [
+      "https://huncwot.com/"
+    ]
+  },
+  {
+    "name": "Fornova Studio",
+    "country": "Slovenia",
+    "website": "https://fornova.studio",
+    "category": "web design studio",
+    "services": [
+      "web design",
+      "branding",
+      "Webflow/custom sites"
+    ],
+    "proof_signals": [
+      "Boutique studio visibility in CEE design circles"
+    ],
+    "market_focus": "EU startups and brands",
+    "note": "Smaller but credible modern studio for polished marketing websites.",
+    "sources": [
+      "https://fornova.studio/"
+    ]
+  },
+  {
+    "name": "Moye Design",
+    "country": "Serbia",
+    "website": "https://moye.design",
+    "category": "web and branding studio",
+    "services": [
+      "branding",
+      "website design",
+      "creative direction"
+    ],
+    "proof_signals": [
+      "Visible boutique portfolio and international positioning"
+    ],
+    "market_focus": "international startups/brands",
+    "note": "Design-driven Balkan studio with clean brand/web integration.",
+    "sources": [
+      "https://moye.design/"
+    ]
+  },
+  {
+    "name": "Qream",
+    "country": "Slovakia",
+    "website": "https://qream.com",
+    "category": "creative digital studio",
+    "services": [
+      "web experiences",
+      "design",
+      "development"
+    ],
+    "proof_signals": [
+      "Respected CEE creative studio profile"
+    ],
+    "market_focus": "regional and international brands",
+    "note": "Known for premium crafted digital experiences from CEE.",
+    "sources": [
+      "https://qream.com/"
+    ]
+  },
+  {
+    "name": "Median",
+    "country": "Croatia",
+    "website": "https://median.hr",
+    "category": "digital product and web studio",
+    "services": [
+      "UX/UI",
+      "web development",
+      "product strategy"
+    ],
+    "proof_signals": [
+      "Established Zagreb digital shop"
+    ],
+    "market_focus": "Croatia and wider EU",
+    "note": "Solid Southeastern Europe representative with product/web balance.",
+    "sources": [
+      "https://median.hr/"
+    ]
+  },
+  {
+    "name": "Infinum",
+    "country": "Croatia",
+    "website": "https://infinum.com",
+    "category": "digital product agency",
+    "services": [
+      "design",
+      "web development",
+      "product strategy",
+      "engineering"
+    ],
+    "proof_signals": [
+      "Internationally visible agency with strong engineering reputation"
+    ],
+    "market_focus": "EU/US product teams",
+    "note": "Broader than web-only, but a major regional player for premium web products.",
+    "sources": [
+      "https://infinum.com/"
+    ]
+  },
+  {
+    "name": "Q agency",
+    "country": "Croatia",
+    "website": "https://q.agency",
+    "category": "web and product development agency",
+    "services": [
+      "web development",
+      "design",
+      "staffed delivery teams"
+    ],
+    "proof_signals": [
+      "Well-known Croatian engineering agency"
+    ],
+    "market_focus": "international scale-ups/enterprise",
+    "note": "More engineering-led than studio-led, but notable in EU web delivery market.",
+    "sources": [
+      "https://q.agency/"
+    ]
+  },
+  {
+    "name": "DevriX",
+    "country": "Bulgaria",
+    "website": "https://devrix.com",
+    "category": "WordPress development agency",
+    "services": [
+      "WordPress engineering",
+      "retainers",
+      "enterprise publishing sites"
+    ],
+    "proof_signals": [
+      "Established specialist reputation in WordPress enterprise space"
+    ],
+    "market_focus": "international publishers and SMB/enterprise",
+    "note": "One of CEE's more visible specialist web engineering companies.",
+    "sources": [
+      "https://devrix.com/"
+    ]
+  },
+  {
+    "name": "eDesign Interactive",
+    "country": "Bulgaria",
+    "website": "https://edesigninteractive.com",
+    "category": "web design and development agency",
+    "services": [
+      "website design",
+      "development",
+      "interactive storytelling"
+    ],
+    "proof_signals": [
+      "International portfolio and web awards visibility"
+    ],
+    "market_focus": "US/EU brands",
+    "note": "Bulgarian-rooted studio with strong marketing-site and storytelling credentials.",
+    "sources": [
+      "https://edesigninteractive.com/"
+    ]
+  },
+  {
+    "name": "DigitInk",
+    "country": "Bulgaria",
+    "website": "https://digitink.com",
+    "category": "web design / digital growth agency",
+    "services": [
+      "web design",
+      "landing pages",
+      "growth marketing"
+    ],
+    "proof_signals": [
+      "Visible B2B digital delivery profile"
+    ],
+    "market_focus": "B2B/SaaS in Europe",
+    "note": "Useful inclusion for conversion-minded web builds tied to performance marketing.",
+    "sources": [
+      "https://digitink.com/"
+    ]
+  },
+  {
+    "name": "Studio Ubique",
+    "country": "Netherlands",
+    "website": "https://www.studioubique.com",
+    "category": "custom web development studio",
+    "services": [
+      "web applications",
+      "Laravel/Vue",
+      "UX/UI"
+    ],
+    "proof_signals": [
+      "Growing reputation in NL custom web build segment"
+    ],
+    "market_focus": "Netherlands and EU",
+    "note": "Developer-led Dutch studio for custom platforms rather than brochure sites.",
+    "sources": [
+      "https://www.studioubique.com/"
+    ]
+  }
+]

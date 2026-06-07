@@ -1,0 +1,108 @@
+<svg width="1600" height="2200" viewBox="0 0 1600 2200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" stroke="#212A33" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="2200" fill="#040A11"/>
+  <rect width="1600" height="2200" fill="url(#grid)" opacity="0.5"/>
+
+  <text x="96" y="92" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="4">HAB. BRAND GUIDEBOOK / PAGE 1</text>
+  <text x="96" y="250" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="166" font-weight="700" letter-spacing="-7">hab</text>
+  <circle cx="472" cy="217" r="20" fill="#60E56B"/>
+  <text x="96" y="338" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="52" font-weight="700">Цифровая мастерская,</text>
+  <text x="96" y="396" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="52" font-weight="700">а не агентство.</text>
+  <text x="96" y="456" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="28">Система бренда строится вокруг идеи</text>
+  <text x="96" y="494" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="28">hub / node / product system.</text>
+
+  <rect x="96" y="500" width="438" height="228" rx="28" fill="#09121C" stroke="#212A33"/>
+  <text x="132" y="568" fill="#60E56B" font-family="Arial, sans-serif" font-size="24" font-weight="700">ПОЗИЦИОНИРОВАНИЕ</text>
+  <text x="132" y="626" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="30" font-weight="700">Не агентство.</text>
+  <text x="132" y="662" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="30" font-weight="700">Мастерская.</text>
+  <text x="132" y="692" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="19">Компактная команда, один контур:</text>
+  <text x="132" y="720" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="19">дизайн, код, запуск, развитие.</text>
+
+  <rect x="580" y="500" width="438" height="228" rx="28" fill="#09121C" stroke="#212A33"/>
+  <text x="616" y="568" fill="#60E56B" font-family="Arial, sans-serif" font-size="24" font-weight="700">ХАРАКТЕР</text>
+  <text x="616" y="626" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="30" font-weight="700">Спокойный</text>
+  <text x="616" y="662" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="30" font-weight="700">и уверенный</text>
+  <text x="616" y="692" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="19">Технологичный, собранный,</text>
+  <text x="616" y="720" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="19">без пафоса и рекламной мишуры.</text>
+
+  <rect x="1064" y="500" width="438" height="228" rx="28" fill="#09121C" stroke="#212A33"/>
+  <text x="1100" y="568" fill="#60E56B" font-family="Arial, sans-serif" font-size="24" font-weight="700">СИМВОЛ</text>
+  <text x="1100" y="626" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="30" font-weight="700">Точка как</text>
+  <text x="1100" y="662" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="30" font-weight="700">active node</text>
+  <text x="1100" y="692" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="19">Не финал фразы, а центр связи,</text>
+  <text x="1100" y="720" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="19">запуска и маршрутизации.</text>
+
+  <text x="96" y="842" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="60" font-weight="700">Логосистема</text>
+  <rect x="96" y="886" width="1408" height="676" rx="32" fill="#09121C" stroke="#212A33"/>
+
+  <rect x="132" y="932" width="404" height="586" rx="24" fill="#0C1621" stroke="#212A33"/>
+  <text x="164" y="986" fill="#8F9AA4" font-family="Courier New, monospace" font-size="22" font-weight="700">WORDMARK</text>
+  <text x="164" y="1166" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="138" font-weight="700" letter-spacing="-6">hab</text>
+  <circle cx="423" cy="1132" r="18" fill="#60E56B"/>
+  <text x="164" y="1280" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="26">Основной знак бренда.</text>
+  <text x="164" y="1318" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="26">Строчный, чистый,</text>
+  <text x="164" y="1352" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="26">без декора.</text>
+  <text x="164" y="1430" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="24" font-weight="700">Правила:</text>
+  <text x="164" y="1468" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="22">• без теней</text>
+  <text x="164" y="1502" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="22">• без градиента в тексте</text>
+
+  <rect x="598" y="932" width="404" height="586" rx="24" fill="#0C1621" stroke="#212A33"/>
+  <text x="630" y="986" fill="#8F9AA4" font-family="Courier New, monospace" font-size="22" font-weight="700">NODE ICON</text>
+  <circle cx="800" cy="1144" r="22" fill="#60E56B"/>
+  <circle cx="800" cy="1018" r="8" fill="#F4F2EA"/>
+  <circle cx="908" cy="1082" r="8" fill="#F4F2EA"/>
+  <circle cx="908" cy="1206" r="8" fill="#F4F2EA"/>
+  <circle cx="692" cy="1206" r="8" fill="#F4F2EA"/>
+  <circle cx="692" cy="1082" r="8" fill="#F4F2EA"/>
+  <line x1="800" y1="1124" x2="800" y2="1030" stroke="#F4F2EA" stroke-width="5" stroke-linecap="round"/>
+  <line x1="817" y1="1134" x2="892" y2="1089" stroke="#F4F2EA" stroke-width="5" stroke-linecap="round"/>
+  <line x1="817" y1="1156" x2="892" y2="1199" stroke="#F4F2EA" stroke-width="5" stroke-linecap="round"/>
+  <line x1="783" y1="1156" x2="708" y2="1199" stroke="#F4F2EA" stroke-width="5" stroke-linecap="round"/>
+  <line x1="783" y1="1134" x2="708" y2="1089" stroke="#F4F2EA" stroke-width="5" stroke-linecap="round"/>
+  <text x="630" y="1280" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="23">Знак для favicon, OG</text>
+  <text x="630" y="1314" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="23">и соцсетей.</text>
+  <text x="630" y="1360" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="23">Node — главный акцент.</text>
+
+  <rect x="1064" y="932" width="404" height="586" rx="24" fill="#0C1621" stroke="#212A33"/>
+  <text x="1096" y="986" fill="#8F9AA4" font-family="Courier New, monospace" font-size="22" font-weight="700">HEX HUB</text>
+  <polygon points="1266,1016 1382,1083 1382,1217 1266,1284 1150,1217 1150,1083" stroke="#F4F2EA" stroke-width="8"/>
+  <circle cx="1266" cy="1150" r="22" fill="#60E56B"/>
+  <line x1="1266" y1="1130" x2="1266" y2="1042" stroke="#F4F2EA" stroke-width="5" stroke-linecap="round"/>
+  <line x1="1283" y1="1140" x2="1362" y2="1094" stroke="#F4F2EA" stroke-width="5" stroke-linecap="round"/>
+  <line x1="1283" y1="1162" x2="1362" y2="1208" stroke="#F4F2EA" stroke-width="5" stroke-linecap="round"/>
+  <line x1="1249" y1="1162" x2="1170" y2="1208" stroke="#F4F2EA" stroke-width="5" stroke-linecap="round"/>
+  <line x1="1249" y1="1140" x2="1170" y2="1094" stroke="#F4F2EA" stroke-width="5" stroke-linecap="round"/>
+  <text x="1096" y="1312" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="21">Системный вариант:</text>
+  <text x="1096" y="1344" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="21">модульность, сеть,</text>
+  <text x="1096" y="1376" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="21">инженерная чистота.</text>
+
+  <text x="96" y="1684" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="60" font-weight="700">Палитра</text>
+  <rect x="96" y="1728" width="1408" height="354" rx="32" fill="#09121C" stroke="#212A33"/>
+
+  <rect x="132" y="1780" width="300" height="126" rx="22" fill="#040A11" stroke="#212A33"/>
+  <text x="156" y="1830" fill="#8F9AA4" font-family="Courier New, monospace" font-size="22">BG</text>
+  <text x="156" y="1876" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="30" font-weight="700">#040A11</text>
+
+  <rect x="462" y="1780" width="300" height="126" rx="22" fill="#09121C" stroke="#212A33"/>
+  <text x="486" y="1830" fill="#8F9AA4" font-family="Courier New, monospace" font-size="22">BG-ELEV</text>
+  <text x="486" y="1876" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="30" font-weight="700">#09121C</text>
+
+  <rect x="792" y="1780" width="300" height="126" rx="22" fill="#F4F2EA"/>
+  <text x="816" y="1830" fill="#5B646E" font-family="Courier New, monospace" font-size="22">FG</text>
+  <text x="816" y="1876" fill="#021704" font-family="Arial, sans-serif" font-size="30" font-weight="700">#F4F2EA</text>
+
+  <rect x="1122" y="1780" width="300" height="126" rx="22" fill="#60E56B"/>
+  <text x="1146" y="1830" fill="#021704" font-family="Courier New, monospace" font-size="22">ACCENT</text>
+  <text x="1146" y="1876" fill="#021704" font-family="Arial, sans-serif" font-size="30" font-weight="700">#60E56B</text>
+
+  <text x="132" y="1958" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="22">Accent используется точечно:</text>
+  <text x="132" y="1988" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="22">CTA, node-элементы, ключевые сигналы.</text>
+  <text x="132" y="2026" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="22">Основная сцена бренда — тёмная,</text>
+  <text x="132" y="2056" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="22">технологичная и собранная.</text>
+
+  <text x="96" y="2130" fill="#5B646E" font-family="Arial, sans-serif" font-size="20">v1 by Amber</text>
+</svg>

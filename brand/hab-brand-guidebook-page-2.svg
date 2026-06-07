@@ -1,0 +1,56 @@
+<svg width="1600" height="2200" viewBox="0 0 1600 2200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" stroke="#212A33" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="2200" fill="#040A11"/>
+  <rect width="1600" height="2200" fill="url(#grid)" opacity="0.5"/>
+
+  <text x="96" y="92" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="4">HAB. BRAND GUIDEBOOK / PAGE 2</text>
+  <text x="96" y="188" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="60" font-weight="700">Типографика, тон</text>
+  <text x="96" y="256" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="60" font-weight="700">и интерфейсные правила</text>
+
+  <rect x="96" y="288" width="1408" height="620" rx="32" fill="#09121C" stroke="#212A33"/>
+  <text x="132" y="362" fill="#60E56B" font-family="Courier New, monospace" font-size="24" font-weight="700">DISPLAY / INTER 500</text>
+  <text x="132" y="456" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="66" font-weight="700">Не агентство.</text>
+  <text x="132" y="526" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="66" font-weight="700">Мастерская.</text>
+  <text x="132" y="586" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="24">Display — medium, tracking-tight,</text>
+  <text x="132" y="620" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="24">без тяжёлых насыщенных начертаний.</text>
+
+  <text x="132" y="644" fill="#60E56B" font-family="Courier New, monospace" font-size="24" font-weight="700">BODY / INTER 400</text>
+  <text x="132" y="720" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="30">Запускаем сайты и веб-продукты</text>
+  <text x="132" y="760" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="30">за 2–6 недель.</text>
+  <text x="132" y="808" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="30">Дальше улучшаем по данным</text>
+  <text x="132" y="848" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="30">и обратной связи.</text>
+
+  <rect x="96" y="980" width="680" height="610" rx="32" fill="#09121C" stroke="#212A33"/>
+  <text x="132" y="1054" fill="#60E56B" font-family="Courier New, monospace" font-size="24" font-weight="700">VOICE / DO</text>
+  <text x="132" y="1132" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="32">• говорим от «мы»</text>
+  <text x="132" y="1180" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="32">• коротко и активно</text>
+  <text x="132" y="1228" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="32">• с цифрами и конкретикой</text>
+  <text x="132" y="1276" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="32">• без воды и клише</text>
+  <text x="132" y="1368" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="28">Хорошо:</text>
+  <text x="132" y="1414" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="26">«Запускаем рабочий MVP</text>
+  <text x="132" y="1450" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="26">за 2–6 недель»</text>
+  <text x="132" y="1500" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="24">«Один проектный контур:</text>
+  <text x="132" y="1532" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="24">дизайн, код, запуск»</text>
+
+  <rect x="824" y="980" width="680" height="560" rx="32" fill="#09121C" stroke="#212A33"/>
+  <text x="860" y="1054" fill="#FA6863" font-family="Courier New, monospace" font-size="24" font-weight="700">VOICE / DON'T</text>
+  <text x="860" y="1132" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="32">• «команда профессионалов»</text>
+  <text x="860" y="1180" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="32">• «индивидуальный подход»</text>
+  <text x="860" y="1228" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="32">• «полный спектр услуг»</text>
+  <text x="860" y="1276" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="32">• «инновационные решения»</text>
+  <text x="860" y="1368" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="24">Плохо: звучит обезличенно</text>
+  <text x="860" y="1402" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="24">и как типовой агентский шаблон.</text>
+
+  <rect x="96" y="1642" width="1408" height="340" rx="32" fill="#09121C" stroke="#212A33"/>
+  <text x="132" y="1702" fill="#60E56B" font-family="Courier New, monospace" font-size="22" font-weight="700">UI / SHAPE / MOTION</text>
+  <text x="132" y="1754" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="28">Радиусы: 4 / 8 / 14 / 22 / 32px</text>
+  <text x="132" y="1810" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="28">Motion: 200ms hover · 350ms transitions</text>
+  <text x="132" y="1848" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="28">700ms reveal · ease: cubic-bezier(0.16, 1, 0.3, 1)</text>
+  <text x="132" y="1912" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="24">Анимация — отклик системы, а не декоративный шум.</text>
+
+  <text x="96" y="2130" fill="#5B646E" font-family="Arial, sans-serif" font-size="20">v1 by Amber</text>
+</svg>

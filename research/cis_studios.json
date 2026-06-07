@@ -1,0 +1,502 @@
+[
+  {
+    "name": "UPQODE",
+    "country": "Kazakhstan",
+    "website": "https://upqode.com",
+    "positioning": "web design agency",
+    "key_services": ["web design", "website development"],
+    "proof_signals": {"awards": "More than 40 awards", "sample_clients_or_cases": ["RippaSend", "Concentric AI", "Bethesda"], "source_url": "https://upqode.com"},
+    "language_market_focus": "English, international",
+    "differentiation": "Premium customer-focused web design agency with visible awards and portfolio depth."
+  },
+  {
+    "name": "DAR",
+    "country": "Kazakhstan",
+    "website": "https://dar.ee",
+    "positioning": "product/web studio",
+    "key_services": ["digital products", "web development", "design"],
+    "proof_signals": {"note": "Listed prominently in search rankings for Kazakhstan web studios", "source_url": "https://themanifest.com/kz/web-design/agencies"},
+    "language_market_focus": "Likely RU/EN, Kazakhstan and regional",
+    "differentiation": "Known as a prominent Kazakhstan tech/product builder rather than a generic ad agency."
+  },
+  {
+    "name": "Resolventa",
+    "country": "Kazakhstan",
+    "website": "https://resolventa.com",
+    "positioning": "web development studio",
+    "key_services": ["full-stack web development", "custom websites", "web design"],
+    "proof_signals": {"note": "Highlighted in search results for technical expertise and timely delivery", "source_url": "https://clutch.co/kz/web-developers"},
+    "language_market_focus": "Likely RU/EN, Kazakhstan",
+    "differentiation": "Strong custom web/app orientation with delivery-focused reputation."
+  },
+  {
+    "name": "SABYR TECHNOLOGIES",
+    "country": "Kazakhstan",
+    "website": "https://sabyr.kz",
+    "positioning": "web development company",
+    "key_services": ["web development", "web design", "full-stack development"],
+    "proof_signals": {"note": "Search-ranked Kazakhstan vendor with praise for project management", "source_url": "https://clutch.co/kz/web-developers"},
+    "language_market_focus": "Kazakhstan, likely RU/KZ",
+    "differentiation": "Pragmatic full-stack shop with visible local-market relevance."
+  },
+  {
+    "name": "iBEC Systems",
+    "country": "Kazakhstan",
+    "website": "https://ibecsystems.kz",
+    "positioning": "web studio",
+    "key_services": ["web development", "web design", "social media marketing", "custom software"],
+    "proof_signals": {"founded": "2004", "source_url": "https://clutch.co/kz/web-developers"},
+    "language_market_focus": "Kazakhstan, likely RU/KZ",
+    "differentiation": "Longer-running Kazakhstan studio combining web build and marketing support."
+  },
+  {
+    "name": "GEXABYTE",
+    "country": "Kazakhstan",
+    "website": "https://gexabyte.com",
+    "positioning": "web development company",
+    "key_services": ["custom website development", "web application development"],
+    "proof_signals": {"note": "Appears in Kazakhstan rankings for quality delivery", "source_url": "https://clutch.co/kz/web-developers"},
+    "language_market_focus": "Kazakhstan/international",
+    "differentiation": "Custom-build oriented studio with app-level capability."
+  },
+  {
+    "name": "Init.kz",
+    "country": "Kazakhstan",
+    "website": "https://init.kz",
+    "positioning": "web studio",
+    "key_services": ["web development", "web design"],
+    "proof_signals": {"founded": "2011", "source_url": "https://themanifest.com/kz/web-design/agencies"},
+    "language_market_focus": "Kazakhstan, likely RU/KZ",
+    "differentiation": "Local web studio with straightforward website-production focus."
+  },
+  {
+    "name": "Concept House",
+    "country": "Kazakhstan",
+    "website": "https://concepthouse.kz",
+    "positioning": "web design agency",
+    "key_services": ["web design", "branding"],
+    "proof_signals": {"founded": "2011", "source_url": "https://themanifest.com/kz/web-design/agencies"},
+    "language_market_focus": "Kazakhstan",
+    "differentiation": "Design-led local agency with web as a core output."
+  },
+  {
+    "name": "Rocket Firm IT Production",
+    "country": "Kazakhstan",
+    "website": "https://rocketfirm.com",
+    "positioning": "product/web studio",
+    "key_services": ["research", "UI/UX design", "mobile development", "web development"],
+    "proof_signals": {"note": "Listed in Kazakhstan web/design rankings", "source_url": "https://themanifest.com/kz/web-design/agencies"},
+    "language_market_focus": "Kazakhstan/regional",
+    "differentiation": "Combines product research and UI/UX with web delivery."
+  },
+  {
+    "name": "Kurmashev Studio",
+    "country": "Kazakhstan",
+    "website": "https://kurmashev.studio",
+    "positioning": "branding + UX/UI studio",
+    "key_services": ["branding", "UX/UI design", "web design"],
+    "proof_signals": {"note": "Noted in Kazakhstan agency lists", "source_url": "https://themanifest.com/kz/web-design/agencies"},
+    "language_market_focus": "Kazakhstan/international",
+    "differentiation": "Brand-first studio suitable for premium visual web projects."
+  },
+  {
+    "name": "Astana Digital Group",
+    "country": "Kazakhstan",
+    "website": "https://adg.kz",
+    "positioning": "enterprise web solutions company",
+    "key_services": ["corporate websites", "government web solutions", "enterprise web development"],
+    "proof_signals": {"note": "Mentioned in search summaries as enterprise-level provider", "source_url": "https://www.softwareworld.co/web-development-companies/kazakhstan/"},
+    "language_market_focus": "Kazakhstan, likely RU/KZ",
+    "differentiation": "More enterprise/government-oriented than boutique studio peers."
+  },
+  {
+    "name": "Purrweb",
+    "country": "Kazakhstan",
+    "website": "https://www.purrweb.com",
+    "positioning": "product development studio",
+    "key_services": ["MVP development", "web apps", "mobile apps"],
+    "proof_signals": {"note": "Widely visible regional product studio; included pragmatically as notable", "source_url": "https://www.purrweb.com"},
+    "language_market_focus": "English/international",
+    "differentiation": "Fast MVP/product-build angle rather than classic brochure-site work."
+  },
+  {
+    "name": "Artkai",
+    "country": "Ukraine",
+    "website": "https://artkai.io",
+    "positioning": "product/web studio",
+    "key_services": ["digital product design", "web design", "web development"],
+    "proof_signals": {"note": "Consistently cited in Ukraine rankings", "source_url": "https://www.designrush.com/agency/web-development-companies/ua"},
+    "language_market_focus": "English, international",
+    "differentiation": "Strong product-thinking and design polish for web products."
+  },
+  {
+    "name": "MEGASITE",
+    "country": "Ukraine",
+    "website": "https://megasite.ua/en/about",
+    "positioning": "web studio",
+    "key_services": ["website creation", "web development"],
+    "proof_signals": {"years": "15+ years", "case_count": "940+ developed projects", "claim": "Top 1 web sites developers in Ukraine", "source_url": "https://megasite.ua/en/about"},
+    "language_market_focus": "UA/RU/EN, Ukraine",
+    "differentiation": "Classic dedicated web-production shop with unusually large project count."
+  },
+  {
+    "name": "League Design Agency",
+    "country": "Ukraine",
+    "website": "https://league.design",
+    "positioning": "branding + web design agency",
+    "key_services": ["web design", "UX/UI", "branding"],
+    "proof_signals": {"note": "Frequently ranked among top Ukraine web design firms", "source_url": "https://clutch.co/ua/web-designers"},
+    "language_market_focus": "English, international",
+    "differentiation": "Brand/design-heavy studio well-suited to premium web experiences."
+  },
+  {
+    "name": "Halo Lab",
+    "country": "Ukraine",
+    "website": "https://halolab.team",
+    "positioning": "design-led web studio",
+    "key_services": ["web design", "UX/UI", "development"],
+    "proof_signals": {"note": "Regularly appears in top Ukraine design/dev shortlists", "source_url": "https://clutch.co/ua/web-designers"},
+    "language_market_focus": "English, international",
+    "differentiation": "Known for modern visual execution and interface craft."
+  },
+  {
+    "name": "Tubik Studio",
+    "country": "Ukraine",
+    "website": "https://tubikstudio.com",
+    "positioning": "design + web studio",
+    "key_services": ["UI/UX", "branding", "web/mobile design"],
+    "proof_signals": {"awards": ["Awwwards", "Red Dot Design Award", "Behance"], "source_url": "https://thedesignest.net/renowned-ukraine-digital-companies/"},
+    "language_market_focus": "English, international",
+    "differentiation": "Globally recognized Ukrainian design studio with awards-backed credibility."
+  },
+  {
+    "name": "Excited",
+    "country": "Ukraine",
+    "website": "https://excited.agency",
+    "positioning": "product design studio",
+    "key_services": ["UI/UX", "web/product design"],
+    "proof_signals": {"note": "Commonly cited in Ukraine design-agency rankings", "source_url": "https://clutch.co/ua/web-designers"},
+    "language_market_focus": "English, international",
+    "differentiation": "Product-design specialist with strong startup/SaaS fit."
+  },
+  {
+    "name": "SPLIT Development",
+    "country": "Ukraine",
+    "website": "https://splitdev.pro",
+    "positioning": "e-commerce web studio",
+    "key_services": ["Shopify Plus", "web development", "e-commerce"],
+    "proof_signals": {"note": "Visible in Ukraine web design/development rankings", "source_url": "https://clutch.co/ua/web-designers"},
+    "language_market_focus": "English, international e-commerce",
+    "differentiation": "Narrower Shopify/e-commerce specialization than generalist peers."
+  },
+  {
+    "name": "VALMAX",
+    "country": "Ukraine",
+    "website": "https://valmax.com.ua/en",
+    "positioning": "web design + development company",
+    "key_services": ["custom websites", "UI/UX design", "responsive design"],
+    "proof_signals": {"note": "Highlighted in Ukraine search rankings for timely delivery", "source_url": "https://clutch.co/ua/web-designers"},
+    "language_market_focus": "UA/EN",
+    "differentiation": "Balanced design-development shop with strong SMB fit."
+  },
+  {
+    "name": "AGMA Studio",
+    "country": "Ukraine",
+    "website": "https://agma.io",
+    "positioning": "web studio",
+    "key_services": ["web design", "web development", "UI/UX"],
+    "proof_signals": {"note": "Repeatedly appears in top web design listings", "source_url": "https://clutch.co/ua/web-designers"},
+    "language_market_focus": "English/international",
+    "differentiation": "Comprehensive web studio with design-forward execution."
+  },
+  {
+    "name": "Giraffe Software",
+    "country": "Ukraine",
+    "website": "https://giraffesoftware.com",
+    "positioning": "web development company",
+    "key_services": ["web development", "consulting", "software testing"],
+    "proof_signals": {"note": "Visible in Ukraine dev-company rankings", "source_url": "https://www.designrush.com/agency/web-development-companies/ua"},
+    "language_market_focus": "English/international",
+    "differentiation": "Engineering-oriented partner for heavier web builds."
+  },
+  {
+    "name": "Cleveroad",
+    "country": "Ukraine",
+    "website": "https://www.cleveroad.com",
+    "positioning": "full-stack web development company",
+    "key_services": ["web development", "web apps", "full-stack engineering"],
+    "proof_signals": {"note": "Highly regarded in reviews for professionalism and flexibility", "source_url": "https://clutch.co/ua/web-developers"},
+    "language_market_focus": "English/international",
+    "differentiation": "Well-known Ukrainian engineering brand with web product delivery capability."
+  },
+  {
+    "name": "Redberry",
+    "country": "Georgia",
+    "website": "https://redberry.international",
+    "positioning": "product/web studio",
+    "key_services": ["digital products", "websites", "apps"],
+    "proof_signals": {"note": "Prominent Georgian digital product company", "source_url": "https://redberry.international"},
+    "language_market_focus": "English/Georgian, regional + international",
+    "differentiation": "One of Georgia’s most visible product-focused web companies."
+  },
+  {
+    "name": "Leavingstone",
+    "country": "Georgia",
+    "website": "https://leavingstone.com",
+    "positioning": "branding + digital/web agency",
+    "key_services": ["digital campaigns", "web projects", "branding"],
+    "proof_signals": {"note": "Long-standing top Georgian creative agency with web capability", "source_url": "https://leavingstone.com"},
+    "language_market_focus": "Georgian/English",
+    "differentiation": "More creative-strategy led, but notable for branded web launches."
+  },
+  {
+    "name": "Red Graphics",
+    "country": "Georgia",
+    "website": "https://red-graphics.com",
+    "positioning": "web design agency",
+    "key_services": ["web design", "branding"],
+    "proof_signals": {"note": "Visible Georgian design studio", "source_url": "https://red-graphics.com"},
+    "language_market_focus": "Georgian/English",
+    "differentiation": "Design-centric studio for visually led web presence."
+  },
+  {
+    "name": "Qwerty",
+    "country": "Georgia",
+    "website": "https://qwerty.ge",
+    "positioning": "web development studio",
+    "key_services": ["website development", "web support"],
+    "proof_signals": {"note": "Local-market Georgian web builder", "source_url": "https://qwerty.ge"},
+    "language_market_focus": "Georgia",
+    "differentiation": "Straightforward local web-production focus."
+  },
+  {
+    "name": "Magma",
+    "country": "Georgia",
+    "website": "https://magma.ge",
+    "positioning": "creative/web studio",
+    "key_services": ["branding", "web projects"],
+    "proof_signals": {"note": "Recognized Georgian creative shop", "source_url": "https://magma.ge"},
+    "language_market_focus": "Georgia",
+    "differentiation": "Blends creative identity work with web execution."
+  },
+  {
+    "name": "BeeWeb",
+    "country": "Armenia",
+    "website": "https://beewebsystems.com",
+    "positioning": "web development company",
+    "key_services": ["custom websites", "full-stack development", "web applications"],
+    "proof_signals": {"note": "Highly praised in Armenia rankings", "source_url": "https://clutch.co/am/web-developers"},
+    "language_market_focus": "English/international",
+    "differentiation": "Strong client-reviewed Armenian web engineering vendor."
+  },
+  {
+    "name": "eWorks",
+    "country": "Armenia",
+    "website": "https://eworks.co",
+    "positioning": "full-stack web development company",
+    "key_services": ["full-stack web development", "custom websites"],
+    "proof_signals": {"note": "Search summary cites 100% positive feedback", "source_url": "https://clutch.co/am/web-developers"},
+    "language_market_focus": "English/international",
+    "differentiation": "Execution-focused engineering studio with strong review signals."
+  },
+  {
+    "name": "Fusion Tech",
+    "country": "Armenia",
+    "website": "https://fusiontech.am",
+    "positioning": "web development company",
+    "key_services": ["full-stack web development", "web applications", "custom websites"],
+    "proof_signals": {"note": "Consistently highlighted for professionalism and communication", "source_url": "https://clutch.co/am/web-developers"},
+    "language_market_focus": "English/international",
+    "differentiation": "Armenian dev shop with broad full-stack website capability."
+  },
+  {
+    "name": "Digital Brains",
+    "country": "Armenia",
+    "website": "https://digitalbrains.am/?lang=en",
+    "positioning": "web development + branding studio",
+    "key_services": ["web development", "UX/UI design", "SEO", "strategic marketing", "brand development"],
+    "proof_signals": {"case_count": "250+ projects completed", "years": "6+", "sample_clients_or_cases": ["aspu.am", "minfin.am", "moonqwines.com"], "source_url": "https://digitalbrains.am/?lang=en"},
+    "language_market_focus": "Armenia plus international",
+    "differentiation": "Combines web production with brand and growth services, but still web-led."
+  },
+  {
+    "name": "ASTUDIO",
+    "country": "Armenia",
+    "website": "https://astudio.am/en",
+    "positioning": "web studio",
+    "key_services": ["custom website development", "e-commerce", "SEO/AIO", "CRM", "ERP", "SaaS", "marketplaces"],
+    "proof_signals": {"case_count": "700+ completed projects (per search summary)", "warranty": "5-year contractual warranty", "source_url": "https://astudio.am/en"},
+    "language_market_focus": "Armenia, likely RU/EN/AM",
+    "differentiation": "Very web-centric Armenian studio spanning simple sites through portals and SaaS."
+  },
+  {
+    "name": "Lionix",
+    "country": "Armenia",
+    "website": "https://lionix.io",
+    "positioning": "web development studio",
+    "key_services": ["web development"],
+    "proof_signals": {"founded": "2017", "source_url": "https://astudio.am/en"},
+    "language_market_focus": "International",
+    "differentiation": "Smaller Armenia-based studio with global service ambition."
+  },
+  {
+    "name": "Webex Technologies",
+    "country": "Armenia",
+    "website": "https://webex.am",
+    "positioning": "web/app development studio",
+    "key_services": ["web application development", "SaaS development", "custom IT solutions"],
+    "proof_signals": {"note": "Referenced in Armenia web studio rankings", "source_url": "https://www.softwareworld.co/web-development-companies/armenia/"},
+    "language_market_focus": "Armenia/international",
+    "differentiation": "Structured custom-solution approach with SaaS/web-app emphasis."
+  },
+  {
+    "name": "PRIME IT Web Development",
+    "country": "Armenia",
+    "website": "https://primeit.am",
+    "positioning": "web development studio",
+    "key_services": ["web development"],
+    "proof_signals": {"note": "Listed among top Armenia web developers", "source_url": "https://clutch.co/am/web-developers"},
+    "language_market_focus": "Armenia",
+    "differentiation": "Pure-play web development positioning."
+  },
+  {
+    "name": "Double Coconut",
+    "country": "Armenia",
+    "website": "https://doublecoconut.com",
+    "positioning": "development studio",
+    "key_services": ["web development", "interactive product development"],
+    "proof_signals": {"note": "Appears in Armenia top company lists", "source_url": "https://themanifest.com/am/web-design/agencies"},
+    "language_market_focus": "International",
+    "differentiation": "Broader product/game DNA but capable on web engagements."
+  },
+  {
+    "name": "IQUADART",
+    "country": "Belarus",
+    "website": "https://iquadart.com",
+    "positioning": "web studio",
+    "key_services": ["website design", "application design", "UX/UI"],
+    "proof_signals": {"note": "Named in Belarus web studio search results", "source_url": "https://www.goodfirms.co/directory/country/top-web-design-companies/by"},
+    "language_market_focus": "International",
+    "differentiation": "Design-oriented Belarusian studio centered on usable digital interfaces."
+  },
+  {
+    "name": "XPGraph",
+    "country": "Belarus",
+    "website": "https://xpgraph.com",
+    "positioning": "web/product studio",
+    "key_services": ["design", "development"],
+    "proof_signals": {"founded": "2008", "source_url": "https://www.goodfirms.co/directory/country/top-web-design-companies/by"},
+    "language_market_focus": "International",
+    "differentiation": "Long-running boutique studio serving both startups and global brands."
+  },
+  {
+    "name": "Arateg",
+    "country": "Belarus",
+    "website": "https://arateg.com",
+    "positioning": "web development company",
+    "key_services": ["marketplace development", "custom web development", "IT outsourcing"],
+    "proof_signals": {"founded": "2014", "source_url": "https://www.goodfirms.co/companies/web-development-agency/by"},
+    "language_market_focus": "USA/Europe-focused delivery",
+    "differentiation": "Marketplace-specialist Belarus firm rather than generic studio."
+  },
+  {
+    "name": "Sky Incom",
+    "country": "Belarus",
+    "website": "https://skyincom.by",
+    "positioning": "web/mobile development company",
+    "key_services": ["IT solution development", "implementation", "support"],
+    "proof_signals": {"years": "15 years", "source_url": "https://aamax.co/blog/top-10-best-web-design-development-companies-belarus"},
+    "language_market_focus": "Belarus/regional",
+    "differentiation": "Established local engineering shop with support/implementation breadth."
+  },
+  {
+    "name": "SmartApp",
+    "country": "Belarus",
+    "website": "https://smartapp.by",
+    "positioning": "web design + development company",
+    "key_services": ["software development", "web design"],
+    "proof_signals": {"note": "Mentioned in Belarus rankings as full-service company", "source_url": "https://aamax.co/blog/top-10-best-web-design-development-companies-belarus"},
+    "language_market_focus": "Belarus/international",
+    "differentiation": "Friendly full-service studio with web design roots."
+  },
+  {
+    "name": "Egorov Agency",
+    "country": "Belarus",
+    "website": "https://egorovagency.by",
+    "positioning": "creative web studio",
+    "key_services": ["AR for web", "e-commerce", "corporate websites", "chatbots"],
+    "proof_signals": {"award_or_rank": "Top 3 most creative studios in Belarus in 2020", "source_url": "https://aamax.co/blog/top-10-best-web-design-development-companies-belarus"},
+    "language_market_focus": "Belarus/regional",
+    "differentiation": "Distinctive creative-tech mix with AR/web emphasis."
+  },
+  {
+    "name": "Ariol",
+    "country": "Belarus",
+    "website": "https://ariol.by",
+    "positioning": "web/mobile studio",
+    "key_services": ["web application development", "mobile app development"],
+    "proof_signals": {"founded": "2010", "source_url": "https://aamax.co/blog/top-10-best-web-design-development-companies-belarus"},
+    "language_market_focus": "International",
+    "differentiation": "Compact Belarusian build shop with dual web/mobile capability."
+  },
+  {
+    "name": "Straut & Skobelev",
+    "country": "Belarus",
+    "website": "https://ss.studio",
+    "positioning": "digital/web studio",
+    "key_services": ["digital products", "branding", "SEO", "web development"],
+    "proof_signals": {"note": "Cited in Belarus search results as full-cycle digital studio", "source_url": "https://aamax.co/blog/top-10-best-web-design-development-companies-belarus"},
+    "language_market_focus": "Belarus/international",
+    "differentiation": "Closer to a classic modern studio marrying strategy, brand, and web build."
+  },
+  {
+    "name": "Livepage",
+    "country": "Uzbekistan",
+    "website": "https://livepage.uz",
+    "positioning": "web studio",
+    "key_services": ["website development", "SEO"],
+    "proof_signals": {"note": "Pragmatic inclusion based on visible local market presence", "source_url": "https://livepage.uz"},
+    "language_market_focus": "Uzbekistan",
+    "differentiation": "Local Uzbekistan web-production shop with search/growth adjacency."
+  },
+  {
+    "name": "Webnow",
+    "country": "Uzbekistan",
+    "website": "https://webnow.uz",
+    "positioning": "web studio",
+    "key_services": ["website development"],
+    "proof_signals": {"note": "Included as visible dedicated local web builder", "source_url": "https://webnow.uz"},
+    "language_market_focus": "Uzbekistan",
+    "differentiation": "Focused on straightforward local website production."
+  },
+  {
+    "name": "C-Space",
+    "country": "Uzbekistan",
+    "website": "https://cspace.uz",
+    "positioning": "branding + web studio",
+    "key_services": ["branding", "websites"],
+    "proof_signals": {"note": "Visible creative/digital studio in Uzbekistan", "source_url": "https://cspace.uz"},
+    "language_market_focus": "Uzbekistan",
+    "differentiation": "Brand-led team that still ships web work, useful for premium presentation sites."
+  },
+  {
+    "name": "Abutech",
+    "country": "Uzbekistan",
+    "website": "https://abutech.uz",
+    "positioning": "web development company",
+    "key_services": ["web development"],
+    "proof_signals": {"note": "Regional/local web development visibility", "source_url": "https://abutech.uz"},
+    "language_market_focus": "Uzbekistan",
+    "differentiation": "Engineering-led local web development option."
+  },
+  {
+    "name": "Develox",
+    "country": "Uzbekistan",
+    "website": "https://develox.uz",
+    "positioning": "web/product development studio",
+    "key_services": ["web development", "product development"],
+    "proof_signals": {"note": "Included as notable visible Uzbekistan builder", "source_url": "https://develox.uz"},
+    "language_market_focus": "Uzbekistan/international",
+    "differentiation": "More product-minded than basic web studio peers."
+  }
+]

@@ -1,0 +1,77 @@
+<svg width="1600" height="2200" viewBox="0 0 1600 2200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" stroke="#212A33" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="2200" fill="#040A11"/>
+  <rect width="1600" height="2200" fill="url(#grid)" opacity="0.5"/>
+
+  <text x="96" y="92" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="4">HAB. BRAND GUIDEBOOK / PAGE 4</text>
+  <text x="96" y="188" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="60" font-weight="700">Носители и правила</text>
+  <text x="96" y="252" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="60" font-weight="700">использования</text>
+
+  <rect x="96" y="288" width="680" height="700" rx="32" fill="#09121C" stroke="#212A33"/>
+  <text x="132" y="362" fill="#60E56B" font-family="Courier New, monospace" font-size="24" font-weight="700">LOGO / DO</text>
+  <text x="132" y="440" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="24">• использовать на тёмном фоне</text>
+  <text x="132" y="472" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="24">  как основной знак</text>
+  <text x="132" y="514" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="24">• сохранять зелёную точку</text>
+  <text x="132" y="546" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="24">  как node-акцент</text>
+  <text x="132" y="588" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="24">• иконку отдельно для favicon</text>
+  <text x="132" y="620" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="24">  и avatar</text>
+
+  <text x="132" y="740" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="28">Минимальные размеры:</text>
+  <text x="132" y="786" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="28">wordmark — от 24px по высоте</text>
+  <text x="132" y="828" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="28">icon — от 16px для favicon, от 24px для UI</text>
+
+  <rect x="824" y="288" width="680" height="700" rx="32" fill="#09121C" stroke="#212A33"/>
+  <text x="860" y="362" fill="#FA6863" font-family="Courier New, monospace" font-size="24" font-weight="700">LOGO / DON'T</text>
+  <text x="860" y="440" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="24">• не добавлять тени и 3D</text>
+  <text x="860" y="482" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="24">• не растягивать по ширине</text>
+  <text x="860" y="514" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="24">  и высоте</text>
+  <text x="860" y="556" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="24">• не красить текст</text>
+  <text x="860" y="588" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="24">  в градиенты</text>
+  <text x="860" y="630" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="24">• не делать точку просто декором</text>
+
+  <text x="860" y="740" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="28">Точка — это смысловой центр бренда,</text>
+  <text x="860" y="782" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="28">а не случайный акцент.</text>
+
+  <rect x="96" y="1060" width="1408" height="540" rx="32" fill="#09121C" stroke="#212A33"/>
+  <text x="132" y="1134" fill="#60E56B" font-family="Courier New, monospace" font-size="24" font-weight="700">KEY CARRIERS</text>
+
+  <rect x="132" y="1190" width="300" height="320" rx="28" fill="#0C1621" stroke="#212A33"/>
+  <text x="164" y="1250" fill="#8F9AA4" font-family="Courier New, monospace" font-size="22">FAVICON / APP ICON</text>
+  <circle cx="282" cy="1360" r="88" fill="#040A11" stroke="#212A33" stroke-width="8"/>
+  <polygon points="282,1274 348,1313 348,1389 282,1428 216,1389 216,1313" stroke="#F4F2EA" stroke-width="6"/>
+  <circle cx="282" cy="1351" r="14" fill="#60E56B"/>
+
+  <rect x="500" y="1190" width="300" height="320" rx="28" fill="#0C1621" stroke="#212A33"/>
+  <text x="532" y="1250" fill="#8F9AA4" font-family="Courier New, monospace" font-size="22">OG IMAGE</text>
+  <rect x="544" y="1290" width="212" height="132" rx="18" fill="#040A11" stroke="#212A33"/>
+  <text x="572" y="1374" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="52" font-weight="700">hab</text>
+  <circle cx="680" cy="1360" r="8" fill="#60E56B"/>
+
+  <rect x="868" y="1190" width="300" height="320" rx="28" fill="#0C1621" stroke="#212A33"/>
+  <text x="900" y="1250" fill="#8F9AA4" font-family="Courier New, monospace" font-size="22">SOCIAL AVATAR</text>
+  <rect x="952" y="1290" width="132" height="132" rx="36" fill="#040A11" stroke="#212A33"/>
+  <polygon points="1018,1320 1061,1345 1061,1395 1018,1420 975,1395 975,1345" stroke="#F4F2EA" stroke-width="5"/>
+  <circle cx="1018" cy="1370" r="10" fill="#60E56B"/>
+
+  <rect x="1236" y="1190" width="232" height="320" rx="28" fill="#0C1621" stroke="#212A33"/>
+  <text x="1268" y="1250" fill="#8F9AA4" font-family="Courier New, monospace" font-size="20">SIGNATURE</text>
+  <text x="1268" y="1320" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="40" font-weight="700">hab</text>
+  <circle cx="1374" cy="1306" r="7" fill="#60E56B"/>
+  <text x="1268" y="1378" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="18">цифровая</text>
+  <text x="1268" y="1406" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="18">мастерская</text>
+
+  <rect x="96" y="1672" width="1408" height="370" rx="32" fill="#09121C" stroke="#212A33"/>
+  <text x="132" y="1746" fill="#60E56B" font-family="Courier New, monospace" font-size="24" font-weight="700">FINAL BRAND LINE</text>
+  <text x="132" y="1812" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="30">hab. — цифровая мастерская,</text>
+  <text x="132" y="1850" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="30">которая собирает продукты</text>
+  <text x="132" y="1888" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="30">как рабочие системы:</text>
+  <text x="132" y="1926" fill="#F4F2EA" font-family="Arial, sans-serif" font-size="30">чисто, быстро и по делу.</text>
+  <text x="132" y="1972" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="22">Основа: тёмная технологичная сцена,</text>
+  <text x="132" y="2002" fill="#8F9AA4" font-family="Arial, sans-serif" font-size="22">живой зелёный node и строгая продуктовая подача.</text>
+
+  <text x="96" y="2130" fill="#5B646E" font-family="Arial, sans-serif" font-size="20">v1 final by Amber</text>
+</svg>
