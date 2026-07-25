@@ -3,9 +3,9 @@ id: infra-server-vps-latvia
 type: infra
 title: VPS Latvia 155.212.230.121 — primary replacement for compromised Beget VPS
 author: paganel
-status: in_use
+status: decommissioning
 created: 2026-05-17T16:50:00Z
-updated: 2026-05-17T19:20:00Z
+updated: 2026-07-25T21:20:00Z
 tags: [vps, beget, latvia, replacement, vault, video, lms]
 relates_to: [infra-server-pasha-beget, infra-vault-babichnail-online, incident-2026-05-12-006-vps-cryptominer-compromise, incident-2026-05-16-007-vps-reinfection]
 implemented_by: [paganel]
@@ -73,3 +73,25 @@ Beget VNC-консоль работает (Pavel проверил 2026-05-17 п�
 - `incident-2026-05-12-006-vps-cryptominer-compromise` + `incident-2026-05-16-007-vps-reinfection` — мотивация переезда.
 - `infra-vault-babichnail-online` — Vaultwarden теперь живёт тут.
 - `reference_paganel_host_access` (auto-memory) — на хосте Paganel'я ключ к Latvia: `/root/.ssh/paganel_vps_ed25519`.
+
+
+## 2026-07-25 — DECOMMISSIONING: санкции ЕС против Beget
+
+2026-07-23 Beget внесён в 21-й пакет санкций ЕС (заморозка активов). Латвийский ДЦ-партнёр прекращает обслуживание, локация закрывается «в ближайшее время» без точной даты. Beget ограничивает скачивание больших объёмов (снапшоты/образы).
+
+**Выполнено Paganel'ем 2026-07-25 (по команде Pavel'я):**
+1. Полный бэкап на Paganel host (46.8.79.53, GOhost.KZ) в `/root/migration-backups/`:
+   - `latvia/videos/` — 11 GB, 19 файлов, `du -sb` байт-в-байт совпадает с origin
+   - `latvia/latvia-core-backup-20260725.tar.gz` — /var/lib/vaultwarden + /var/lib/hab (сняты при остановленных сервисах — консистентные SQLite), nginx sites-available, letsencrypt, hab-site.service
+   - `latvia/hab-site/` — код без node_modules, включая `.env.local`
+   - `frutped/` — webroot public_html + mysqldump всех 7 таблиц + родительский каталог с config.php и schema.sql (через временный token-guarded PHP-хелпер, удалён после использования)
+2. Все три сервиса развёрнуты на Paganel host и проверены:
+   - **gudhab.com**: nginx → hab-site systemd (Next.js, :3001), локально 307 → /ru как на проде
+   - **vault.babichnail.online**: Vaultwarden docker с той же конфигурацией (127.0.0.1:8080+3012), healthy, 200
+   - **video.babichnail.online**: nginx + php8.3-fpm, полный боевой тест — HMAC-токен сгенерирован вручную, файл отдался 206/Range
+   - SSL-сертификаты перенесены (истекают 2026-10-15), certbot renewal (nginx authenticator) заработает после DNS
+3. ffmpeg/gdown/yt-dlp на Paganel host уже стояли — gdl.php работоспособен.
+
+**Ожидает Pavel:** 4 A-записи в панели Beget → 46.8.79.53 (gudhab.com, www.gudhab.com, vault.babichnail.online, video.babichnail.online). TTL 600, переключение бесшовное — Латвия ещё жива.
+
+**Не затронуто санкционным отключением:** fp.babichnail.online (Beget shared RU `sakura`), DNS-сервера Beget, домены .com/.online.
