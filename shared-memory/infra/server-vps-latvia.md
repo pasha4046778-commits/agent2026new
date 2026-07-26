@@ -3,9 +3,9 @@ id: infra-server-vps-latvia
 type: infra
 title: VPS Latvia 155.212.230.121 — primary replacement for compromised Beget VPS
 author: paganel
-status: decommissioning
+status: decommissioned
 created: 2026-05-17T16:50:00Z
-updated: 2026-07-25T21:20:00Z
+updated: 2026-07-26T09:15:00Z
 tags: [vps, beget, latvia, replacement, vault, video, lms]
 relates_to: [infra-server-pasha-beget, infra-vault-babichnail-online, incident-2026-05-12-006-vps-cryptominer-compromise, incident-2026-05-16-007-vps-reinfection]
 implemented_by: [paganel]
@@ -95,3 +95,6 @@ Beget VNC-консоль работает (Pavel проверил 2026-05-17 п�
 **Ожидает Pavel:** 4 A-записи в панели Beget → 46.8.79.53 (gudhab.com, www.gudhab.com, vault.babichnail.online, video.babichnail.online). TTL 600, переключение бесшовное — Латвия ещё жива.
 
 **Не затронуто санкционным отключением:** fp.babichnail.online (Beget shared RU `sakura`), DNS-сервера Beget, домены .com/.online.
+
+## 2026-07-26 — Cutover завершён
+Pavel сменил 4 A-записи в панели Beget → 46.8.79.53 (проверено: authoritative NS + 8.8.8.8). Все сервисы работают по публичному DNS с нового сервера, включая боевой видео-поток с HMAC-токеном (206/Range). Certbot auto-renew: dry-run успешен, systemd certbot.timer активен. На Латвии hab-site/nginx остановлены+disabled, vaultwarden остановлен (restart=no) — базы не менялись с момента бэкапа, потерь данных нет. VPS можно удалять из панели Beget.
