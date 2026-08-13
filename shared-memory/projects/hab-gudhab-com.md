@@ -19,10 +19,9 @@ Pavel и я (Paganel как Tech Lead) строим digital-product студию
 Запустить продаваемую студию с автоматическим приёмом лидов через сайт. Сейчас в режиме pre-launch — сайт готов и публичен, ждём первых реальных клиентов.
 
 ## URLs и инфра
-- **Прод:** https://gudhab.com (TLS via Let's Encrypt, auto-renew 90 дней; nginx 80→443→127.0.0.1:3001 reverse proxy)
-- **Латвия VPS:** 155.212.230.121, источники в `/var/www/hab-site/`, systemd unit `hab-site.service`, env в `/var/www/hab-site/.env.local`
-- **Локальная копия источников:** `/root/hab-site/` на Paganel host (46.8.79.53)
-- **Деплой workflow:** edit local → rsync src → ssh latvia → `npm run build` → `systemctl restart hab-site`
+- **Прод:** https://gudhab.com (TLS Let's Encrypt; nginx 80→443→127.0.0.1:3001)
+- **ОБНОВЛЕНО 2026-08-13:** после декоммишена Латвии сайт живёт на **Paganel host 46.8.79.53** — источники `/root/hab-site/`, systemd `hab-site.service` (Next 15.5, порт 3001), активен. Латвийский VPS 155.212.230.121 больше не используется.
+- **Деплой сейчас (локально на хосте):** edit `/root/hab-site/src` → `cd /root/hab-site && npm run build` → `systemctl restart hab-site` (rsync/ssh в Латвию больше не нужен).
 - **Telegram-бот:** @habnotifier_bot (id 8987612976), уведомляет Pavel'я в DM (chat_id 1097461410) при новом брифе
 - **Email уведомления:** пока не настроены (Resend API key не выдан)
 - **DNS:** A-record gudhab.com → 155.212.230.121 (плюс www), MX → mx1/mx2.beget.com (Beget mail — настройка ящиков отложена)

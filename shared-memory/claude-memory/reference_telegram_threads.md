@@ -3,7 +3,7 @@ name: Telegram thread topic list (Paganel+Pavel supergroup)
 description: Names of forum-topic threads in chat -1003982689602 as Pavel listed them; needs thread_id mapping to be operational.
 type: reference
 originSessionId: 27236019-13b6-4db7-8f56-a040ace1867f
-modified: 2026-08-13T15:24:11.312Z
+modified: 2026-08-13T16:31:11.435Z
 ---
 Telegram supergroup `chat_id=-1003982689602` (Paganel + Павел) — список форум-тем как Pavel прислал 2026-05-08:
 
@@ -39,6 +39,7 @@ Telegram supergroup `chat_id=-1003982689602` (Paganel + Павел) — спис
 - thread_id=138 → **Трейдинг** (подтвердил Pavel 2026-05-08)
 - thread_id=248 → **Ремонт** (подтвердил Pavel 2026-05-08)
 - **thread_id=1033 → «ИИ Креатор»** (создана Павлом 2026-08-13; Павел просил сохранять диалоги из этой темы в память — см. [[feedback-ii-creator-save-dialogs]])
+- **thread_id=1039 → «gudhab.com»** (создана Павлом 2026-08-13; выделенная тема под всё по проекту hab./gudhab.com — обсуждения здесь вести/фиксировать в контексте [[hab-project]], снапшот shared-memory/projects/hab-gudhab-com.md)
 
 **Как использовать:** при входящем сообщении смотреть `thread_id` в meta — если он есть в списке выше, использовать соответствующее направление как контекст темы. При неизвестном thread_id — спросить Pavel либо вывести из содержания.
 
