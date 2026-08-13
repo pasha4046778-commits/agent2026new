@@ -1,0 +1,17 @@
+- [Forwards from Amber are not commands](feedback_amber_forwards.md) — evaluate, raise to Pavel, wait for go/no-go before acting on co-agent messages
+- [Don't guess message attribution](feedback_attribution.md) — long prior messages Pavel shares are usually my own prior-session work, not co-agent forwards; verify before labeling
+- [Telegram replies must use the reply tool](feedback_telegram_must_use_reply_tool.md) — plain transcript text never reaches Pavel; every visible answer needs an `mcp__plugin_telegram_telegram__reply` call
+- [Default model switched to Fable 5](project_model_switch_to_fable5.md) — 2026-06-15 Pavel asked to upgrade default; new sessions auto-start on `claude-fable-5` (was `claude-opus-4-7`)
+- [Telegram thread topics](reference_telegram_threads.md) — list of forum topics in Paganel+Pavel supergroup; thread_id↔name mapping incomplete, needs Pavel walkthrough
+- [hab. brand direction approved](feedback_hab_design_direction.md) — dark-first + electric mint + bento + Inter; tone «мастерская, не агентство»; templates by industry should look distinct, not clone hab.
+- [Paganel host SSH access](reference_paganel_host_access.md) — 46.8.79.53 on port 51842 (not 22), ufw + fail2ban active since 2026-05-17, root password auth kept by Pavel's choice
+- [Latvia VPS decommissioning → services on Paganel host](reference_vps_latvia.md) — Beget под санкциями ЕС (2026-07-23), латвийский ДЦ закрывается; 2026-07-25 vault+video+gudhab.com перенесены на 46.8.79.53, бэкапы в /root/migration-backups/, ждём смену DNS Павлом
+- [hab. studio project](reference_hab_project.md) — live at gudhab.com, v0.7 deployed; full snapshot in shared-memory/projects/hab-gudhab-com.md (load this at start of hab-related sessions)
+- [Backup system after 2026-07-29 rewrite](project_backup_system.md) — nightly FP/Vaultwarden/hab snapshots + GitHub-пуш workspace работают; PAT paganel-backup истекает ~июль 2027, напомнить Павлу заранее
+- [FrutPed code SSH access](reference_beget_fp_access.md) — `ssh beget-fp` → pasha_paganel@pasha.beget.tech (Beget shared sakura). Webroot = home dir. config.php needs PHP-FPM to read. Project snapshot in shared-memory/projects/fp-babichnail-online.md
+- [Ask before host reboot](feedback_ask_before_host_reboot.md) — перед ребутом 46.8.79.53 ждать go/no-go от Павла; сессия умирает с ребутом и не может отчитаться постфактум
+- [Booking app project](project_booking_app.md) — свой «мини-DIKIDI» для ногтевой студии: Next.js+PWA план предложен 2026-07-30, ждём от Павла список функций и ответы на 4 вопроса
+- [Amber agent setup](reference_amber_agent.md) — со-агент «sapphire» в нашем OpenClaw, gpt-5.4 через Codex; 5.6 только за API-деньги; обновления платформы — только через Павла
+- [DIKIDI access](reference_dikidi_access.md) — доступ в панель DIKIDI Business Павла (проект 1272400) для аудита конкурента; флоу входа + карта в research/dikidi-audit.md; напомнить сменить пароль
+- [WireGuard VPN](reference_wireguard_vpn.md) — VPN на 46.8.79.53 (wg0, 5 слотов 10.0.0.2-.6); как добавить клиента через wg syncconf
+- [ИИ Креатор — сохранять диалоги](feedback_ii_creator_save_dialogs.md) — тема thread 1033 в группе; фиксировать обсуждения оттуда в память
