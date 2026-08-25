@@ -209,3 +209,65 @@ Pavel решил: ручной перевод на карту Райфа неу�
 
 ### Бэкап-стратегия (Beget)
 Каждое моё изменение оставляет `.bak-pre-<change>-<timestamp>` рядом с файлом. На 2026-06-07 в репо около 13 .bak-файлов (от manual-payment, prodamus, admin/manual-orders, sidebar nav и т.д.). При откате — `cp file.bak-… file`.
+
+## Новое направление: вторая система «Light System» (Лайт Систем) — 2026-08-25
+Павел ставит задачу: добавить на существующий сайт fp.babichnail.online ВТОРОЙ курс — технику **«Light System»** (не новый сайт). От основателей «Фруктового педикюра».
+
+**Что за техника:** ортониксия — коррекция вросшего ногтя и ониходистрофий прозрачными пластинами-«рессорами» (15 видов жёсткости, толщина 200/300/500/700 мкм, ширина 3-7мм). Клеевая система, приподнимает края ногтя (эффект «арки», анатомическая ротация). Автор: Вопилкина Елена (хирург-дерматовенеролог) + Вопилкин Евгений (к.ф.-м.н. ИФМ РАН). Разработка нижегородских подологов. Показания: вросший ноготь, онихолизис, онихогрифоз, онихомикоз; детская линейка с 0 лет. Материалы: методичка PDF (12 стр, в inbox), логотипы «Light System» (золотой отпечаток стопы + каллиграфия), фото продукта (клей 10г + прозрачные пластины). Всё в /root/.claude/channels/telegram/inbox/ (2026-08-25).
+
+**Архитектурная находка (из кода):** сайт УЖЕ спроектирован под мультикурс — таблица `lessons` имеет `course_id` (сейчас захардкожен =1), таблица `user_courses` зарезервирована под доступ по курсам но пустая. Реальные таблицы: users, lessons, payments, lesson_progress, admins. Доступ сейчас = глобальный флаг `users.is_active` + `expires_at` (купил → видит ВСЕ уроки where is_active=1). Оплата (TipTop confirm-payment.php + Prodamus prodamus-webhook.php) ставит is_active=1, БЕЗ привязки к курсу. buy.php — одна захардкоженная цена 45000₸.
+
+**Предложенный план (Вариант A — «правильный движок курсов», Павел ещё не финализировал):** справочник курсов; lessons.course_id=2 для новой системы; доступ через user_courses (per-course); payments.course_id; buy.php?course=N со своей ценой; webhook'и пишут user_courses; ЛК ученика фильтрует уроки по купленным курсам (вкладки если обе); дашборд админа — выбор курса у уроков, per-course доступ у учеников, статистика с разбивкой. Главная: описание 2 систем + переключатель, отдельный лендинг на каждую.
+
+**Открытые вопросы Павлу:** цена курса Light System; авто-выдать существующим 10 ученикам доступ к «Системе 1» (рекоменд. да); разрешить докупку второй системы; сколько видеоуроков у Light System и где они; название/брендинг на сайте (золотой лого Light System).
+
+**ДОСТУП-ограничение:** мой SSH-юзер pasha_paganel имеет ACL rwx на файлы public_html/ (могу читать/править код), но НЕ на ../config.php (секреты БД/платёжек закрыты) — к БД напрямую из CLI не подключиться. Дефолтный `php`=5.6, сайт на php8.3 (использовать `php8.3`), mysql-клиент /usr/local/bin/mysql. Для интроспекции БД нужен временный web-скрипт под FPM или запрос к Павлу.
+
+## Light System — подтверждённые решения + реальная схема (2026-08-25, вечер)
+Павел ответил на все вопросы, план утверждён:
+- **Цена Light System (3 метода, инфраструктура УЖЕ есть в коде):** Prodamus (РФ) 13 000 ₽; TipTop (KZ) 60 000 ₸; ручной перевод на карту РФ (manual_ru) 11 000 ₽. Методы уже реализованы: confirm-payment.php=TipTop, prodamus-webhook.php=Prodamus, manual-payment.php+admin/manual-orders.php=ручной РФ.
+- **Видео:** уже на YouTube, заливать на VPS через gdl.php (yt-dlp), ссылки пришлёт.
+- **Ученики:** НЕ 10, а 73 активных (277 всего, 202 ждут активации, 13 уроков). Дашборд admin/students.php. Миграция: всем is_active=1 проставить user_courses→Курс 1.
+- **Структура (Вариант 1 утверждён):** корень / = НОВАЯ развилка двух систем + переключатель; Фруктовый переедет на /frutped (страница 1-в-1, НЕ менять) + редиректы со старых ссылок; Light System на /light-system. Потом поправить success/webhook URL в кабинете TipTop под новые адреса покупки.
+- **Брендинг Light System:** название «Light System», макет и шрифты как Frutped (Montserrat), палитра премиум-медицинская под золотой лого: золото/шампань #C9A24B (акцент), тёплый беж #F3E9DB (подложки), мраморно-белый #F7F5F2 (фон), графит #3A342C (текст). Ассеты (лого золотой отпечаток+каллиграфия, фото продукта клей+пластины) в /root/.claude/channels/telegram/inbox/. Frutped НЕ трогать.
+
+### РЕАЛЬНАЯ СХЕМА БД (из дампа 2026-08-25) — мультикурс уже заложен физически:
+- `courses`: id, title, description, price decimal, duration_days(365), is_active. 1 строка (Курс1=Фруктовый), next id=2.
+- `user_courses`: id, user_id, course_id, purchased_at, expires_at, is_active. ПУСТАЯ (0 строк) — заполнить миграцией.
+- `lessons`: id, **course_id**(есть!), title, description, video_path, video_type enum(file,url), video_url, thumbnail, duration_min, sort_order, is_active, created_at. 13-14 уроков, все course_id=1.
+- `payments`: id, user_id, amount, currency, status, payment_method, transaction_id, created_at, updated_at. НЕТ course_id — единственное поле, что надо ДОБАВИТЬ.
+- users: is_active + expires_at (текущий гейт доступа). admins, lesson_progress тоже есть.
+
+### БД-доступ решён: creds в `/root/secrets/fp-db-creds.php` (DB_NAME/USER=pasha_fruitpedic, host localhost). Дамп/запросы гонять `mysqldump/mysql ... -u USER -pPASS DBN` ЧЕРЕЗ `ssh beget-fp` (mysql-клиент на Beget). Так работает ночной mirror-vps-backups.sh.
+
+### БЭКАП перед стартом (сделан 2026-08-25): /root/backups/fp.babichnail.online/pre-lightsystem-20260825/ — db/pasha_fruitpedic-20260825.sql.gz (278 users) + code/frutped-public_html-20260825.tar.gz (34 php). config.php НЕ включён (нет прав чтения).
+
+### План 6 этапов (утверждён, ждём финальный "go" на Этап 1):
+1. Движок мультикурса: INSERT Курс2; +payments.course_id; миграция 73 активных→user_courses Курс1; гейт доступа переключить на user_courses (backward-compat). 2. Оплата ?course=N + 3 цены LS. 3. Витрина: развилка / + лендинг /light-system + перенос Frutped на /frutped+редиректы. 4. ЛК ученика: фильтр уроков по купленным курсам, вкладки если обе. 5. Дашборд: выбор курса у уроков, per-course доступ/статистика/оплаты. 6. Залив видео LS + e2e тест оплаты и доступа.
+
+## ПРОГРЕСС Light System (2026-08-25, вечер) — Этап 1 ✅ + Этап 3 (видимая часть) ✅
+**Этап 1 (движок мультикурса) — ВЫПОЛНЕН на боевой БД:**
+- Курс 2 «Light System» создан (id=2, price 60000, 365 дней).
+- payments.course_id добавлена, все 72 старые оплаты → course_id=1.
+- Миграция: 75 активных (было 73 на скрине, стало 75) → user_courses course_id=1. Целостность 0/0 проверена.
+- Frutped работает как раньше (код Этапа1 не трогал). Бэкап: /root/backups/fp.babichnail.online/pre-lightsystem-20260825/.
+- БД-доступ: creds /root/secrets/fp-db-creds.php, запросы через `ssh beget-fp "mysql -u USER -pPASS pasha_fruitpedic -e ..."`.
+
+**ВАЖНО про структуру сайта:** живой лендинг Frutped на корне = **`index.html`** (53609 байт, title «…| 2026»), НЕ index.php! На Beget index.html приоритетнее. (index.php была неактивная v2.)
+
+**Этап 3 (витрина) — видимая часть ВЫПОЛНЕНА, задеплоена, ждём фидбэк Павла по дизайну:**
+- Локальный worktree: `/root/.openclaw/workspace/fp-worktree/public_html/` (распакован из бэкапа; правлю тут → scp на beget-fp).
+- НОВЫЙ `index.php` = развилка двух систем (Montserrat, беж-фон, 2 карточки: оранжевая Фруктовый→/frutped, золотая Light System→/light-system).
+- `frutped.php` = точная копия живого `index.html` (лендинг Frutped, служит на /frutped).
+- `light-system.php` = лендинг Light System (палитра золото #C9A24B/#8a6f3c/беж #F3E9DB/мрамор #F7F5F2/графит #3A342C; hero+лого, problems, stats 15 видов, галерея 3 фото, 7 модулей-программа из методички, price-блок с 3 ценами 60000₸/13000₽/11000₽, FAQ, footer; switchbar сверху для перехода между системами). Кнопка Купить → /buy.php?course=2.
+- `.htaccess`: `DirectoryIndex index.php index.html` + rewrite /frutped→frutped.php, /light-system→light-system.php. mod_rewrite на Beget работает.
+- Ассеты Light System: /assets/lightsystem/ (logo-gold.jpg, product-tray.jpg, product-glue.jpg, product-plate.jpg — последний оказался лого, не пластиной; попросил у Павла реальные фото процесса/до-после).
+- Проверено: / =развилка(200), /frutped=живой лендинг(200, hero-cat.mp4 на месте), /light-system(200), /buy.php(200), /dashboard.php(302). Скрины отправлены Павлу (msg 1119-1121).
+
+**ОСТАЛОСЬ:**
+- Ждём фидбэк Павла по дизайну (палитра/развилка/фото).
+- Этап 2: buy.php?course=2 — своя цена LS + 3 метода; webhook'и (confirm-payment.php/prodamus-webhook.php/manual-payment.php+manual-orders.php) должны писать user_courses(course_id) и payments.course_id. Кнопка Купить на LS пока ведёт на форму Frutped 45000 — НЕ покупать LS по-настоящему.
+- Этап 4: dashboard.php/watch.php — фильтр уроков по купленным курсам (сейчас гейт по users.is_active показывает ВСЕ is_active уроки; переключить ДО заливки уроков course_id=2, иначе Frutped-ученики увидят LS-уроки).
+- Этап 5: admin — выбор курса у уроков (add-lesson course_id захардкожен=1), per-course доступ у students, статистика/оплаты по курсам.
+- Этап 6: залив видео LS (YouTube→gdl.php yt-dlp), e2e тест.
+- Потом: обновить success/webhook URL в кабинете TipTop под новые адреса (Павел упоминал).
