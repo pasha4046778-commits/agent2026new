@@ -291,3 +291,71 @@ Pavel решил: ручной перевод на карту Райфа неу�
 - Плашка «официальная регистрация с рег. номером» (.reg-badge) + строка в price-features.
 - Вотермарки на фото-результатах оставлены (Павел: «не страшно»).
 - Скрин v3 отправлен (msg 1136-1139). Ждём ОК Павла → Этап 2 (оплата LS).
+
+## Light System лендинг v4 (2026-08-27) — карусель + юр-реквизиты
+- Секция «до/после» переделана в КАРУСЕЛЬ (scroll-snap track + кнопки ‹ › + swipe на мобиле). CSS .carousel/.carousel-track/.carousel-btn, JS по data-car="results".
+- ЮР-СТРАНИЦЫ: обнаружено что LS вёл на /offer.php,/privacy.php,/contacts.php — там ПЛЕЙСХОЛДЕРЫ. Живой Frutped использует .html-версии (offer.html/contacts.html/privacy.html) с РЕАЛЬНЫМИ реквизитами. Создал для LS свои: offer-ls.html, contacts-ls.html, privacy-ls.html (золотая палитра, курс «Light System + Протезирование», цены 60000₸/13000₽/11000₽). Футер LS обновлён на них (+ payment-security.php общий).
+- РЕКВИЗИТЫ (ИП, для будущих задач): ИП Бабич-Гудебская Мария Викторовна, ИИН 930225400083, г. Актобе ул. Маресьева 4А, info@galereya-krasoti.com, +7 702 126 6054, Банк ЦентрКредит, БИК KCJBKZKX, ИИК KZ42 8562 2041 4645 8224, КБе 19.
+- Ждём проверку Павла → Этап 2 (оплата LS). Павлу нужно: продукт в Prodamus под LS (13000₽) + реквизиты перевода (11000₽).
+
+## Этап 2 старт (2026-08-27) — бэкап + разбор платежей + курсовая изоляция (Этап 4) ГОТОВА
+БЭКАП: /root/backups/fp.babichnail.online/pre-payment-etap2-20260827/ (db 28K + payment-files tar: buy.php, api/confirm-payment.php, api/prodamus-webhook.php, api/manual-payment.php, admin/manual-orders.php, payment*.php).
+
+ПЛАТЁЖНЫЙ ФЛОУ (разобран):
+- TipTop: buy.php widget → externalId=user_id → webhook api/confirm-payment.php (InvoiceId=user_id, HMAC X-Content-HMAC, ставит is_active=1 +password +expires 365, payment_method 'tiptoppay').
+- Prodamus RU: buy.php «Оплата из России» modal → POST /api/manual-payment.php → создаёт pending payment 'prodamus_ru' order FP-RU-XXXXX + redirect на RU_PRODAMUS_LINK='https://proeducation.kz/jpa0So/' (это Frutped-ссылка) + _param_user_id/order_id/customer_email → webhook api/prodamus-webhook.php (HMAC Sign, PRODAMUS_SECRET, ставит is_active=1). Сумма реальная из Prodamus.
+- Ручной manual_ru: admin/manual-orders.php апрувит pending (manual_ru/prodamus_ru) → активирует.
+
+КУРСОВАЯ ИЗОЛЯЦИЯ (Этап 4) — ВНЕДРЕНА и задеплоена:
+- dashboard.php: уроки фильтруются по user_courses (owned course_ids), группировка по курсам если >1, backward-compat (активный без uc → курс1). Проверено на боевой: user id=3 → 13 уроков (как было).
+- watch.php: проверка доступа к course_id урока через user_courses + backward-compat; prev/next в рамках курса.
+- Тест: 75 активных все имеют uc course 1, 0 без uc. php8.3 -l чисто, HTTP 302.
+
+ОСТАЛОСЬ Этап 2 (жду данные Павла для end-to-end):
+- buy.php course-aware (?course=2 → LS цена/название, 3 метода). Branch: course=1 = как сейчас (Frutped не менять).
+- confirm-payment.php: externalId кодировать 'userId-courseId' (без разделителя→курс1), писать user_courses(courseId)+payments.course_id.
+- manual-payment.php: course-aware, LS Prodamus link (ЖДЁМ от Павла) для 13000₽.
+- НОВЫЙ метод «перевод на карту РФ» 11000₽ (transfer_ru): нужны реквизиты карты от Павла; флоу pending→admin/manual-orders апрув→user_courses.
+- admin/manual-orders.php: добавить transfer_ru + писать user_courses при активации.
+- НУЖНО от Павла: (1) Prodamus-ссылка/продукт LS 13000₽; (2) номер карты+имя для перевода 11000₽.
+
+## Этап 2 ЗАВЕРШЁН + протестирован (2026-08-27) — оплата Light System работает
+Данные Павла: Prodamus LS = https://proeducation.kz/3jamku/ (13000₽); перевод Сбербанк карта 2202 2023 5005 4791 / тел +7 922 846-85-40 / получатель «Павел Г.» / без комментария (11000₽); TipTop тот же терминал, 60000₸.
+
+РЕАЛИЗОВАНО (все файлы задеплоены + php8.3 lint чист):
+- buy.php: мультикурс через $COURSES[$course_id] (?course=1|2). course=1 = Frutped БАЙТ-в-байт как было. course=2 = LS: TipTop 60000₸, кнопка Prodamus, НОВАЯ кнопка+модалка «Перевод на карту РФ» (Сбербанк реквизиты, копирование карты, «Я оплатил»→заявка). externalId кодируется "userId-courseId" (курс1 = просто userId, обратно совместимо). Оферта/политика ссылки по курсу.
+- api/confirm-payment.php (TipTop webhook): парсит courseId из InvoiceId, payments.course_id, upsert user_courses.
+- api/manual-payment.php: переписан, $COURSE_PAY per-course. method=prodamus (ссылка по курсу) | transfer (transfer_ru, 11000). Заявки с course_id, order-префикс FP/LS. Prodamus URL пробрасывает _param_course_id.
+- api/prodamus-webhook.php: определяет courseId (param/из платежа), идемпотентность по СТАТУСУ платежа (не по is_active — важно для докупки 2-го курса активным юзером), грант user_courses, welcome-письмо только новым.
+- admin/manual-orders.php: +transfer_ru в фильтрах, +course_id, грант user_courses при активации, авто-сверка теперь по наличию user_courses (мультикурс-безопасно), пароль не сбрасывается уже активным.
+- dashboard.php/watch.php (Этап 4): фильтр уроков по user_courses (сделано ранее).
+
+ТЕСТ (live, потом очищено): POST buy?course=2 → pending показал карту+60000+externalId 290-2; manual-payment prodamus→3jamku+13000+course_id=2; transfer→11000 transfer_ru; payments с course_id=2. Тестовый юзер 290 + платежи удалены, счётчики в норме (75 активных, 72 платежа).
+
+НУЖНО от Павла (конфиг на его стороне):
+- Prodamus: в продукте LS (3jamku) прописать Notification/webhook URL = https://fp.babichnail.online/api/prodamus-webhook.php (секрет PRODAMUS_SECRET тот же, если аккаунт один). TipTop — ничего не надо (тот же терминал/webhook).
+- Перевод — ручное подтверждение в /admin/manual-orders.php.
+
+ОСТАЛОСЬ до полного запуска LS:
+- Этап 5: admin/add-lesson.php курс-селектор (сейчас course_id захардкожен=1) → уроки LS в course_id=2. Плюс admin/lessons.php фильтр/колонка курса, students per-course.
+- Этап 6: залив видео LS (YouTube→gdl.php) как course 2. ВАЖНО: пока нет уроков course 2, покупатель LS увидит пустой кабинет — не продавать LS до заливки видео.
+
+## Оплата LS — стилизация + правки (2026-08-27, вечер)
+- buy.php: добавлен $back_url (course2→/light-system, course1→/frutped) + course-2 style override блок (золото #C9A24B/#8a6f3c, поверх базовой оранжевой; Frutped стиль НЕ тронут). features-list теперь из $C['features'] (LS: протезирование/офиц.регистрация; Frutped прежний). success/fail redirect'ы пробрасывают &course.
+- payment-success.php + payment-fail.php: курсо-зависимы (?course), название/акцент/back-ссылки; retry на fail → /buy.php?course=N.
+- Про TipTop (ответ Павлу): сумму настраивать в ЛК TipTop НЕ надо — виджет передаёт amount из кода страницы (LS=60000, FP=45000), один терминал, разные суммы по коду.
+- Всё задеплоено, протестировано (course2=золото+LS-фичи+/light-system back; course1 не изменён).
+ОСТАЛОСЬ: Павлу — webhook в Prodamus-продукте LS. Далее Этап 5 (admin курс-селектор add-lesson) + Этап 6 (видео LS).
+
+## Этап 5 (админ курс-селектор) ГОТОВ + видео-пайплайн (2026-08-27)
+ВИДЕО-ПАЙПЛАЙН (на этом VPS 46.8.79.53):
+- Видео-хранилище: /var/www/videos/ (14 mp4, ~10.5G). Отдаётся через video.babichnail.online по ПОДПИСАННЫМ ссылкам (check-access.php + watch.php makeSignedVideoUrl, VIDEO_SECRET, TTL 4ч).
+- yt-dlp /usr/local/bin/yt-dlp (v2026.03.17), gdown, ffmpeg — ЕСТЬ. gdl.php загрузчик в /var/www/videos/. Диск: 21G свободно (64%).
+- Формат урока: video_type='url', video_url='https://video.babichnail.online/<file>.mp4', sort_order. Существующие: urok_01.mp4… (course 1).
+- ПЛАН заливки LS: yt-dlp качает YouTube → /var/www/videos/ls_NN.mp4 (H.264 mp4) → INSERT lesson course_id=2, video_url на video.babichnail.online, is_active=1, по порядку.
+
+АДМИН (Этап 5, задеплоено):
+- admin/add-lesson.php: селектор курса (было захардкожено course_id=1), sort_order по курсу (JS MAX_ORDER), редирект на lessons.php?course=N.
+- admin/edit-lesson.php: селектор курса + UPDATE course_id (можно перемещать урок между курсами).
+- admin/lessons.php: фильтр-табы (Все/Fruit Pedicure/Light System) через ?course, колонка «Курс» (бейдж), +Добавить с курсом.
+ОСТАЛОСЬ: admin/students.php per-course доступ (не критично для заливки). Ждём YouTube-ссылки LS от Павла → качаю + создаю уроки course 2 + тест.
