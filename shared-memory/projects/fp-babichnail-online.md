@@ -359,3 +359,25 @@ Pavel решил: ручной перевод на карту Райфа неу�
 - admin/edit-lesson.php: селектор курса + UPDATE course_id (можно перемещать урок между курсами).
 - admin/lessons.php: фильтр-табы (Все/Fruit Pedicure/Light System) через ?course, колонка «Курс» (бейдж), +Добавить с курсом.
 ОСТАЛОСЬ: admin/students.php per-course доступ (не критично для заливки). Ждём YouTube-ссылки LS от Павла → качаю + создаю уроки course 2 + тест.
+
+## Дашборд+Ученики по курсам ГОТОВО + проблема загрузки видео (2026-08-27, вечер)
+АДМИН (задеплоено):
+- admin/index.php: блок «По курсам» (SELECT из courses с подзапросами students/lessons/sales). Данные боевые: Fruit Pedicure 75 активных/13 уроков/34 продажи; Light System 0/0/0.
+- admin/students.php: колонка «Курсы» (бейджи из user_courses) + фильтр по курсу (?course=1|2, Любой/Фруктовый/Light System). courseShort[1]=Фрут,[2]=Light System.
+- Все админ-файлы курсо-зависимы. Frutped не затронут.
+- ПРИМ: /admin/*.php иногда отдаёт 200 = Beget-заглушка проверки cookie (JS set beget=begetok), НЕ утечка. Реальный доступ под admin_id сессией.
+
+ПРОБЛЕМА ЗАГРУЗКИ ВИДЕО YouTube (не решена полностью):
+- yt-dlp обновлён 2026.3.17→2026.8.19, поставлен deno 2.9.6 (JS-рантайм, YouTube требует), aria2c 1.37.
+- КОРЕНЬ: сеть VPS ОК (Cloudflare 10MB=1с, свежий googlevideo TLS мгновенно). НО YouTube назначает конкретную CDN-ноду sn-XXXX, и часть нод НЕДОСТУПНА из KZ (TLS handshake виснет). Пример: rr1-sn-hxb54vo НЕдостижим, rr3-sn-n8v7kn7z достижим. android/ios extraction возвращает EMPTY (нужен PO token). Ноды раздаются рандомно → retry-цикл может поймать достижимую.
+- Запущен фоновый /tmp/dl_ls01.sh (6 попыток) для видео №1.
+- ЕСЛИ не выйдет: варианты — (1) YouTube cookies от Павла (--cookies, надёжнее), (2) Павел заливает оригиналы на Google Drive → gdown (другая инфра), (3) прокси/exit-нода.
+- ОЧЕРЕДЬ ссылок: scratchpad/ls-video-queue.txt (1=0xg8KqtSB7E «Вводный урок», 2=ayu5Fu-V0Pw, 3=VkagT-kw5QY). Ждём ещё от Павла.
+- Пайплайн после скачивания: ffmpeg CRF 22 H.264 → ls_NN.mp4 → INSERT lesson course_id=2, video_url=https://video.babichnail.online/ls_NN.mp4, sort_order по очереди.
+
+## ВЫВОД по загрузке видео (2026-08-27): YouTube не качается с VPS, переход на Google Drive
+- 6/6 попыток yt-dlp упали (SSL handshake timeout к googlevideo sn-нодам). Блокировка нод СИСТЕМНАЯ из KZ, retry не помогает. deno/aria2/force-ipv4/разные клиенты — не спасли (android/ios extraction=EMPTY нужен PO token).
+- Google Drive/googleusercontent/storage.googleapis — ВСЕ достижимы мгновенно с VPS. gdown 6.0.0 стоит.
+- РЕШЕНИЕ предложено Павлу: залить оригиналы видео LS на Google Drive («доступ по ссылке») → пришлёт ссылки (папка или по файлу) → gdown качает → ffmpeg CRF 22 → INSERT lesson course_id=2. Альтернатива — его YouTube cookies (менее надёжно).
+- Артефакты неудачных загрузок подчищены. Ждём от Павла ссылки Google Drive.
+- ВЕСЬ САЙТ ГОТОВ (лендинг, оплата 3 способа, курсовая изоляция, админка курсо-зависимая, дашборд по курсам). Осталось ТОЛЬКО наполнить курс LS видео.
