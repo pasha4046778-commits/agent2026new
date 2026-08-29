@@ -381,3 +381,14 @@ Pavel решил: ручной перевод на карту Райфа неу�
 - РЕШЕНИЕ предложено Павлу: залить оригиналы видео LS на Google Drive («доступ по ссылке») → пришлёт ссылки (папка или по файлу) → gdown качает → ffmpeg CRF 22 → INSERT lesson course_id=2. Альтернатива — его YouTube cookies (менее надёжно).
 - Артефакты неудачных загрузок подчищены. Ждём от Павла ссылки Google Drive.
 - ВЕСЬ САЙТ ГОТОВ (лендинг, оплата 3 способа, курсовая изоляция, админка курсо-зависимая, дашборд по курсам). Осталось ТОЛЬКО наполнить курс LS видео.
+
+## ВИДЕО LS — путь найден (Google Drive), урок №1 ГОТОВ (2026-08-29)
+YouTube с VPS не качается (гео-блок CDN). Решение: Google Drive + gdown. РАБОЧИЙ ПАЙПЛАЙН:
+1. Павел заливает видео на Drive, ОБЯЗАТЕЛЬНО ставит доступ «Все, у кого есть ссылка» (иначе gdown→signin-редирект, не качает). Ссылка drivesdk с телефона по умолчанию ПРИВАТНАЯ.
+2. Скачивание: `gdown "https://drive.google.com/uc?id=FILE_ID" -O ls_NN_src.mp4` (gdown 6.0: без --id/--fuzzy, просто URL/ID; сам проходит virus-scan confirm для больших файлов).
+3. Пережатие: `ffmpeg -i ls_NN_src.mp4 -c:v libx264 -crf 22 -preset medium -c:a aac -b:a 128k -movflags +faststart ls_NN.mp4` (в фоне, ~неск.минут). Затем rm src (экономия диска), chown www-data:www-data, chmod 644.
+4. Создание урока: INSERT INTO lessons (course_id=2, title, video_type='url', video_url='https://video.babichnail.online/ls_NN.mp4', duration_min, sort_order N, is_active=1).
+5. ТЕСТ воспроизведения: video-сервер /var/www/videos/check-access.php, VIDEO_SECRET='qiGYjKQ1WodZPOdiRUDg88kUuGXYPiAzQSZgsrwn' (совпадает с config.php). Подпись: token=hash_hmac('sha256', "FILE|EXPIRES", SECRET), URL video.babichnail.online/FILE?token=..&expires=.. (TTL 4ч, Range/206 поддержан).
+
+СДЕЛАНО: Урок №1 = ls_01.mp4 (484МБ, 1080p, 15:13), lesson id=15, «Вводный урок: виды НП, подбор LS», sort_order 1. Тест 206 video/mp4 OK. Название как на YouTube (Павел подтвердил).
+ЖДЁМ: остальные видео (Павел зальёт папкой на Drive «по ссылке»). Очередь YouTube-ссылок (устарела, теперь через Drive): scratchpad/ls-video-queue.txt.
