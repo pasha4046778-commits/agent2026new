@@ -20,3 +20,8 @@ On 2026-06-15 Pavel asked to switch the default Claude Code model to Claude Fabl
 - **Behavioral tone:** Fable 5 writes more directly and concisely than Opus 4.7 by default. Less "warm-up", more outcome-first prose. If Pavel says my tone changed/got blunter — that's the model, not a behavior shift on my side.
 
 **If reverting:** edit `~/.claude/settings.json` → `"model": "claude-opus-4-7"` (or `"claude-opus-4-8"` for the current flagship Opus).
+
+---
+**ОБНОВЛЕНИЕ 2026-09-01:** По факту сейчас Paganel (Claude Code CLI) работает на **Opus 4.8**, НЕ на Fable 5 (проверено — system prompt + `~/.claude.json`). Amber (OpenClaw agent) — на **openai/gpt-5.4** (codex), в openclaw.json defaults модель Fable НЕ прописана (доступны opus-4-6/sonnet-4-6/gpt-5.4). Т.е. fable-5 дефолт из этой заметки к текущему состоянию НЕ применяется (был изменён/сброшен где-то после 06-15).
+**Fable 5.1 вышла** (Павел видел новость 2026-09-01) — реальная модель, есть в `~/.claude.json` (tengu_usage_overage_included_models: Fable, Fable 5, Fable 5.1). Смена модели — решение Павла (как договорено, платформа/модель через него). Предложил ему на выбор: (1) почистить 23ГБ миграц-бэкапов, (2) обновить OpenClaw 2026.7.1→2026.8.2, (3) переключить Paganel на Fable 5.1. Ждём решение.
+**OpenClaw:** установлена 2026.7.1-2, npm latest 2026.8.2 (обновление доступно, делать только с согласия Павла + бэкап конфига).
