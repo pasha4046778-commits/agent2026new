@@ -15,3 +15,4 @@
 - [DIKIDI access](reference_dikidi_access.md) — доступ в панель DIKIDI Business Павла (проект 1272400) для аудита конкурента; флоу входа + карта в research/dikidi-audit.md; напомнить сменить пароль
 - [WireGuard VPN](reference_wireguard_vpn.md) — VPN на 46.8.79.53 (wg0, 5 слотов 10.0.0.2-.6); как добавить клиента через wg syncconf
 - [ИИ Креатор — сохранять диалоги](feedback_ii_creator_save_dialogs.md) — тема thread 1033 в группе; фиксировать обсуждения оттуда в память
+- [90-дневные маркетинг-планы fp/gudhab](project_marketing_90d.md) — тред 1413; рамка принята, старт с бесплатных каналов + микро-тест 50К₸; ждём бюджет Павла
