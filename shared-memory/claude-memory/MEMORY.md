@@ -10,9 +10,11 @@
 - [Backup system after 2026-07-29 rewrite](project_backup_system.md) — nightly FP/Vaultwarden/hab snapshots + GitHub-пуш workspace работают; PAT paganel-backup истекает ~июль 2027, напомнить Павлу заранее
 - [FrutPed code SSH access](reference_beget_fp_access.md) — `ssh beget-fp` → pasha_paganel@pasha.beget.tech (Beget shared sakura). Webroot = home dir. config.php needs PHP-FPM to read. Project snapshot in shared-memory/projects/fp-babichnail-online.md
 - [Ask before host reboot](feedback_ask_before_host_reboot.md) — перед ребутом 46.8.79.53 ждать go/no-go от Павла; сессия умирает с ребутом и не может отчитаться постфактум
+- [QR-меню проект](project_qr_menu.md) — тред 1589, запуск 2026-09-23; продуктизация Arzu-опыта, ждём ответы Павла на 4 стартовых вопроса
 - [Booking app project](project_booking_app.md) — свой «мини-DIKIDI» для ногтевой студии: Next.js+PWA план предложен 2026-07-30, ждём от Павла список функций и ответы на 4 вопроса
 - [Amber agent setup](reference_amber_agent.md) — со-агент «sapphire» в нашем OpenClaw, gpt-5.4 через Codex; 5.6 только за API-деньги; обновления платформы — только через Павла
 - [DIKIDI access](reference_dikidi_access.md) — доступ в панель DIKIDI Business Павла (проект 1272400) для аудита конкурента; флоу входа + карта в research/dikidi-audit.md; напомнить сменить пароль
 - [WireGuard VPN](reference_wireguard_vpn.md) — VPN на 46.8.79.53 (wg0, 5 слотов 10.0.0.2-.6); как добавить клиента через wg syncconf
 - [ИИ Креатор — сохранять диалоги](feedback_ii_creator_save_dialogs.md) — тема thread 1033 в группе; фиксировать обсуждения оттуда в память
 - [90-дневные маркетинг-планы fp/gudhab](project_marketing_90d.md) — тред 1413; рамка принята, старт с бесплатных каналов + микро-тест 50К₸; ждём бюджет Павла
+- [Пост-проверка после ребута](project_pending_reboot_check.md) — ХЕНДОФФ: если хост 46.8.79.53 ребутнулся ~23.09+, прогнать чек-лист и отчитаться в тред 248
