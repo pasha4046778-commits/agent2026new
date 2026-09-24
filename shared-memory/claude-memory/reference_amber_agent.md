@@ -1,11 +1,11 @@
 ---
 name: amber-agent-setup
-description: "Amber — со-агент на этом же хосте: OpenClaw-агент «sapphire», gpt-5.4 через Codex-подписку Павла; детали и история инцидента 2026-08-01"
+description: "Amber — со-агент на этом же хосте: OpenClaw-агент `main` (sapphire мёртв), openai/gpt-6-astra через OAuth ChatGPT-подписку Павла (expires 2026-10-02); история инцидентов и фиксов"
 metadata: 
   node_type: memory
   type: reference
   originSessionId: f234e779-0f5f-4305-8fff-b02292287a1f
-  modified: 2026-09-22T12:51:26.734Z
+  modified: 2026-09-23T19:07:35.176Z
 ---
 
 Amber живёт в том же OpenClaw-инстансе, что и я: агент `sapphire` (/root/.openclaw/agents/sapphire/), свой Telegram-бот (токен в openclaw.json), OAuth `codex` (ChatGPT Plus Павла, pasha4046778@gmail.com). Модель: `openai/gpt-5.4` с agentRuntime `codex` в agents.defaults. Через подписку Plus линейка 5.5/5.6 недоступна — только через платный OpenAI API-ключ (`openai/gpt-5.6*`).
@@ -79,4 +79,4 @@ OpenAI закрыл возможность гонять общую модель 
 ## АПГРЕЙД 2026-09-23: OpenClaw 2026.9.5, Amber на GPT-6 ASTRA
 По плану обновления (тред 248, «делай всё»): OpenClaw 2026.9.1→2026.9.5 (потребовал Node 22→24, nodesource repo переключён на node_24.x; hab-site/booking-app перезапущены — ок), плагин moonshot 2026.7.1→2026.9.5 (`openclaw plugins update moonshot`), схемы БД мигрированы `doctor --fix` + рестарт гейтвея. ГРАБЛЯ: миграция хранилища 2026.9.5 ПОТЕРЯЛА OAuth-профиль → «Codex app-server auth profile … was not found | selected_auth_profile_unavailable». Лечение = свежий device-логин (код TY7H-B4R9N, Павел ввёл; в логе после успеха: «Default model available: openai/gpt-6-astra»). После логина через подписку Plus стала доступна **openai/gpt-6-astra** (272k контекст, text+image) — переключил primary на неё (+allow, бэкап openclaw.json.bak-20260923-gpt6), тест ок: «я на связи и готова проверить GPT-6 Astra в деле». Откат при желании: primary=openai/gpt-5.6-sol.
 Грабля #2: pkill -f с паттерном "codex"/"app-server" убивает СОБСТВЕННЫЙ шелл Bash-тула (паттерн в cmdline обёртки) → собирать паттерн в рантайме ("app-""server") или kill по явным PID.
-Бэкапы: /root/backups/openclaw/pre-update-20260923/. ОСТАЛОСЬ из плана: (1) ребут (ядро 6.8.0-142 + libc) — ждём go, моя сессия умрёт, пост-проверку делает СЛЕДУЮЩАЯ сессия; (2) миграция секретов openclaw.json → SecretRef (не делал). OAuth expires 2026-10-02 — при новом протухании тот же device-флоу.
+Бэкапы: /root/backups/openclaw/pre-update-20260923/. Ребут состоялся 2026-09-23 18:46 UTC, пост-проверка пройдена (ядро 6.8.0-142, все сервисы/сайты ок, Amber отвечает на gpt-6-astra). ОСТАЛОСЬ из плана: миграция секретов openclaw.json → SecretRef (не делал — предложить Павлу отдельно). OAuth expires 2026-10-02 — при новом протухании тот же device-флоу.
