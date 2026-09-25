@@ -2,6 +2,7 @@
 - [Don't guess message attribution](feedback_attribution.md) — long prior messages Pavel shares are usually my own prior-session work, not co-agent forwards; verify before labeling
 - [Telegram replies must use the reply tool](feedback_telegram_must_use_reply_tool.md) — plain transcript text never reaches Pavel; every visible answer needs an `mcp__plugin_telegram_telegram__reply` call
 - [Report in topic threads](feedback_report_in_topic_threads.md) — отчёты/статусы по задачам постить reply_to=<thread_id> профильной темы, не в General (Павел, msg 1611)
+- [Файлы Павлу — PDF](feedback_pavel_file_formats.md) — .md у Павла не открывается; документы конвертить в PDF (wkhtmltopdf, эмодзи заменять текстом), короткое — текстом в чат
 - [Default model switched to Fable 5](project_model_switch_to_fable5.md) — 2026-06-15 Pavel asked to upgrade default; new sessions auto-start on `claude-fable-5` (was `claude-opus-4-7`)
 - [Telegram thread topics](reference_telegram_threads.md) — list of forum topics in Paganel+Pavel supergroup; thread_id↔name mapping incomplete, needs Pavel walkthrough
 - [hab. brand direction approved](feedback_hab_design_direction.md) — dark-first + electric mint + bento + Inter; tone «мастерская, не агентство»; templates by industry should look distinct, not clone hab.
@@ -13,7 +14,8 @@
 - [Ask before host reboot](feedback_ask_before_host_reboot.md) — перед ребутом 46.8.79.53 ждать go/no-go от Павла; сессия умирает с ребутом и не может отчитаться постфактум
 - [QR-меню проект](project_qr_menu.md) — тред 1589, запуск 2026-09-23; продуктизация Arzu-опыта, ждём ответы Павла на 4 стартовых вопроса
 - [Корпоративный сайт ФП+Лайт систем](project_fp_corporate_site.md) — запуск 2026-09-24 (msg 1625, тред уточнить); ждём ответы Павла на 4 стартовых вопроса (домен, задача, материалы, языки)
-- [Лид Beef&Beer Актобе](project_beefbeer_lead.md) — первый боевой QR-меню кейс; демо готово, ждём DNS beefbeer + цену КП от Павла
+- [Лид Beef&Beer Актобе](project_beefbeer_lead.md) — первый боевой QR-меню кейс; демо живое на beefbeer.gudhab.com, ждём цену КП от Павла и отправку в WhatsApp кафе
+- [Движок hab](project_hab_engine.md) — авторская мини-CMS (ядро + кафе/услуги/магазин); матрица функций research/hab-engine-features.md у Павла на правке, собираем требования не торопясь
 - [Booking app project](project_booking_app.md) — свой «мини-DIKIDI» для ногтевой студии: Next.js+PWA план предложен 2026-07-30, ждём от Павла список функций и ответы на 4 вопроса
 - [Amber agent setup](reference_amber_agent.md) — со-агент = агент `main` в нашем OpenClaw (sapphire мёртв), openai/gpt-6-astra через OAuth-подписку (expires 2026-10-02, потом device-логин); обновления платформы — только через Павла
 - [DIKIDI access](reference_dikidi_access.md) — доступ в панель DIKIDI Business Павла (проект 1272400) для аудита конкурента; флоу входа + карта в research/dikidi-audit.md; напомнить сменить пароль
