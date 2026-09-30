@@ -16,6 +16,7 @@
 - [Корпоративный сайт ФП+Лайт систем](project_fp_corporate_site.md) — запуск 2026-09-24 (msg 1625, тред уточнить); ждём ответы Павла на 4 стартовых вопроса (домен, задача, материалы, языки)
 - [Лид Beef&Beer Актобе](project_beefbeer_lead.md) — первый боевой QR-меню кейс; демо живое на beefbeer.gudhab.com, ждём цену КП от Павла и отправку в WhatsApp кафе
 - [Движок hab](project_hab_engine.md) — авторская мини-CMS (ядро + кафе/услуги/магазин); матрица функций research/hab-engine-features.md у Павла на правке, собираем требования не торопясь
+- [ИИ Креатор: направление](project_ii_creator_direction.md) — после аудита Neurover предложен нишевый ИИ-креатор для малого бизнеса как модуль движка hab; ждём решение Павла на концепт
 - [Booking app project](project_booking_app.md) — свой «мини-DIKIDI» для ногтевой студии: Next.js+PWA план предложен 2026-07-30, ждём от Павла список функций и ответы на 4 вопроса
 - [Amber agent setup](reference_amber_agent.md) — со-агент = агент `main` в нашем OpenClaw (sapphire мёртв), openai/gpt-6-astra через OAuth-подписку (expires 2026-10-02, потом device-логин); обновления платформы — только через Павла
 - [DIKIDI access](reference_dikidi_access.md) — доступ в панель DIKIDI Business Павла (проект 1272400) для аудита конкурента; флоу входа + карта в research/dikidi-audit.md; напомнить сменить пароль
