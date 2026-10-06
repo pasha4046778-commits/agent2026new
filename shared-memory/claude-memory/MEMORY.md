@@ -6,7 +6,7 @@
 - [Default model switched to Fable 5](project_model_switch_to_fable5.md) — 2026-06-15 Pavel asked to upgrade default; new sessions auto-start on `claude-fable-5` (was `claude-opus-4-7`)
 - [Telegram thread topics](reference_telegram_threads.md) — list of forum topics in Paganel+Pavel supergroup; thread_id↔name mapping incomplete, needs Pavel walkthrough
 - [hab. brand direction approved](feedback_hab_design_direction.md) — dark-first + electric mint + bento + Inter; tone «мастерская, не агентство»; templates by industry should look distinct, not clone hab.
-- [Paganel host SSH access](reference_paganel_host_access.md) — 46.8.79.53 on port 51842 (not 22), ufw + fail2ban active since 2026-05-17, root password auth kept by Pavel's choice
+- [Paganel host SSH access](reference_paganel_host_access.md) — ⚠️ Я РАБОТАЮ НА ЭТОМ ХОСТЕ (46.8.79.53): /var/www и сервисы — локальные, никакого ssh paganel (это ssh к себе → fail2ban самобан, случилось 2026-06-14 и 2026-10-06); порт 51842 и пароль — для Павла
 - [Latvia VPS decommissioning → services on Paganel host](reference_vps_latvia.md) — Beget под санкциями ЕС (2026-07-23), латвийский ДЦ закрывается; 2026-07-25 vault+video+gudhab.com перенесены на 46.8.79.53, бэкапы в /root/migration-backups/, ждём смену DNS Павлом
 - [hab. studio project](reference_hab_project.md) — live at gudhab.com, v0.7 deployed; full snapshot in shared-memory/projects/hab-gudhab-com.md (load this at start of hab-related sessions)
 - [Backup system after 2026-07-29 rewrite](project_backup_system.md) — nightly FP/Vaultwarden/hab snapshots + GitHub-пуш workspace работают; PAT paganel-backup истекает ~июль 2027, напомнить Павлу заранее

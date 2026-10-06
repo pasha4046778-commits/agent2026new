@@ -5,11 +5,12 @@ metadata:
   node_type: memory
   type: reference
   originSessionId: 836f4cd2-57d7-445a-ae3d-52b6f8787b19
+  modified: 2026-10-06T17:58:46.316Z
 ---
 
 Host: `46.8.79.53` (hostname `server`, the box where Paganel and Amber processes run, also the offsite mirror for Vaultwarden and FrutPed DB backups).
 
-**⚠️ I (Claude Code) run ON this host as root.** The SSH details below are for **Pavel's** access from his PC. For me, "checking the Paganel host" = running local commands directly (`uptime`, `systemctl`, etc.), NOT `ssh paganel ...`. If I find myself trying to SSH to 46.8.79.53, I'm SSHing to myself — stop and run the command locally. Confirmed 2026-06-14 after a reboot when I wasted time fighting key auth before Pavel pointed it out.
+**⚠️ I (Claude Code) run ON this host as root.** The SSH details below are for **Pavel's** access from his PC. For me, "checking the Paganel host" = running local commands directly (`uptime`, `systemctl`, etc.), NOT `ssh paganel ...`. If I find myself trying to SSH to 46.8.79.53, I'm SSHing to myself — stop and run the command locally. Confirmed 2026-06-14 after a reboot when I wasted time fighting key auth before Pavel pointed it out. **Repeated 2026-10-06**: again tried `ssh paganel` for the estechim deploy, got key-denied, and the failed attempts made fail2ban ban our own IP 46.8.79.53 in the sshd jail (unbanned with `fail2ban-client set sshd unbanip 46.8.79.53`). The stale `Host paganel` block in ~/.ssh/config is a trap — the fix that finally registered: MEMORY.md index line now carries this warning inline.
 
 **SSH access (effective 2026-05-17 ~10:30 UTC):**
 - **Only port: `51842`**. Port 22 closed both at ssh.socket override and in ufw. Confirmed by Pavel from PC Termius.
