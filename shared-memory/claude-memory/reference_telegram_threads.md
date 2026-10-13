@@ -3,7 +3,7 @@ name: Telegram thread topic list (Paganel+Pavel supergroup)
 description: Names of forum-topic threads in chat -1003982689602 as Pavel listed them; needs thread_id mapping to be operational.
 type: reference
 originSessionId: 27236019-13b6-4db7-8f56-a040ace1867f
-modified: 2026-09-15T19:38:31.271Z
+modified: 2026-10-13T06:18:37.667Z
 ---
 Telegram supergroup `chat_id=-1003982689602` (Paganel + Павел) — список форум-тем как Pavel прислал 2026-05-08:
 
@@ -42,6 +42,9 @@ Telegram supergroup `chat_id=-1003982689602` (Paganel + Павел) — спис
 - **thread_id=1039 → «gudhab.com»** (создана Павлом 2026-08-13; выделенная тема под всё по проекту hab./gudhab.com — обсуждения здесь вести/фиксировать в контексте [[hab-project]], снапшот shared-memory/projects/hab-gudhab-com.md)
 - **thread_id=1413 → «Продвижение проектов»** (создана Павлом 2026-09-15: «здесь все о продвижении проектов» — маркетинг/реклама/SEO/соцсети наших проектов: gudhab, fp-курсы и др.)
 - **thread_id=1589 → «QR-меню»** (создана Павлом 2026-09-23: «здесь запускаем новый проект, QR меню для кафе и ресторанов» — см. [[qr-menu-project]])
+- **«fruitpedProduction»** — тема по Эстехим/производству (выявлена 2026-10-13, msg 1866; точный thread_id неизвестен — отвечать через reply_to на сообщения Павла из неё). Сообщения 1852–1868 шли в ней.
+
+**⚠️ Правило (урок 2026-10-13, msg 1866):** в этой супергруппе ВСЕГДА отвечать с reply_to на сообщение Павла — reply без reply_to падает в General, даже если Павел писал из темы. Канальный тег thread_id не показывает.
 
 **Как использовать:** при входящем сообщении смотреть `thread_id` в meta — если он есть в списке выше, использовать соответствующее направление как контекст темы. При неизвестном thread_id — спросить Pavel либо вывести из содержания.
 

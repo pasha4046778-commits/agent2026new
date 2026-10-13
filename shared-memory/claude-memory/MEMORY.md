@@ -13,7 +13,7 @@
 - [FrutPed code SSH access](reference_beget_fp_access.md) — `ssh beget-fp` → pasha_paganel@pasha.beget.tech (Beget shared sakura). Webroot = home dir. config.php needs PHP-FPM to read. Project snapshot in shared-memory/projects/fp-babichnail-online.md
 - [Ask before host reboot](feedback_ask_before_host_reboot.md) — перед ребутом 46.8.79.53 ждать go/no-go от Павла; сессия умирает с ребутом и не может отчитаться постфактум
 - [QR-меню проект](project_qr_menu.md) — тред 1589, запуск 2026-09-23; продуктизация Arzu-опыта, ждём ответы Павла на 4 стартовых вопроса
-- [Корпоративный сайт ФП+Лайт систем](project_fp_corporate_site.md) — запуск 2026-09-24 (msg 1625, тред уточнить); ждём ответы Павла на 4 стартовых вопроса (домен, задача, материалы, языки)
+- [Корпоративный сайт Эстехим](project_fp_corporate_site.md) — боевая вёрстка на estechim.gudhab.com/v2, 4 раунда правок Елены + квиз + ВК-виджет внесены (2026-10-13); тема «fruitpedProduction», отвечать только с reply_to
 - [Лид Beef&Beer Актобе](project_beefbeer_lead.md) — первый боевой QR-меню кейс; демо живое на beefbeer.gudhab.com, ждём цену КП от Павла и отправку в WhatsApp кафе
 - [Движок hab](project_hab_engine.md) — авторская мини-CMS (ядро + кафе/услуги/магазин); матрица функций research/hab-engine-features.md у Павла на правке, собираем требования не торопясь
 - [ИИ Креатор: направление](project_ii_creator_direction.md) — после аудита Neurover предложен нишевый ИИ-креатор для малого бизнеса как модуль движка hab; ждём решение Павла на концепт
