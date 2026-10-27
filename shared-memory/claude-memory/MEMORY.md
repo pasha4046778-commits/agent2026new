@@ -25,3 +25,5 @@
 - [ИИ Креатор — сохранять диалоги](feedback_ii_creator_save_dialogs.md) — тема thread 1033 в группе; фиксировать обсуждения оттуда в память
 - [90-дневные маркетинг-планы fp/gudhab](project_marketing_90d.md) — тред 1413; рамка принята, старт с бесплатных каналов + микро-тест 50К₸; ждём бюджет Павла
 - [Видеоплатформа для курсов](project_course_platform.md) — альтернатива GetCourse на FrutPed-стеке, идея 2026-10-01; концепт отправлен, ждём от Павла инфо об откликнувшихся
+- [Сайт fruitpedicure.ru в работу](project_fruitpedicure_site.md) — клиентский WP-магазин Эстехим передан нам; тема 1967; аудит→демо→оплата→работа; настроить бэкап (ждём доступы)
+- [Отправка в Telegram-темы](reference_telegram_threads.md) — плагинный reply НЕ умеет темы (всё в General); слать через scripts/tg-send.sh --thread <id>; Эстехим=1624, fruitpedicure.ru=1967, FrutPed=49

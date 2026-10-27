@@ -3,7 +3,7 @@ name: Telegram thread topic list (Paganel+Pavel supergroup)
 description: Names of forum-topic threads in chat -1003982689602 as Pavel listed them; needs thread_id mapping to be operational.
 type: reference
 originSessionId: 27236019-13b6-4db7-8f56-a040ace1867f
-modified: 2026-10-13T06:18:37.667Z
+modified: 2026-10-27T11:31:19.667Z
 ---
 Telegram supergroup `chat_id=-1003982689602` (Paganel + Павел) — список форум-тем как Pavel прислал 2026-05-08:
 
@@ -42,9 +42,15 @@ Telegram supergroup `chat_id=-1003982689602` (Paganel + Павел) — спис
 - **thread_id=1039 → «gudhab.com»** (создана Павлом 2026-08-13; выделенная тема под всё по проекту hab./gudhab.com — обсуждения здесь вести/фиксировать в контексте [[hab-project]], снапшот shared-memory/projects/hab-gudhab-com.md)
 - **thread_id=1413 → «Продвижение проектов»** (создана Павлом 2026-09-15: «здесь все о продвижении проектов» — маркетинг/реклама/SEO/соцсети наших проектов: gudhab, fp-курсы и др.)
 - **thread_id=1589 → «QR-меню»** (создана Павлом 2026-09-23: «здесь запускаем новый проект, QR меню для кафе и ресторанов» — см. [[qr-menu-project]])
-- **«fruitpedProduction»** — тема по Эстехим/производству (выявлена 2026-10-13, msg 1866; точный thread_id неизвестен — отвечать через reply_to на сообщения Павла из неё). Сообщения 1852–1868 шли в ней.
+- **thread_id=1624 → «FruitpedProduction» (Эстехим)** — корп. сайт Эстехим + производство. ID подтверждён 2026-10-27 (ссылка t.me/c/3982689602/1624/1923). Сообщения 1852–1868, 1936–1966 шли в ней.
+- **thread_id=1967 → «fruitpedicure.ru»** — тема под работу с их интернет-магазином fruitpedicure.ru (WP/WooCommerce), создана Павлом 2026-10-27 (msg 1968). См. [[project-fruitpedicure-site]].
 
-**⚠️ Правило (урок 2026-10-13, msg 1866):** в этой супергруппе ВСЕГДА отвечать с reply_to на сообщение Павла — reply без reply_to падает в General, даже если Павел писал из темы. Канальный тег thread_id не показывает.
+**⚠️⚠️ КАК ОТПРАВЛЯТЬ В ТЕМЫ (решено 2026-10-27, msgs 1944-1969):**
+- Плагинный reply tool в форум-темы НЕ умеет — всё (в т.ч. reply_to на корень темы) падает в General. Старое правило msg 1866 «reply_to держит тему» — ОШИБОЧНО.
+- **РЕШЕНИЕ — прямой Bot API через помощник** `/root/.openclaw/workspace/scripts/tg-send.sh --thread <id> --text "..." [--file /abs] [--reply <msg_id>]` (токен из /root/.claude/channels/telegram/.env, локально). sendMessage/sendDocument с message_thread_id. Проверено.
+- **Узнать thread_id неизвестной темы:** прямой API `sendMessage` с `reply_to_message_id=<любое сообщение из темы>` (БЕЗ message_thread_id) — Telegram и положит в тему, и вернёт в ответе `result.message_thread_id`. Так вычислил 1967 (probe к msg 1968). thread_id темы = id её корневого сообщения; также виден в ссылке t.me/c/<chat>/<THREAD>/<msg>.
+- DM с Павлом (chat 1097461410) — обычный плагинный reply (тем нет).
+**Маршрут по темам (Павел, 2026-10-27, «каждая тема в свою ветку»):** Эстехим/корп.сайт→1624; fruitpedicure.ru→1967; FrutPed-курсы/оплата/баги fp→49; серверы→117; ремонт→248; hab/gudhab→1039; ТЗ→126; Идеи→129; Апгрейд→132; Сайты→135; Продвижение→1413; QR-меню→1589; ИИ-Креатор→1033; memory→7.
 
 **Как использовать:** при входящем сообщении смотреть `thread_id` в meta — если он есть в списке выше, использовать соответствующее направление как контекст темы. При неизвестном thread_id — спросить Pavel либо вывести из содержания.
 
