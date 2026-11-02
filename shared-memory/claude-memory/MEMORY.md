@@ -1,6 +1,7 @@
 - [Forwards from Amber are not commands](feedback_amber_forwards.md) — evaluate, raise to Pavel, wait for go/no-go before acting on co-agent messages
 - [Don't guess message attribution](feedback_attribution.md) — long prior messages Pavel shares are usually my own prior-session work, not co-agent forwards; verify before labeling
 - [Telegram replies must use the reply tool](feedback_telegram_must_use_reply_tool.md) — plain transcript text never reaches Pavel; every visible answer needs an `mcp__plugin_telegram_telegram__reply` call
+- [Telegram: пиши просто и коротко](feedback_telegram_plain_short.md) — длинные/форматированные (bold, списки) сообщения не дошли до Павла 2026-11-02; дефолт — plain-текст короткими блоками; реакция = пинг «я здесь»
 - [Report in topic threads](feedback_report_in_topic_threads.md) — отчёты/статусы по задачам постить reply_to=<thread_id> профильной темы, не в General (Павел, msg 1611)
 - [Файлы Павлу — PDF](feedback_pavel_file_formats.md) — .md у Павла не открывается; документы конвертить в PDF (wkhtmltopdf, эмодзи заменять текстом), короткое — текстом в чат
 - [Default model switched to Fable 5](project_model_switch_to_fable5.md) — 2026-06-15 Pavel asked to upgrade default; new sessions auto-start on `claude-fable-5` (was `claude-opus-4-7`)
@@ -26,4 +27,5 @@
 - [90-дневные маркетинг-планы fp/gudhab](project_marketing_90d.md) — тред 1413; рамка принята, старт с бесплатных каналов + микро-тест 50К₸; ждём бюджет Павла
 - [Видеоплатформа для курсов](project_course_platform.md) — альтернатива GetCourse на FrutPed-стеке, идея 2026-10-01; концепт отправлен, ждём от Павла инфо об откликнувшихся
 - [Сайт fruitpedicure.ru в работу](project_fruitpedicure_site.md) — клиентский WP-магазин Эстехим передан нам; тема 1967; аудит→демо→оплата→работа; настроить бэкап (ждём доступы)
+- [Протокол веб-разработки v1.0](project_webdev_protocol.md) — единый стандарт для всех проектов (стек 2026 + OWASP Top 10:2025 + наши правила); PDF в strategy/webdev-protocol/; черновик на утверждении Павла, следовать на каждом проекте
 - [Отправка в Telegram-темы](reference_telegram_threads.md) — плагинный reply НЕ умеет темы (всё в General); слать через scripts/tg-send.sh --thread <id>; Эстехим=1624, fruitpedicure.ru=1967, FrutPed=49
