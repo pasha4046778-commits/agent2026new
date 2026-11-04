@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Cloudflare — что это и порядок действий</title>
+<style>
+  @page { size: A4; margin: 18mm 16mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "DejaVu Sans", Arial, sans-serif; font-size: 10.5pt; line-height: 1.45; color: #1a1a1a; margin: 0; }
+  h1 { font-size: 20pt; margin: 0 0 3px; color: #0f2d3c; }
+  h2 { font-size: 12.5pt; color: #0f2d3c; margin: 16px 0 6px; border-bottom: 2px solid #1aa17e; padding-bottom: 3px; }
+  .lead { color: #44555c; font-size: 10.5pt; margin-top: 2px; }
+  .meta { color: #7a8a90; font-size: 9pt; margin: 5px 0 0; }
+  ul { margin: 5px 0; padding-left: 20px; } li { margin: 3px 0; }
+  ol.steps { list-style: none; padding-left: 0; margin: 6px 0; counter-reset: s; }
+  ol.steps li { margin: 5px 0; padding-left: 26px; position: relative; }
+  ol.steps li::before { counter-increment: s; content: counter(s); position: absolute; left: 0; top: 0;
+    background: #1aa17e; color: #fff; width: 18px; height: 18px; border-radius: 50%; text-align: center;
+    font-size: 9pt; line-height: 18px; font-weight: bold; }
+  .box { background: #f3f7f5; border-left: 4px solid #1aa17e; padding: 8px 12px; margin: 10px 0; border-radius: 0 4px 4px 0; }
+  .box.warn { background: #fdf3f1; border-left-color: #d9513f; }
+  .box.note { background: #eef5fb; border-left-color: #2f74b5; }
+  b.red { color: #b02a1f; }
+  .footer { margin-top: 12px; color: #7a8a90; font-size: 8.5pt; }
+</style>
+</head>
+<body>
+
+<h1>Cloudflare — что это, зачем нам и порядок действий</h1>
+<p class="lead">Коротко и по делу: как мы с ним связаны сейчас, чем он полезен, что делать</p>
+<p class="meta">4 ноября 2026 &middot; подготовил Paganel</p>
+
+<div class="box note">
+<b>Сразу главное.</b> Сейчас мы Cloudflare <b>не используем вообще</b> — никак с ним не связаны. DNS всех наших доменов (gudhab.com, babichnail.online с поддоменами fp / vault / video) живёт на неймсерверах Beget. <b>Именно поэтому авария DNS Beget 2–3 ноября положила сайты</b>, хотя наш сервер в Казахстане работал исправно. Cloudflare — это моё предложение убрать эту зависимость (вариант B из документа по домену).
+</div>
+
+<h2>1. Что такое Cloudflare</h2>
+<p>Крупнейший в мире бесплатный DNS-провайдер плюс защитный слой, который встаёт перед сайтом. Для нас это прежде всего — надёжный DNS, не зависящий от Beget. Конкретно даёт:</p>
+<ul>
+  <li><b>DNS.</b> Держит записи доменов на своей глобальной сети (сотни точек по миру). Падение одного провайдера наши домены больше не кладёт — это прямое лекарство от аварии, как у Beget.</li>
+  <li><b>Защита.</b> Бесплатный фаервол (WAF), анти-DDoS и фильтр ботов — перед нашим сервером.</li>
+  <li><b>Скорость (CDN).</b> Отдаёт картинки/статику с ближайшей к клиенту точки — сайт грузится быстрее.</li>
+  <li><b>TLS/HTTPS.</b> Бесплатные сертификаты; наши certbot при этом остаются как есть.</li>
+  <li><b>Скрывает реальный IP сервера</b> (46.8.79.53) — меньше прямых атак на машину.</li>
+</ul>
+<p>Бесплатного тарифа хватает на все наши задачи с запасом. Платить не нужно.</p>
+
+<h2>2. Почему это нужно именно нам</h2>
+<ul>
+  <li><b>Независимость от Beget.</b> Beget под санкциями ЕС, его аварии бьют по доступности. Cloudflare нейтрален и крайне надёжен — это снимает главный риск.</li>
+  <li><b>Чиним сразу три сервиса.</b> fp, vault и video — все на домене babichnail.online. Один перевод домена на Cloudflare делает устойчивыми все три.</li>
+  <li><b>Обратимо.</b> Не понравится — вернём неймсерверы на Beget за минуты. Риска «застрять» нет.</li>
+</ul>
+
+<h2>3. Порядок действий (вариант B — домен babichnail.online)</h2>
+<ol class="steps">
+  <li>Завести <b>бесплатный аккаунт Cloudflare</b> (нужна твоя почта, 2–3 минуты).</li>
+  <li>Добавить в него домен <b>babichnail.online</b> — Cloudflare сам просканирует и подтянет текущие DNS-записи.</li>
+  <li><b>Сверить все записи:</b> fp / vault / video → наш VPS, и <b class="red">почта (MX, SPF, DKIM, DMARC)</b> — всё должно перенестись без потерь. Это критичный шаг: почту потерять нельзя.</li>
+  <li>В <b>панели Beget</b> сменить неймсерверы babichnail.online на выданные Cloudflare (обычно 2 адреса).</li>
+  <li>Дождаться обновления (от часа до суток), проверить все поддомены и отправку/приём почты.</li>
+  <li>Включить TLS на fp и поднять публичный адрес уже припаркованного FrutPed.</li>
+</ol>
+
+<div class="box warn">
+<b>Единственный аккуратный момент — почта.</b> При переносе зоны нужно точно перенести почтовые записи (MX/SPF/DKIM/DMARC), иначе письма перестанут ходить. Поэтому шаг 3 делаю внимательно и со сверкой до смены неймсерверов.
+</div>
+
+<h2>4. Что нужно от тебя</h2>
+<ul>
+  <li>Решение: идём по варианту B.</li>
+  <li>Доступ в <b>панель Beget</b> (основной аккаунт) — сменить неймсерверы и снять полный список DNS-записей babichnail.online.</li>
+  <li>Почта для аккаунта Cloudflare — заведём вместе, или заведи сам, я подскажу шаги.</li>
+</ul>
+
+<div class="footer">
+Подготовлено на решение. Паркинг FrutPed на нашем VPS уже готов и протестирован — Cloudflare закрывает последний шаг (публичный адрес + устойчивый DNS). Актуально на 4 ноября 2026.
+</div>
+
+</body>
+</html>

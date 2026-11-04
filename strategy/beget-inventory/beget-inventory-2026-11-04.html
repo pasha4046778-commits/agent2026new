@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Инвентаризация Beget</title>
+<style>
+  @page { size: A4; margin: 18mm 16mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "DejaVu Sans", Arial, sans-serif; font-size: 10.5pt; line-height: 1.45; color: #1a1a1a; margin: 0; }
+  h1 { font-size: 20pt; margin: 0 0 3px; color: #0f2d3c; }
+  h2 { font-size: 12.5pt; color: #0f2d3c; margin: 17px 0 6px; border-bottom: 2px solid #1aa17e; padding-bottom: 3px; }
+  .lead { color: #44555c; font-size: 10.5pt; margin-top: 2px; }
+  .meta { color: #7a8a90; font-size: 9pt; margin: 5px 0 0; }
+  ul { margin: 5px 0; padding-left: 20px; }
+  li { margin: 3px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 9.5pt; }
+  th, td { border: 1px solid #cfdad6; padding: 5px 7px; text-align: left; vertical-align: top; }
+  th { background: #0f2d3c; color: #fff; font-weight: 600; }
+  tr:nth-child(even) td { background: #f3f7f5; }
+  .ok { color: #137a4b; font-weight: bold; }
+  .no { color: #b02a1f; font-weight: bold; }
+  .box { background: #f3f7f5; border-left: 4px solid #1aa17e; padding: 8px 12px; margin: 10px 0; border-radius: 0 4px 4px 0; }
+  .box.warn { background: #fdf3f1; border-left-color: #d9513f; }
+  .footer { margin-top: 12px; color: #7a8a90; font-size: 8.5pt; }
+</style>
+</head>
+<body>
+
+<h1>Что у нас на Beget</h1>
+<p class="lead">Инвентаризация аккаунта Beget: сайты, почта, домены — для бэкапа и миграции</p>
+<p class="meta">4 ноября 2026 &middot; подготовил Paganel</p>
+
+<div class="box warn">
+<b>Главное ограничение.</b> Мой SSH-доступ посажен в вебрут FrutPed — другие сайты и почту аккаунта я из него не вижу и не могу забэкапить. Полную инвентаризацию и бэкап всего, что на Beget, я сделаю только с доступом в <b>основной аккаунт Beget</b> (панель). Ниже — что удалось установить со своего доступа и по открытым данным (WHOIS/DNS).
+</div>
+
+<h2>1. Хостинг на Beget (сервер sakura, IP 45.130.41.50)</h2>
+<table>
+  <tr><th>Сайт</th><th>Мой доступ</th><th>Статус бэкапа / комментарий</th></tr>
+  <tr><td>fp.babichnail.online (FrutPed, курсы)</td><td class="ok">Полный</td><td class="ok">Бэкап сделан и отправлен тебе; план переноса готов</td></tr>
+  <tr><td>galereya-krasoti.com (сайт + почта)</td><td class="no">Закрыт</td><td>Живой сайт (HTTP 200), но файлы под правами основного аккаунта — из моего доступа не читаются. Нужен основной аккаунт. Это домен-отправитель писем курсов (info@)</td></tr>
+  <tr><td>Другие сайты аккаунта</td><td class="no">Не вижу</td><td>Листинг аккаунта закрыт — перечислить не могу, нужна панель</td></tr>
+</table>
+
+<h2>2. Почта на Beget</h2>
+<div class="box">
+Домен <b>galereya-krasoti.com</b> обслуживает почту на Beget (MX: mx1/mx2.beget.com). Значит ящик <b>info@galereya-krasoti.com</b> и переписка — на серверах Beget. Это отдельный важный узел: почту (ящики + письма) тоже стоит забэкапить и спланировать перенос. Доступ к содержимому ящиков — только через аккаунт/почтовую панель Beget.
+</div>
+
+<h2>3. Домены, чей DNS на Beget</h2>
+<p>Эти домены резолвятся через неймсерверы Beget (ns1/ns2.beget.com/.pro) — именно они лежали при аварии 2–3 ноября. Кандидаты на увод DNS в Cloudflare:</p>
+<table>
+  <tr><th>Домен</th><th>Регистратор</th><th>Где хостинг</th></tr>
+  <tr><td>gudhab.com</td><td>Beget</td><td>Наш VPS (46.8.79.53) — на Beget только домен/DNS</td></tr>
+  <tr><td>fp.babichnail.online</td><td>Beget</td><td>Beget (переносим на наш VPS)</td></tr>
+  <tr><td>galereya-krasoti.com</td><td>REG.RU</td><td>Beget (сайт + почта)</td></tr>
+  <tr><td>Прочие домены</td><td colspan="2">Не вижу без панели — проверим по списку аккаунта</td></tr>
+</table>
+
+<h2>4. Для ясности — НЕ на Beget</h2>
+<ul>
+  <li><b>fruitpedicure.ru</b> — хостинг и DNS на REG.RU (IP 31.31.196.165), не Beget. Отдельный узел (нам передан, ждём доступы на настройку бэкапа).</li>
+</ul>
+
+<h2>5. Что нужно от тебя для полной картины</h2>
+<p>Дай доступ в <b>основной аккаунт Beget</b> (или пройдись по панели и пришли списком), чтобы я собрал всё и забэкапил на твой ПК:</p>
+<ul>
+  <li>Полный список доменов на аккаунте</li>
+  <li>Все сайты/хостинг (не только FrutPed)</li>
+  <li>Все базы данных</li>
+  <li>Почтовые ящики (info@galereya-krasoti.com и другие) — для бэкапа писем</li>
+  <li>DNS-зоны (записи) — чтобы точно воспроизвести при уводе на Cloudflare</li>
+</ul>
+<div class="box">
+<b>Что сделаю, получив доступ:</b> забэкаплю каждый сайт + базу + почту на твой ПК (как FrutPed), подготовлю план миграции по каждому узлу и список доменов на увод DNS в Cloudflare.
+</div>
+
+<div class="footer">
+Составлено по данным доступного SSH и открытым WHOIS/DNS на 4 ноября 2026. Полнота — после доступа в основной аккаунт Beget.
+</div>
+
+</body>
+</html>

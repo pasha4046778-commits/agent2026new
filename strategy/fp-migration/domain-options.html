@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Как переносим домен</title>
+<style>
+  @page { size: A4; margin: 18mm 16mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "DejaVu Sans", Arial, sans-serif; font-size: 10.5pt; line-height: 1.45; color: #1a1a1a; margin: 0; }
+  h1 { font-size: 20pt; margin: 0 0 3px; color: #0f2d3c; }
+  h2 { font-size: 12.5pt; color: #0f2d3c; margin: 16px 0 6px; border-bottom: 2px solid #1aa17e; padding-bottom: 3px; }
+  .lead { color: #44555c; font-size: 10.5pt; margin-top: 2px; }
+  .meta { color: #7a8a90; font-size: 9pt; margin: 5px 0 0; }
+  ul { margin: 5px 0; padding-left: 20px; } li { margin: 3px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 9.3pt; }
+  th, td { border: 1px solid #cfdad6; padding: 5px 7px; text-align: left; vertical-align: top; }
+  th { background: #0f2d3c; color: #fff; font-weight: 600; }
+  tr:nth-child(even) td { background: #f3f7f5; }
+  .rec { background: #eaf7f1 !important; }
+  .box { background: #f3f7f5; border-left: 4px solid #1aa17e; padding: 8px 12px; margin: 10px 0; border-radius: 0 4px 4px 0; }
+  .box.note { background: #eef5fb; border-left-color: #2f74b5; }
+  .yes { color: #137a4b; font-weight: bold; } .no { color: #b02a1f; font-weight: bold; }
+  .footer { margin-top: 12px; color: #7a8a90; font-size: 8.5pt; }
+</style>
+</head>
+<body>
+
+<h1>Как переносим домен fp.babichnail.online</h1>
+<p class="lead">Варианты перевода домена на наш VPS и ухода от зависимости от Beget</p>
+<p class="meta">4 ноября 2026 &middot; подготовил Paganel &middot; на решение</p>
+
+<div class="box note">
+<b>Важный контекст.</b> fp.babichnail.online — это поддомен домена <b>babichnail.online</b> (регистратор Beget, DNS на неймсерверах Beget). На этом же домене уже работают <b>vault.babichnail.online</b> и <b>video.babichnail.online</b> — они на нашем VPS, но их DNS тоже на Beget. Значит авария DNS Beget (как 2 ноября) кладёт и их. Поэтому решение по домену касается не только fp, но и vault/video.
+</div>
+
+<h2>Три варианта</h2>
+<table>
+  <tr><th>Вариант</th><th>Что делаем</th><th>Плюсы</th><th>Минусы</th><th>Срок</th></tr>
+  <tr>
+    <td><b>A. Точечно</b></td>
+    <td>Сменить A-запись fp на наш VPS (46.8.79.53). DNS остаётся на Beget.</td>
+    <td>Быстро, минимум действий</td>
+    <td class="no">DNS остаётся на Beget — риск повторной аварии сохраняется; vault/video тоже</td>
+    <td>минуты</td>
+  </tr>
+  <tr class="rec">
+    <td><b>B. NS на Cloudflare</b><br>(рекомендую)</td>
+    <td>Сменить неймсерверы babichnail.online на Cloudflare, перенести все записи зоны (fp, vault, video, почта). Регистрация остаётся на Beget.</td>
+    <td class="yes">Независимость от DNS Beget для fp И vault/video; бесплатный Cloudflare + WAF/CDN; обратимо</td>
+    <td>Нужен доступ в панель Beget (сменить NS) + аккуратно перенести все записи</td>
+    <td>до суток (обновление NS)</td>
+  </tr>
+  <tr>
+    <td><b>C. Полный перенос</b></td>
+    <td>Перенести саму регистрацию babichnail.online от Beget к другому регистратору (напр. Cloudflare Registrar).</td>
+    <td>Полная независимость от Beget (и регистрация, и DNS)</td>
+    <td>Дольше и сложнее: код авторизации, возможная блокировка переноса на 60 дней</td>
+    <td>дни</td>
+  </tr>
+</table>
+
+<h2>Рекомендация</h2>
+<p><b>Сейчас — вариант B</b> (неймсерверы на Cloudflare). Это оптимально: одним действием убираем зависимость от DNS Beget сразу для fp, vault и video, получаем бесплатный надёжный DNS + защиту Cloudflare, и всё обратимо (вернём NS обратно за минуты при необходимости). Регистрация пока остаётся на Beget — её при желании перенесём позже (вариант C), это отдельный неспешный шаг. Вариант A не советую: он оставляет главную причину аварий — DNS на Beget.</p>
+
+<div class="box">
+<b>Порядок действий по варианту B:</b>
+<ul>
+  <li>Завести зону babichnail.online в Cloudflare (у тебя есть аккаунт Cloudflare? если нет — заведём бесплатный).</li>
+  <li>Снять полный список текущих DNS-записей зоны (из панели Beget) и воспроизвести в Cloudflare — fp → наш VPS, vault/video → наш VPS, почта (MX/SPF/DKIM) и прочее без потерь.</li>
+  <li>Поменять неймсерверы babichnail.online на Cloudflare в панели Beget.</li>
+  <li>Дождаться обновления (до суток), проверить все поддомены, включить TLS на fp.</li>
+</ul>
+</div>
+
+<h2>Что нужно от тебя</h2>
+<ul>
+  <li>Доступ в панель Beget (основной аккаунт) — сменить неймсерверы и снять полный список DNS-записей babichnail.online.</li>
+  <li>Аккаунт Cloudflare — есть или заводим бесплатный.</li>
+  <li>Выбор варианта (A / B / C) — рекомендую B.</li>
+</ul>
+
+<div class="footer">
+Подготовлено на решение. Паркинг FrutPed на нашем VPS уже готов и протестирован — не хватает только DNS-записи (её закрывает выбранный вариант). Актуально на 4 ноября 2026.
+</div>
+
+</body>
+</html>
