@@ -181,3 +181,7 @@ R-06: чек-лист мобильной приёмки отправлен Па�
 ## Модуль «Анкеты» (2026-10-01, запрос Павла msg 1739)
 Онлайн-формы сбора материалов от клиентов вместо PDF. Код: src/lib/forms-db.ts (своё подключение better-sqlite3; таблицы client_forms/form_questions/form_respondents/form_answers), src/app/actions/forms.ts (admin CRUD + public start/save/submit, TG-уведомления напрямую через env TELEGRAM_*), админка /admin/forms + /admin/forms/[id] (FormEditor: вкладки Вопросы/Ответы, таблица ответов по людям), публичная /f/[token] (FillClient: имя+роль → вопросы роли+общие, автосейв с дебаунсом 600мс, respondent-token в ?r= URL — возврат и дополнение). Роли per-form (JSON), вопросы с ролью 'any'|роль. middleware matcher: добавлен f/ в исключения next-intl. Шаблон «Эстехим» (21 вопрос) зашит в forms-db.seedEstechim.
 Первая анкета создана: id=1, Эстехим, https://gudhab.com/f/zpic2vvNPPC8Hy-p (seed напрямую в БД). Файлы от клиентов в v1 — ссылками на облако; прямая загрузка = этап 2. Этот модуль — кандидат в ядро движка hab (лиды/формы).
+
+## Обновление 2026-11-10: админ-вкладка «Проекты» (CRM-lite)
+- /admin/projects — Excel-подобная таблица клиентов/проектов: автосохранение ячеек, цветные статусы воронки (10 шт.), поиск/фильтр, CSV экспорт/импорт (merge by id или полная замена). Файлы: src/lib/crm-db.ts, src/app/api/admin/projects/route.ts, src/app/admin/projects/*. Seed: 8 текущих проектов (однократно, флаг crm_seeded в app_settings).
+- Назначение: база для активной рассылки предложений компаниям (план Павла от 2026-11-10).
