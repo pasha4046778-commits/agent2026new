@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 51b4561f-d3b0-43cf-aeab-b0ac57659f38
-  modified: 2026-08-13T15:38:14.565Z
+  modified: 2026-11-17T19:29:29.298Z
 ---
 
 Backup layout (rewritten 2026-07-29 after Latvia decommission):
@@ -14,5 +14,7 @@ Backup layout (rewritten 2026-07-29 after Latvia decommission):
 - Cron 18:55 UTC `scripts/backup-shared-memory.sh` — daily git commit+push of workspace to github.com/pasha4046778-commits/agent2026new. **FIXED 2026-07-29**: push had been failing since ≥2026-07-01 (empty `/root/.git-credentials`); Pavel issued fine-grained PAT `paganel-backup` (repos agent2026new + fp-site, Contents R/W, **expires ~2027-07-29 — remind Pavel to renew in early July 2027**). Stored as `https://pasha4046778-commits:<PAT>@github.com` in `/root/.git-credentials` (chmod 600, helper=store); backlog pushed, master==origin. The PAT also covers fp-site — можно возобновить зеркало кода FrutPed.
 
 - **2026-08-13: агентная память включена в GitHub-автосохранение** (просьба Павла — «добавить тему ИИ Креатор в автосохранение»). backup-shared-memory.sh теперь перед коммитом зеркалит `/root/.claude/projects/-root--openclaw-workspace/memory/` → `shared-memory/claude-memory/` (rsync -a --delete), и оно попадает в ночной пуш (path shared-memory/ уже отслеживается). Т.е. вся моя память (MEMORY.md + заметки, вкл. диалоги по темам) бэкапится в приватный репо agent2026new каждую ночь. Прогнал вручную — закоммичено и запушено.
+
+- **⚠️ 2026-11-17: побочный эффект зеркала обнаружен** — из-за `rsync -a --delete` любой файл, созданный НЕ в агентной памяти, а напрямую в `shared-memory/claude-memory/` (например, дневники 2026-11-08, 2026-11-10, 2026-11-17), удаляется при следующей синхронизации. **Правило: дневники писать в `workspace/memory/YYYY-MM-DD.md`** (каноничное место из AGENTS.md, зеркало его не трогает). Открытый вопрос Павлу: добавить `memory/` в PATHS ночного бэкапа, чтобы дневники тоже уходили в GitHub.
 
 **Why:** off-host copy of shared-memory exists only via that GitHub push. Related: [[reference-vps-latvia]], [[feedback-ii-creator-save-dialogs]]

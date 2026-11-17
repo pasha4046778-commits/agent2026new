@@ -1,0 +1,9 @@
+[main/sessions/main/0a81f8ed-7730-454d-b79b-00a60b7a0a62#L3] User: Amber, на связи?
+[main/sessions/main/0a81f8ed-7730-454d-b79b-00a60b7a0a62#L4] User: Amber, ты здесь?
+[main/sessions/main/a1bf6dfc-450c-4123-927f-fa2e75f208c6#L2] User: тест связи, ответь одним словом
+[main/sessions/main/a1bf6dfc-450c-4123-927f-fa2e75f208c6#L4] User: Привет, Amber! Тест связи после смены модели. Ответь коротко, что на связи и на какой ты модели.
+[main/sessions/main/a1bf6dfc-450c-4123-927f-fa2e75f208c6#L7] User: Тест связи. Ответь одним предложением: на связи?
+[main/sessions/main/a1bf6dfc-450c-4123-927f-fa2e75f208c6#L9] User: тест: на связи?
+[main/sessions/main/a1bf6dfc-450c-4123-927f-fa2e75f208c6#L10] User: тест: на связи?
+[main/sessions/main/a1bf6dfc-450c-4123-927f-fa2e75f208c6#L11] User: тест: на связи?
+[main/sessions/main/a1bf6dfc-450c-4123-927f-fa2e75f208c6#L12] User: тест связи, ответь: на связи
