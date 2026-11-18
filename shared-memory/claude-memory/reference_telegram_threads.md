@@ -3,7 +3,7 @@ name: Telegram thread topic list (Paganel+Pavel supergroup)
 description: Names of forum-topic threads in chat -1003982689602 as Pavel listed them; needs thread_id mapping to be operational.
 type: reference
 originSessionId: 27236019-13b6-4db7-8f56-a040ace1867f
-modified: 2026-10-27T11:31:19.667Z
+modified: 2026-11-18T10:12:14.940Z
 ---
 Telegram supergroup `chat_id=-1003982689602` (Paganel + Павел) — список форум-тем как Pavel прислал 2026-05-08:
 
@@ -43,6 +43,7 @@ Telegram supergroup `chat_id=-1003982689602` (Paganel + Павел) — спис
 - **thread_id=1413 → «Продвижение проектов»** (создана Павлом 2026-09-15: «здесь все о продвижении проектов» — маркетинг/реклама/SEO/соцсети наших проектов: gudhab, fp-курсы и др.)
 - **thread_id=1589 → «QR-меню»** (создана Павлом 2026-09-23: «здесь запускаем новый проект, QR меню для кафе и ресторанов» — см. [[qr-menu-project]])
 - **thread_id=1624 → «FruitpedProduction» (Эстехим)** — корп. сайт Эстехим + производство. ID подтверждён 2026-10-27 (ссылка t.me/c/3982689602/1624/1923). Сообщения 1852–1868, 1936–1966 шли в ней.
+- **thread_id=2278 → «YT: Умные Колёсики»** (создал Я ботом 2026-11-18 через scripts/tg-topic.sh по предложению Павла «для каждого канала отдельная ветка»; весь контент детского YouTube-канала — туда; бот УМЕЕТ создавать темы: createForumTopic работает)
 - **thread_id=1967 → «fruitpedicure.ru»** — тема под работу с их интернет-магазином fruitpedicure.ru (WP/WooCommerce), создана Павлом 2026-10-27 (msg 1968). См. [[project-fruitpedicure-site]].
 
 **⚠️⚠️ КАК ОТПРАВЛЯТЬ В ТЕМЫ (решено 2026-10-27, msgs 1944-1969):**
