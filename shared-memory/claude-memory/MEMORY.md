@@ -31,3 +31,4 @@
 - [Сеть YouTube-каналов](project_youtube_channels.md) — «Умные Колёсики» запущен 17.11.2026 (первый ролик опубликован); конвейер в exports/kids-test/, голос Jessica/eleven_v4, дедлайн YPP 01.02.2027
 - [Протокол веб-разработки v1.0](project_webdev_protocol.md) — единый стандарт для всех проектов (стек 2026 + OWASP Top 10:2025 + наши правила); PDF в strategy/webdev-protocol/; черновик на утверждении Павла, следовать на каждом проекте
 - [Отправка в Telegram-темы](reference_telegram_threads.md) — плагинный reply НЕ умеет темы (всё в General); слать через scripts/tg-send.sh --thread <id>; Эстехим=1624, fruitpedicure.ru=1967, FrutPed=49
+- [Paganel avatar](reference_paganel_avatar.md) — paganel-avatar.png в workspace; avatar.png = Amber
